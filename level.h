@@ -6,8 +6,8 @@
 
 struct Level {
     char tiles[MAX_HIGHT][MAX_WIDTH];
-    char items[MAX_HIGHT][MAX_WIDTH];
-    int darkness[MAX_HIGHT][MAX_WIDTH];
+    //char items[MAX_HIGHT][MAX_WIDTH];
+    //int darkness[MAX_HIGHT][MAX_WIDTH];
 };
 
 void level_print(Level level);
