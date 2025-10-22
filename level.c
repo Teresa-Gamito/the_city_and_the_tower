@@ -2,27 +2,27 @@
 #include <stdbool.h>
 #include <level.h>
 
-// ===== Labels =====
-// 'W' - Wall
-// 'F' - Floor
-// 'P' - Pit
-// '0' - Empty
-// 'R' - Relic
-// 'T' - Torch
-// 'P' - Player
+/*  ===== Labels =====
+'W' - Wall
+'P' - Pit
+'0' - Empty
+'R' - Relic
+'T' - Torch
+'P' - Player 
+*/
 
 struct Level lvl1 = 
 {
     {
         {"WWWWWWWWWW"},
-        {"WFFFFFFFFW"},
-        {"WFFFFFFFFW"},
-        {"WFFFFFFFFW"},
-        {"WFFFFFFFFW"},
-        {"WFFFFFFFFW"},
-        {"WFFFFFFFFW"},
-        {"WFFFFFFFFW"},
-        {"WFFFFFFFFW"},
+        {"W00000000W"},
+        {"W00000000W"},
+        {"W00000000W"},
+        {"W00000000W"},
+        {"W00000000W"},
+        {"W00000000W"},
+        {"W00000000W"},
+        {"W00000000W"},
         {"WWWWWWWWWW"},
     },
     {
