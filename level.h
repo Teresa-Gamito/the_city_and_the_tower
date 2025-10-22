@@ -22,4 +22,6 @@ struct Level {
     bool darkness[MAX_HIGHT][MAX_WIDTH];
 };
 
+bool isWalkable(struct Level level, int pos_x, int pos_y);
+
 #endif
