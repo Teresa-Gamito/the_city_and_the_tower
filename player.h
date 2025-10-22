@@ -5,8 +5,6 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-//create a structure for player with the position
-
 typedef struct Player {
     
     int pos_x; // player x position

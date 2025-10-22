@@ -13,6 +13,7 @@
 #define MAX_WIDTH 60
 #define MAX_HIGHT 33
 
+
 #ifndef LEVEL_H
 #define LEVEL_H
 
@@ -24,6 +25,11 @@ typedef struct Level {
 
 extern Level lvl1;
 
-bool isWalkable(Level level, int pos_x, int pos_y);
+bool tileIsWalkable(Level level, int pos_x, int pos_y);
+bool tileHasItem(Level level, int pos_x, int pos_y);
+
+int levelGetWidth(Level level);
+int levelGetHight(Level level);
+
 
 #endif

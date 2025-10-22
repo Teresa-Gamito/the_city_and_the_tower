@@ -11,8 +11,7 @@
 'P' - Player 
 */
 
-struct Level lvl1 = 
-{
+struct Level lvl1 = {
     {
         {"WWWWWWWWWW"},
         {"W00000000W"},
@@ -39,5 +38,3 @@ struct Level lvl1 =
     },
     {{0}}
 };
-
-bool isWalkable(struct Level level, int pos_x, int pos_y);
