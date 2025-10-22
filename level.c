@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
-#include <level.h>
+#include "level.h"
 
 /*  ===== Labels =====
 'W' - Wall
@@ -39,3 +39,5 @@ struct Level lvl1 =
     },
     {{0}}
 };
+
+bool isWalkable(struct Level level, int pos_x, int pos_y);
