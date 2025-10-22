@@ -7,6 +7,13 @@ player structure must switch with the 'P' in the map location:
     Delete 'P'
 
 
+Draw:
+Copy level info
+Change copy accordingly
+Create a final map with all the layers in one
+Print final map 
+
+
 Labels for level creation:
 'W' - Wall
 'P' - Pit

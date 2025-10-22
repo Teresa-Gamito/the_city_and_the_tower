@@ -11,7 +11,8 @@
 'P' - Player 
 */
 
-struct Level lvl1 = {
+// ===== Hardcoded Levels =====
+const Level level_list[] = {
     {
         {"WWWWWWWWWW"},
         {"W00000000W"},
