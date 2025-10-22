@@ -16,12 +16,14 @@
 #ifndef LEVEL_H
 #define LEVEL_H
 
-struct Level {
+typedef struct Level {
     char tiles[MAX_HIGHT][MAX_WIDTH];
     char items[MAX_HIGHT][MAX_WIDTH];
     bool darkness[MAX_HIGHT][MAX_WIDTH];
-};
+} Level;
 
-bool isWalkable(struct Level level, int pos_x, int pos_y);
+extern Level lvl1;
+
+bool isWalkable(Level level, int pos_x, int pos_y);
 
 #endif

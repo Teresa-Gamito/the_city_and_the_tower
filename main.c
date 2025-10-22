@@ -4,6 +4,8 @@
 #include "draw.h"
 #include "player.h"
 
+char getInput();
+
 int main() {
 
     
