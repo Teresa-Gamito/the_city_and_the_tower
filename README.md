@@ -6,6 +6,11 @@ player structure must switch with the 'P' in the map location:
     Assign 'P' cordinates to structure player position
     Delete 'P'
 
+Level creating conventions:
+ - Create a file named lvlXX with "XX" being replaced by the level number
+ - The text should be split into the three layers separeated by '-'
+ - Levels can be a maximum of 66 tiles wide and 30 tiles in height 
+ - All three layers must be the same dimentions
 
 Draw:
 Copy level info
