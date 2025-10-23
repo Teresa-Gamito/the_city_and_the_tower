@@ -32,3 +32,6 @@ What we cant add right now:
  - Audio
  - Time
  - Following events
+
+What we can add:
+ - File access to read levels or save data using stdio.h

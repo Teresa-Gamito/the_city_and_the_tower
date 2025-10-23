@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+#define TORCH_RADIUS 3
+
 typedef struct Torch {
-   int radius;
+   int radius = TORCH_RADIUS;
    int pos_x;
    int pos_y;
 } Torch;
@@ -15,5 +17,5 @@ typedef struct Plank {
 typedef struct Relic {
    int pos_x;
    int pos_y;
-   bool wasPickedUp;
+   bool wasPickedUp = false;
 } Relic;

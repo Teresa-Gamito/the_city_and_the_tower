@@ -5,6 +5,7 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
+// define the player as an object
 typedef struct Player {
     
     int pos_x; // player x position
@@ -25,7 +26,6 @@ void playerMoveUp(Player * player);
 void playerMoveDown(Player * player);
 void playerMoveLeft(Player * player);
 void playerMoveRight(Player * player);
-
 
 // item related actions
 bool playerHasItem(Player player); // return true if the player has an item

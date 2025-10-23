@@ -19,13 +19,26 @@
 #define LEVEL_H
 
 typedef struct Level {
-    char tiles[MAX_HIGHT][MAX_WIDTH];
-    char objects[MAX_HIGHT][MAX_WIDTH];
-    bool darkness[MAX_HIGHT][MAX_WIDTH];
+    char tiles[MAX_HIGHT][MAX_WIDTH]; // this includes tiles
+    char objects[MAX_HIGHT][MAX_WIDTH]; // this includes only items and the player
+    bool darkness[MAX_HIGHT][MAX_WIDTH]; // setting this layer allows to define permanently lit spaces
 } Level;
 
-extern const Level level_list[];
+extern Level level_active; // this will be the current level
 
+/*
+
+Here we can get the level from a file and set it as the current level (extern Level level_active)
+
+*/
+
+/*
+
+Here we can save the current level progress
+
+*/
+
+// ===== Get info from level =====
 // checks for specific positions within the level selected
 bool tileIsWalkable(Level level, int pos_x, int pos_y);
 bool tileHasItem(Level level, int pos_x, int pos_y);
@@ -35,18 +48,6 @@ int levelGetWidth(Level level);
 int levelGetHight(Level level);
 
 
-// prepare level to be drawn
-// this will be a copy of the current level that will then be changed according to required alterations
-Level level_to_draw; // move to level.c
 
-// set the tiles layer first, then the objects and the player and then the darkness
-// set the copy with required modifications
-void levelSetTiles(Level * level_to_draw, Level level);
-void levelSetItems(Level * level_to_draw, Level level);
-void levelSetDarkness(Level * level_to_draw, Level level);
-void levelSetPlayer(Level * level_to_draw, Player player); //player is set on the objects layer
-
-// merge level layout into a single layer
-char* levelMerge(Level level_to_draw); // returns the level to draw as a 2D array
 
 #endif
