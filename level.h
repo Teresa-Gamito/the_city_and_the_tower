@@ -14,6 +14,8 @@
 #define MAX_WIDTH 60
 #define MAX_HIGHT 33
 
+#define MAX_NUM_OF_DIGITS_FOR_LEVEL_NAME 2
+
 
 #ifndef LEVEL_H
 #define LEVEL_H
@@ -26,11 +28,9 @@ typedef struct Level {
 
 extern Level level_active; // this will be the current level
 
-/*
 
-Here we can get the level from a file and set it as the current level (extern Level level_active)
+Level getLevelFromFile(int level_num);
 
-*/
 
 /*
 

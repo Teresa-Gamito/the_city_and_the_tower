@@ -24,7 +24,6 @@ Labels for level creation:
 'T' - Torch
 'P' - Player 
 
-
 What we cant add right now:
  - Animations
  - Keylogger

@@ -4,7 +4,7 @@
 #define TORCH_RADIUS 3
 
 typedef struct Torch {
-   int radius = TORCH_RADIUS;
+   int radius;
    int pos_x;
    int pos_y;
 } Torch;
@@ -17,5 +17,5 @@ typedef struct Plank {
 typedef struct Relic {
    int pos_x;
    int pos_y;
-   bool wasPickedUp = false;
+   bool wasPickedUp;
 } Relic;
