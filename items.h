@@ -3,6 +3,8 @@
 
 #define TORCH_RADIUS 3
 
+
+// needs changing
 typedef struct Torch {
    int radius;
    int pos_x;

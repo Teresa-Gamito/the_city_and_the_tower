@@ -10,7 +10,7 @@
 #ifndef LEVEL_H
 #define LEVEL_H
 
-typedef struct Level {
+typedef struct {
     int width;
     int height;
     char tiles[MAX_HIGHT][MAX_WIDTH]; // this includes tiles
