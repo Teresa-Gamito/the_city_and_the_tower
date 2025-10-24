@@ -1,26 +1,18 @@
 #include <stdio.h>
 #include <stdbool.h>
-#include "player.h"
-
-/*  ===== Labels =====
-'W' - Wall
-'P' - Pit
-'0' - Empty
-'R' - Relic
-'T' - Torch
-'P' - Player 
-*/
 
 #define MAX_WIDTH 60
 #define MAX_HIGHT 33
 
-#define MAX_NUM_OF_DIGITS_FOR_LEVEL_NAME 2
-
+#define LEVEL_FILE_NAME "lvl00.txt"
+#define LEVEL_FILE_NAME_SIZE 10
 
 #ifndef LEVEL_H
 #define LEVEL_H
 
 typedef struct Level {
+    int width;
+    int height;
     char tiles[MAX_HIGHT][MAX_WIDTH]; // this includes tiles
     char objects[MAX_HIGHT][MAX_WIDTH]; // this includes only items and the player
     bool darkness[MAX_HIGHT][MAX_WIDTH]; // setting this layer allows to define permanently lit spaces
@@ -28,9 +20,8 @@ typedef struct Level {
 
 extern Level level_active; // this will be the current level
 
-
 Level getLevelFromFile(int level_num);
-
+char * getLevelFileName(int level_num);
 
 /*
 
