@@ -72,6 +72,10 @@ Level getLevelFromFile(int level_num) {
     return level;
 }
 
+void loadLevel(Level level, int level_num) {
+    level_active = getLevelFromFile(level_num);
+}
+
 // only for testing
 void testLevelPrint(Level level) {
     for (int i = 0; i < level.height; i++) {
