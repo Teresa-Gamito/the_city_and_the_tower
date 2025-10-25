@@ -4,7 +4,7 @@
 
 char * getLevelFileName(int level_num) {
     // get file name - naming convention is "lvlXX" (maximum of 100 levels) 
-    static char file_name[LEVEL_FILE_NAME_SIZE] = LEVEL_FILE_NAME;
+    static char file_name[] = LEVEL_FILE_NAME;
     file_name[4] = (level_num % 10) + '0';
     file_name[3] = (level_num / 10) + '0';
     return file_name;

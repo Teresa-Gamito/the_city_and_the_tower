@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+#include "items.h"
+
 #define MAX_WIDTH 60
 #define MAX_HIGHT 33
 
-#define LEVEL_FILE_NAME "lvl00.txt"
-#define LEVEL_FILE_NAME_SIZE 10
+#define LEVEL_FILE_NAME "lvl00.txt\0"
 
 #ifndef LEVEL_H
 #define LEVEL_H

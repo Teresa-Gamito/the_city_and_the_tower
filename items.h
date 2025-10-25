@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#include "level.h"
-
 #define STACK_SIZE 20
 
 #define TORCH_RADIUS 3

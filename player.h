@@ -1,6 +1,7 @@
 #include <stdbool.h>
 
 #include "level.h"
+#include "items.h"
 
 #ifndef PLAYER_H
 #define PLAYER_H
@@ -29,7 +30,7 @@ void playerMoveRight(Player * player);
 
 // item related actions
 bool playerHasItem(Player player); // return true if the player has an item
-void playerPickUpItem(Player * player, Level * level, int pos_x, int pos_y); // gets an item on the selected level
-void playerDropItem(Player * player, Level * level, int pos_x, int pos_y); // gets an item on the selected level
+void playerPickUpItem(Player * player, Item item, int pos_x, int pos_y); // gets an item on the selected level
+void playerDropItem(Player * player, Item item, int pos_x, int pos_y); // gets an item on the selected level
 
 #endif
