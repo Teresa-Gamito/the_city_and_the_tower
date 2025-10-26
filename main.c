@@ -10,7 +10,11 @@ char getInput();
 
 int main() {
 
-    
+    while(1) {
+        
+        playerMoveDirection(getInput());
+
+    }
     return 0;
 }
 

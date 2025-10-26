@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "player.h"
 
 void playerMoveDirection(char dir) {
