@@ -49,10 +49,10 @@ void playerMoveRight() {
 void playerMove(int pos_x, int pos_y) {
 
     player.pos_x = pos_x;
-    player.pos_y = pos.y;
+    player.pos_y = pos_y;
 }
 
 bool playerHasItem() {
 
-    return player.item 
+    return player.item != '0';
 }
