@@ -1,5 +1,25 @@
 #include <stdio.h>
 #include "player.h"
+#include "level.h"
+
+Player player = {0, 0, '0'};
+
+void playerSpawn() {
+
+    for(int i = 0 ; i < level_active.width ; i++) {
+
+        for(int j = 0 ; j < level_active.height ; j++) {
+
+            if(level_active.objects[i][j] == 'P') {
+
+                player.pos_x = j;
+                player.pos_y = i;
+
+                level_active.objects[i][j] = '0';
+            }
+        }
+    }
+}
 
 void playerMoveDirection(char dir) {
 

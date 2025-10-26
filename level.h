@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#include "items.h"
 
 #define MAX_WIDTH 60
 #define MAX_HEIGHT 33
@@ -23,7 +22,7 @@ extern Level level_active; // this will be the current level
 
 // gets the level and sets it as level_active
 void loadLayoutLevel(int level_num);
-Level getLevelFromFile(int level_num);
+void getLevelFromFile(int level_num);
 char * getLevelFileName(int level_num);
 
 /*

@@ -1,7 +1,6 @@
 #include <stdbool.h>
 
-#include "level.h"
-#include "items.h"
+//#include "level.h"
 
 #ifndef PLAYER_H
 #define PLAYER_H
@@ -18,7 +17,7 @@ typedef struct Player {
 extern Player player;
 
 // player creation
-void playerSpawn(Level level);
+void playerSpawn();
 
 // player movement
 void playerMove(int pos_x, int pos_y); // move the player
