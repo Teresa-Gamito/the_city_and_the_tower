@@ -15,22 +15,24 @@ typedef struct Player {
 
 } Player;
 
+extern Player player;
+
 // player creation
-void playerSpawn(Player * player, Level level);
+void playerSpawn(Level level);
 
 // player movement
-void playerMove(Player * player, int pos_x, int pos_y); // move the player
+void playerMove(int pos_x, int pos_y); // move the player
 
-void playerMoveDirection(Player * player, char dir);
+void playerMoveDirection(char dir);
 
-void playerMoveUp(Player * player);
-void playerMoveDown(Player * player);
-void playerMoveLeft(Player * player);
-void playerMoveRight(Player * player);
+void playerMoveUp();
+void playerMoveDown();
+void playerMoveLeft();
+void playerMoveRight();
 
 // item related actions
-bool playerHasItem(Player player); // return true if the player has an item
-void playerPickUpItem(Player * player, Item item, int pos_x, int pos_y); // gets an item on the selected level
-void playerDropItem(Player * player, Item item, int pos_x, int pos_y); // gets an item on the selected level
+bool playerHasItem(); // return true if the player has an item
+void playerPickUpItem(Item item, int pos_x, int pos_y); // gets an item on the selected level
+void playerDropItem(Item item, int pos_x, int pos_y); // gets an item on the selected level
 
 #endif
