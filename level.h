@@ -21,7 +21,8 @@ typedef struct {
 
 extern Level level_active; // this will be the current level
 
-void loadLevel(Level level, int level_num);
+// gets the level and sets it as level_active
+void loadLayoutLevel(int level_num);
 Level getLevelFromFile(int level_num);
 char * getLevelFileName(int level_num);
 
@@ -34,14 +35,14 @@ Will be added when working on menus
 
 // ===== Get info from level =====
 // checks for specific positions within the level selected
-bool tileIsWalkable(Level level_active, int pos_x, int pos_y);
-bool tileHasItem(Level level_active, int pos_x, int pos_y);
+bool tileIsWalkable(int pos_x, int pos_y);
+bool tileHasItem(int pos_x, int pos_y);
 
 // gets current level size
-int levelGetWidth(Level level_active);
-int levelGetHight(Level level_active);
+int levelGetWidth();
+int levelGetHight();
 
-void processLightItems(Level * level_active, Item * item_stack); // will process the light coming from items
+void processLightItems(); // will process the light coming from items
 
 
 

@@ -13,3 +13,9 @@ int main() {
     
     return 0;
 }
+
+char getInput() {
+    char input;
+    scanf("%c", &input);
+    return input;
+}
