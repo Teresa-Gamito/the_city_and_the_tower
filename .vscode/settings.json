@@ -2,6 +2,7 @@
     "files.associations": {
         "stdbool.h": "c",
         "level.h": "c",
-        "items.h": "c"
+        "items.h": "c",
+        "stdio.h": "c"
     }
 }

@@ -19,8 +19,8 @@ Level getLevelFromFile(int level_num) {
     if(!file) perror("Error opening file!");
 
 
-    Level level = {MAX_WIDTH, MAX_HIGHT, {{0}}, {{0}}, {{0}}};
-    char temp_layer[MAX_HIGHT][MAX_WIDTH]; // temp layer
+    Level level = {MAX_WIDTH, MAX_HEIGHT, {{0}}, {{0}}, {{0}}};
+    char temp_layer[MAX_HEIGHT][MAX_WIDTH]; // temp layer
     char c; // temp char holder
     
     
@@ -37,7 +37,7 @@ Level getLevelFromFile(int level_num) {
                     break;
                 }
                 else if (c == '-' || c == EOF) { // if its the end of the layer or end of file
-                    if (k == 0) level.height = i; // get the hight of thee first column
+                    if (k == 0) level.height = i; // get the height of thee first column
                     fgetc(file); // skip the '\n' that comes after '-'
                     goto break2; // break twice
                 }

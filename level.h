@@ -4,7 +4,7 @@
 #include "items.h"
 
 #define MAX_WIDTH 60
-#define MAX_HIGHT 33
+#define MAX_HEIGHT 33
 
 #define LEVEL_FILE_NAME "lvl00.txt\0"
 
@@ -14,9 +14,9 @@
 typedef struct {
     int width;
     int height;
-    char tiles[MAX_HIGHT][MAX_WIDTH]; // this includes tiles
-    char objects[MAX_HIGHT][MAX_WIDTH]; // this includes only items and the player
-    bool darkness[MAX_HIGHT][MAX_WIDTH]; // setting this layer allows to define permanently lit spaces
+    char tiles[MAX_HEIGHT][MAX_WIDTH]; // this includes tiles
+    char objects[MAX_HEIGHT][MAX_WIDTH]; // this includes only items and the player
+    bool darkness[MAX_HEIGHT][MAX_WIDTH]; // setting this layer allows to define permanently lit spaces
 } Level;
 
 extern Level level_active; // this will be the current level
