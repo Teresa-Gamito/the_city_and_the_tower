@@ -22,9 +22,8 @@ void playerSpawn(Level level);
 
 // player movement
 void playerMove(int pos_x, int pos_y); // move the player
-
+// other redundant functions
 void playerMoveDirection(char dir);
-
 void playerMoveUp();
 void playerMoveDown();
 void playerMoveLeft();
@@ -32,7 +31,7 @@ void playerMoveRight();
 
 // item related actions
 bool playerHasItem(); // return true if the player has an item
-void playerPickUpItem(Item item, int pos_x, int pos_y); // gets an item on the selected level
-void playerDropItem(Item item, int pos_x, int pos_y); // gets an item on the selected level
+void playerPickUpItem(int pos_x, int pos_y); // grabs an item from the stack
+void playerDropItem(int pos_x, int pos_y); // puts an item on the stack
 
 #endif
