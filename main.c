@@ -13,12 +13,9 @@ int main() {
     getLevelFromFile(1);
     playerSpawn();
 
-
     while(1) {
-
         drawLevel();
         playerMoveDirection(getInput());
-        printf("\n\n\n\n\n\n\n\n\n\n\n\n\n");
     }
     return 0;
 }

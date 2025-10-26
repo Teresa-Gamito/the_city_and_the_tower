@@ -9,14 +9,14 @@
 #define CHARACTER_EMPTY 255
 #define CHARACTER_PLAYER 'P'
 
-char level_to_draw[MAX_HEIGHT][MAX_WIDTH] = {{'0'}};
+char level_to_draw[MAX_HEIGHT][MAX_WIDTH] = {{0}};
 
 void setLevelToDraw() {
 
     setTiles();
     //setItems();
     setPlayer();
-    //setDarkness();
+    setDarkness();
 
 }
 

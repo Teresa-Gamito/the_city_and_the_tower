@@ -28,7 +28,7 @@ void getLevelFromFile(int level_num) {
     for (int k = 0; k < 3; k++) { // iterate for each layer
 
         // Create temp_layer with current layer
-        for (int i = 0; i < level_active.height; i++) { // iterate for each row
+        for (int i = 0; i < level_active.height + 1; i++) { // iterate for each row
             for (int j = 0; j < level_active.width + 1; j++) { // iterate for each column
 
                 c = fgetc(file);
@@ -47,7 +47,7 @@ void getLevelFromFile(int level_num) {
         }
 
         break2:
-
+        
         for (int i = 0; i < level_active.height; i++) {
             for (int j = 0; j < level_active.width; j++) {
 
