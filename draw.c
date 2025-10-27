@@ -52,7 +52,7 @@ void setPlayer() {
 
 void drawLevel() {
 
-    //system("cls");
+    system("cls");
 
     setLevelToDraw();
 
@@ -60,7 +60,7 @@ void drawLevel() {
 
         for(int j = 0 ; j < level_active.width ; j++) {
 
-            printf("%c", level_to_draw[i][j]);
+            printf("%c ", level_to_draw[i][j]);
         }
     
         printf("\n");

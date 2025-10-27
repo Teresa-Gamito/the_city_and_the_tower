@@ -12,8 +12,11 @@ void logPrint(char * message);
 
 int main() {
 
+    logOpen();
+
     getLevelFromFile(1);
     playerSpawn();
+    logPrintLevelActive();
 
     while(1) {
         drawLevel();
