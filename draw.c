@@ -22,9 +22,9 @@ void setLevelToDraw() {
 
 void setTiles() {
 
-    for(int i = 0 ; i < level_active.width ; i++) {
+    for(int i = 0 ; i < level_active.height ; i++) {
 
-        for(int j = 0 ; j < level_active.height ; j++) {
+        for(int j = 0 ; j < level_active.width ; j++) {
 
             level_to_draw[i][j] = level_active.tiles[i][j];
         }
@@ -35,9 +35,9 @@ void setDarkness() {
 
     
 
-    for(int i = 0 ; i < level_active.width ; i++) {
+    for(int i = 0 ; i < level_active.height ; i++) {
 
-        for(int j = 0 ; j < level_active.height ; j++) {
+        for(int j = 0 ; j < level_active.width ; j++) {
 
             if (level_active.darkness[i][j] == 0) 
                 level_to_draw[i][j] = CHARACTER_EMPTY;
@@ -52,13 +52,13 @@ void setPlayer() {
 
 void drawLevel() {
 
-    system("cls");
+    //system("cls");
 
     setLevelToDraw();
 
-    for(int i = 0 ; i < level_active.width ; i++) {
+    for(int i = 0 ; i < level_active.height ; i++) {
 
-        for(int j = 0 ; j < level_active.height ; j++) {
+        for(int j = 0 ; j < level_active.width ; j++) {
 
             printf("%c", level_to_draw[i][j]);
         }
