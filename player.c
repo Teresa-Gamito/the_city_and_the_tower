@@ -27,22 +27,34 @@ void playerMoveDirection(char dir) {
 
         case 'w':
         case 'W':
-            player.pos_y--;
+            if(tileIsWalkable(player.pos_x, player.pos_y - 1)) {
+                
+                player.pos_y--;
+            }
             break;
 
         case 's':
         case 'S':
-            player.pos_y++;
+            if(tileIsWalkable(player.pos_x, player.pos_y + 1)) {
+                
+                player.pos_y++;
+            }
             break;
 
         case 'a':
         case 'A':
+            if(tileIsWalkable(player.pos_x - 1, player.pos_y)) {
+                
             player.pos_x--;
+            }
             break;
 
         case 'd':
         case 'D':
+            if(tileIsWalkable(player.pos_x + 1, player.pos_y)) {
+                
             player.pos_x++;
+            }
             break;
     }
 }
