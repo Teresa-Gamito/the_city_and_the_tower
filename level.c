@@ -74,5 +74,5 @@ void getLevelFromFile(int level_num) {
 
 bool tileIsWalkable(int pos_x, int pos_y) {
 
-    return level_active.tiles[pos_x][pos_y] != 'W' && level_active.tiles[pos_x][pos_y] != 'P';
+    return level_active.tiles[pos_y][pos_x] != 'W' && level_active.tiles[pos_y][pos_x] != 'P';
 }
