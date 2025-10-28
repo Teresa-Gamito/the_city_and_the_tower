@@ -10,7 +10,7 @@ char getInput();
 void logPrint(char * message);
 
 int main() {
-
+    drawStartMenu(getInput());
     getLevelFromFile(1);
     playerSpawn();
 

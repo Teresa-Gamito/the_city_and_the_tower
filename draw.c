@@ -52,7 +52,7 @@ void setPlayer() {
 
 void drawLevel() {
 
-    system("cls");
+    //system("cls");
 
     setLevelToDraw();
 
@@ -66,4 +66,25 @@ void drawLevel() {
         printf("\n");
     }
     
+}
+
+int drawStartMenu(char opt) {
+
+    printf("1. - Start\n2. - Options\n3. - Exit\n");
+
+    switch(opt) {
+
+        case '1':
+            return 1;
+            break;
+
+        case '2':
+            return 2;
+            break;
+
+        case '3':
+            return 3;
+            break;
+    }
+
 }
