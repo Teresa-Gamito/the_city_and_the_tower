@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+#ifndef DEBUG_H
+#define DEBUG_H
+
 extern FILE *file;
 
 // logging related functions
@@ -11,3 +14,5 @@ void logClose();
 void logPrintLevelActive();
 
 void debugCommand(char * msg); // run debug commands
+
+#endif
