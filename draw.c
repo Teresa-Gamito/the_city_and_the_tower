@@ -6,9 +6,6 @@
 #include "level.h"
 #include "player.h"
 
-#define CHARACTER_EMPTY 255
-#define CHARACTER_PLAYER 'P'
-
 char level_to_draw[MAX_HEIGHT][MAX_WIDTH] = {{0}};
 
 void setLevelToDraw() {
@@ -32,22 +29,20 @@ void setTiles() {
 }
 
 void setDarkness() {
-
     
-
     for(int i = 0 ; i < level_active.height ; i++) {
 
         for(int j = 0 ; j < level_active.width ; j++) {
 
             if (level_active.darkness[i][j] == 0) 
-                level_to_draw[i][j] = CHARACTER_EMPTY;
+                level_to_draw[i][j] = DRAW_CHARACTER_DARKNESS;
         }
     }
 }
 
 void setPlayer() {
 
-    level_to_draw[player.pos_y][player.pos_x] = CHARACTER_PLAYER;
+    level_to_draw[player.pos_y][player.pos_x] = DRAW_CHARACTER_PLAYER;
 }
 
 void drawLevel() {

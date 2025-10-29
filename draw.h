@@ -5,6 +5,16 @@
 #include "player.h"
 //#include "items.h"
 
+#define DRAW_CHARACTER_DARKNESS '*'
+#define DRAW_CHARACTER_PLAYER 'P'
+#define DRAW_CHARACTER_GROUND 255
+#define DRAW_CHARACTER_WALL 178
+#define DRAW_CHARACTER_PIT 'X'
+#define DRAW_CHARACTER_PLANK 205
+#define DRAW_CHARACTER_RELIC 232
+#define DRAW_CHARACTER_TORCH 173
+
+
 #ifndef DRAW_H
 #define DRAW_H
 

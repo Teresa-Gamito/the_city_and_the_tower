@@ -5,13 +5,18 @@
 #include "player.h"
 #include "items.h"
 #include "draw.h"
+#include "debug.h"
 
 char getInput();
 void logPrint(char * message);
 
 int main() {
+    logOpen(); // creates the log file and opens it
+
     drawStartMenu(getInput());
-    getLevelFromFile(1);
+
+    setLevelFromFile(1);
+    
     playerSpawn();
 
     while(1) {

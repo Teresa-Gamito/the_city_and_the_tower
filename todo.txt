@@ -1,0 +1,20 @@
+change visuals
+    -make them work
+    -define emojis
+
+create items
+    -player pick up mechanics (same tile)
+    -better pick up (next tiles)
+    -make items
+    -relic first
+    -then plank
+    -then torch
+
+create menus
+    -main menu
+    -options menu
+    -pause menu
+
+makefile
+    -make this thing work
+

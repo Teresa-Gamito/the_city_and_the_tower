@@ -7,6 +7,11 @@
 
 FILE *file;
 
+void debugCommand(char * msg) {
+    
+}
+
+
 void logOpen() {
 
     // Get current time

@@ -22,10 +22,10 @@ extern Level level_active; // this will be the current level
 
 // gets the level and sets it as level_active
 void loadLayoutLevel(int level_num);
-void getLevelFromFile(int level_num);
+void setLevelFromFile(int level_num);
 char * getLevelFileName(int level_num);
 
-/*
+/* Save system
 
 Here we can save the current level progress
 Will be added when working on menus
@@ -41,7 +41,7 @@ bool tileHasItem(int pos_x, int pos_y);
 int levelGetWidth();
 int levelGetHight();
 
-void processLightItems(); // will process the light coming from items
+void processLightItems(); // process the light coming from items
 
 
 

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include "level.h"
+#include "debug.h"
 
 Level level_active = {MAX_WIDTH, MAX_HEIGHT, {{0}}, {{0}}, {{0}}};
 
@@ -12,13 +13,14 @@ char * getLevelFileName(int level_num) {
     return file_name;
 }
 
-void getLevelFromFile(int level_num) {
+void setLevelFromFile(int level_num) {
 
     // open file - reading in text format
     FILE *file;
     file = fopen(getLevelFileName(level_num), "rt");
     // throw error if file cant be opened
     if(!file) perror("Error opening file");
+    else logPrints("Opened level file");
 
 
     char temp_layer[MAX_HEIGHT][MAX_WIDTH]; // temp layer
@@ -68,6 +70,8 @@ void getLevelFromFile(int level_num) {
             }
         }
     }
+
+    logPrintLevelActive();
 
     fclose(file);
 }

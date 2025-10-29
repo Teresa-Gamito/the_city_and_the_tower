@@ -9,3 +9,5 @@ void logPrintc(char message);
 void logClose();
 
 void logPrintLevelActive();
+
+void debugCommand(char * msg); // run debug commands
