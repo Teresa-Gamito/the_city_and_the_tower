@@ -13,7 +13,7 @@ void logPrint(char * message);
 int main() {
     logOpen(); // creates the log file and opens it
 
-    drawStartMenu(getInput());
+    //drawStartMenu(getInput());
 
     setLevelFromFile(1);
     
@@ -22,6 +22,7 @@ int main() {
     while(1) {
         drawLevel();
         playerMoveDirection(getInput());
+        printf("\n\n\n\n\n\n\n\n\n\n\n\n");
     }
     
     return 0;
