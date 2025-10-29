@@ -27,5 +27,10 @@ void setHighlight(int pos_x, int pos_y, char highlight_type); // set the highlig
 // Draw level
 void drawLevel();
 
+//Draw menus
+int drawStartMenu(char opt);
+void drawPauseMenu();
+void drawOptionsMenu();
+void drawCreditsMenu();
 
 #endif
