@@ -52,7 +52,7 @@ void setPlayer() {
 
 void drawLevel() {
 
-    system("cls");
+    //system("cls");
 
     setLevelToDraw();
 

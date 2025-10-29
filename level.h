@@ -5,7 +5,7 @@
 #define MAX_WIDTH 60
 #define MAX_HEIGHT 33
 
-#define LEVEL_FILE_NAME "lvl00.txt\0"
+#define LEVEL_FILE_NAME "level/lvl00.txt\0"
 
 #ifndef LEVEL_H
 #define LEVEL_H

@@ -7,8 +7,8 @@ Level level_active = {MAX_WIDTH, MAX_HEIGHT, {{0}}, {{0}}, {{0}}};
 char * getLevelFileName(int level_num) {
     // get file name - naming convention is "lvlXX" (maximum of 100 levels) 
     static char file_name[] = LEVEL_FILE_NAME;
-    file_name[4] = (level_num % 10) + '0';
-    file_name[3] = (level_num / 10) + '0';
+    file_name[10] = (level_num % 10) + '0';
+    file_name[9] = (level_num / 10) + '0';
     return file_name;
 }
 
@@ -18,7 +18,7 @@ void getLevelFromFile(int level_num) {
     FILE *file;
     file = fopen(getLevelFileName(level_num), "rt");
     // throw error if file cant be opened
-    if(!file) perror("Error opening file!");
+    if(!file) perror("Error opening file");
 
 
     char temp_layer[MAX_HEIGHT][MAX_WIDTH]; // temp layer

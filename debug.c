@@ -1,5 +1,6 @@
 
 #include <stdio.h>
+#include <time.h>
 
 #include "debug.h"
 #include "level.h"
@@ -7,7 +8,27 @@
 FILE *file;
 
 void logOpen() {
-    file = fopen(LOG_NAME, "wt");
+
+    // Get current time
+    time_t now = time(NULL);         
+    struct tm *t = localtime(&now);
+
+    // file name
+    char file_name[] = { 'l', 'o', 'g', 's', '/', 'l', 'o', 'g',
+        ((t->tm_mon + 1) / 10) + '0', 
+        ((t->tm_mon + 1) % 10) + '0', // month
+        ((t->tm_mday) / 10) + '0',
+        ((t->tm_mday) % 10) + '0',    // day
+        ((t->tm_hour) / 10) + '0',
+        ((t->tm_hour) % 10) + '0',    // hour
+        ((t->tm_min) / 10) + '0',
+        ((t->tm_min) % 10) + '0',     // minutes
+        ((t->tm_sec) / 10) + '0',
+        ((t->tm_sec) % 10) + '0'      // seconds
+    };
+
+    // open file
+    file = fopen(file_name, "at");
 }
 
 void logPrints(char * message) {
