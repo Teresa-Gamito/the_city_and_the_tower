@@ -8,7 +8,6 @@
 #include "debug.h"
 
 char getInput();
-void logPrint(char * message);
 
 int main() {
     logOpen(); // creates the log file and opens it
@@ -33,10 +32,4 @@ char getInput() {
     char input;
     scanf(" %c", &input);
     return input;
-}
-
-void logPrint(char * message) {
-    FILE *file;
-    file = fopen("log.txt\0", "wt");
-    fputs(message, file);
 }
