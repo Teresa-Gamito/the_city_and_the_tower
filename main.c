@@ -10,18 +10,20 @@
 char getInput();
 
 int main() {
+    char c;
     logOpen(); // creates the log file and opens it
-
+    printf("Hello Wizard! 🧙‍♂️\n");
     //drawStartMenu(getInput());
 
     setLevelFromFile(1);
-    
     playerSpawn();
 
     while(1) {
         drawLevel();
-        playerMoveDirection(getInput());
-        printf("\n\n\n\n\n\n\n\n\n\n\n\n");
+        c = getInput();
+        playerMoveDirection(c);
+        playerAction(c);
+        printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
     }
     
     return 0;

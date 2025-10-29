@@ -5,13 +5,14 @@
 #include "draw.h"
 #include "level.h"
 #include "player.h"
+#include "items.h"
 
 char level_to_draw[MAX_HEIGHT][MAX_WIDTH] = {{0}};
 
 void setLevelToDraw() {
 
     setTiles();
-    //setItems();
+    setItems();
     setPlayer();
     setDarkness();
 
@@ -40,6 +41,18 @@ void setDarkness() {
     }
 }
 
+void setItems() {
+
+    for(int i = 0 ; i < level_active.height ; i++) {
+
+        for(int j = 0 ; j < level_active.width ; j++) {
+
+            if (level_active.objects[i][j] != '0')
+                level_to_draw[i][j] = level_active.objects[i][j];
+        }
+    }    
+}
+
 void setPlayer() {
 
     level_to_draw[player.pos_y][player.pos_x] = DRAW_CHARACTER_PLAYER;
@@ -63,7 +76,8 @@ void drawLevel() {
     
 }
 
-int drawStartMenu(char opt) {
+
+/*int drawStartMenu(char opt) {
 
     printf("1. - Start\n2. - Options\n3. - Exit\n");
 
@@ -82,4 +96,4 @@ int drawStartMenu(char opt) {
             break;
     }
 
-}
+}*/

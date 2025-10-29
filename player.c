@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 #include "player.h"
 #include "level.h"
 
@@ -59,26 +60,6 @@ void playerMoveDirection(char dir) {
     }
 }
 
-void playerMoveUp() {
-
-    player.pos_y --;
-}
-
-void playerMoveDown() {
-
-    player.pos_y ++;
-}
-
-void playerMoveLeft() {
-
-    player.pos_x --;
-}
-
-void playerMoveRight() {
-
-    player.pos_x ++;
-}
-
 void playerMove(int pos_x, int pos_y) {
 
     player.pos_x = pos_x;
@@ -88,4 +69,42 @@ void playerMove(int pos_x, int pos_y) {
 bool playerHasItem() {
 
     return player.item != '0';
+}
+
+void playerPickUpItem(int pos_x, int pos_y) {
+
+    if(!playerHasItem() && tileHasItem(pos_x, pos_y)) {
+
+        player.item = level_active.objects[pos_y][pos_x];
+
+        level_active.objects[pos_y][pos_x] = '0';
+    }
+}
+
+void playerDropItem(int pos_x, int pos_y) {
+
+    if(playerHasItem() && !tileHasItem(pos_x, pos_y)) {
+
+        level_active.objects[pos_y][pos_x] = player.item;
+
+        player.item = '0';
+    }
+}
+
+void playerAction(char act) {
+
+        switch(act) {
+
+            case 'z':
+        case 'Z':
+
+            playerPickUpItem(player.pos_x, player.pos_y);
+            break;
+
+        case 'x':
+        case 'X':
+
+            playerDropItem(player.pos_x, player.pos_y);
+            break;
+        }
 }

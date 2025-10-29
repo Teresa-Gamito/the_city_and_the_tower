@@ -23,12 +23,9 @@ void playerSpawn();
 void playerMove(int pos_x, int pos_y); // move the player
 // other redundant functions
 void playerMoveDirection(char dir);
-void playerMoveUp();
-void playerMoveDown();
-void playerMoveLeft();
-void playerMoveRight();
 
 // item related actions
+void playerAction(char act);
 bool playerHasItem(); // return true if the player has an item
 void playerPickUpItem(int pos_x, int pos_y); // grabs an item from the stack
 void playerDropItem(int pos_x, int pos_y); // puts an item on the stack
