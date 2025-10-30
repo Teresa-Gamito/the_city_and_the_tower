@@ -1,14 +1,14 @@
 change visuals
-    -make them work
-    -define emojis
+    -make them work - saturday R
+    -define emojis - saturday R
 
 create items
     -player pick up mechanics (same tile)
     -better pick up (next tiles)
     -make items
     -relic first
-    -then plank
-    -then torch
+    -then plank - friday R
+    -then torch - friday T
 
 create menus
     -main menu
