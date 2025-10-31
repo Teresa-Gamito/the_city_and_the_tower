@@ -31,6 +31,8 @@ void setTiles() {
 
 void setDarkness() {
     
+    lightPorcessLayers();
+    
     for(int i = 0 ; i < level_active.height ; i++) {
 
         for(int j = 0 ; j < level_active.width ; j++) {

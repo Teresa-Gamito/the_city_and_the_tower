@@ -4,7 +4,9 @@
         "level.h": "c",
         "items.h": "c",
         "stdio.h": "c",
-        "player.h": "c"
+        "player.h": "c",
+        "corecrt_stdio_config.h": "c",
+        "cmath": "c"
     },
     "makefile.configureOnOpen": true
 }

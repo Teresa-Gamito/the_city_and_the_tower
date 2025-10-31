@@ -1,11 +1,12 @@
 
 #include <stdio.h>
+#include <stdarg.h>
 #include <time.h>
 
 #include "debug.h"
 #include "level.h"
 
-FILE *file;
+FILE *logFile;
 
 void debugCommand(char * msg) {
     
@@ -19,62 +20,54 @@ void logOpen() {
     struct tm *t = localtime(&now);
 
     // file name
-    char file_name[] = { 'l', 'o', 'g', 's', '/', 'l', 'o', 'g',
-        ((t->tm_mon + 1) / 10) + '0', 
-        ((t->tm_mon + 1) % 10) + '0', // month
-        ((t->tm_mday) / 10) + '0',
-        ((t->tm_mday) % 10) + '0',    // day
-        ((t->tm_hour) / 10) + '0',
-        ((t->tm_hour) % 10) + '0',    // hour
-        ((t->tm_min) / 10) + '0',
-        ((t->tm_min) % 10) + '0',     // minutes
-        ((t->tm_sec) / 10) + '0',
-        ((t->tm_sec) % 10) + '0'      // seconds
-    };
+    char file_name[30];
+    sprintf(file_name, "logs/log%02d%02d%02d%02d.txt\0", 
+        t->tm_mon + 1,  //month
+        t->tm_mday,     //day
+        t->tm_hour,     //hour
+        t->tm_min,      //min
+        t->tm_sec);     //sec
 
     // open file
-    file = fopen(file_name, "at");
+    logFile = fopen(file_name, "at");
 }
 
-void logPrints(char * message) {
-    fputs(message, file);
-    fputc('\n', file);
-}
-
-void logPrintc(char message) {
-    fputc(message, file);
-
+void logPrint(char * message,...) {
+    va_list args;
+    va_start(args, message);
+    vfprintf(logFile, message, args);
+    va_end(args);
 }
 
 void logClose() {
-    fclose(file);
+    fclose(logFile);
 }
 
 void logPrintLevelActive() {
 
-    logPrints("level_active : \nTiles :");
+    logPrint("level_active : \nTiles :\n");
 
     for (int i = 0; i < level_active.height; i++) {
         for (int j = 0; j < level_active.width; j++) {
-            logPrintc(level_active.tiles[i][j]);
+            logPrint("%c", level_active.tiles[i][j]);
         }
-        logPrintc('\n');
+        logPrint("\n");
     }
-    logPrints("Objects :");
+    logPrint("Objects :\n");
 
     for (int i = 0; i < level_active.height; i++) {
         for (int j = 0; j < level_active.width; j++) {
-            logPrintc(level_active.objects[i][j]);
+            logPrint("%c", level_active.objects[i][j]);
         }
-        logPrintc('\n');
+        logPrint("\n");
     }
-    logPrints("Darkness :");
+    logPrint("Darkness :\n");
 
     for (int i = 0; i < level_active.height; i++) {
         for (int j = 0; j < level_active.width; j++) {
-            logPrintc(level_active.darkness[i][j] + '0');
+            logPrint("%d", level_active.darkness[i][j]);
         }
-        logPrintc('\n');
+        logPrint("\n");
     }
-    logPrintc('\n');
+    logPrint("\n");
 }

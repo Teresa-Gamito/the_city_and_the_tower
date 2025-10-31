@@ -1,15 +1,19 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <math.h>
+
 #include "level.h"
 #include "debug.h"
+#include "player.h"
 
 Level level_active = {MAX_WIDTH, MAX_HEIGHT, {{0}}, {{0}}, {{0}}};
+bool level_active_starting_darkness[MAX_WIDTH][MAX_HEIGHT];
 
 char * getLevelFileName(int level_num) {
     // get file name - naming convention is "lvlXX" (maximum of 100 levels) 
-    static char file_name[] = LEVEL_FILE_NAME;
-    file_name[10] = (level_num % 10) + '0';
-    file_name[9] = (level_num / 10) + '0';
+    static char file_name[17];
+    sprintf(file_name, LEVEL_FILE_NAME, level_num);
+    logPrint("%s\n", file_name);
     return file_name;
 }
 
@@ -20,7 +24,7 @@ void setLevelFromFile(int level_num) {
     file = fopen(getLevelFileName(level_num), "rt");
     // throw error if file cant be opened
     if(!file) perror("Error opening file");
-    else logPrints("Opened level file");
+    else logPrint("Opened level file\n");
 
 
     char temp_layer[MAX_HEIGHT][MAX_WIDTH]; // temp layer
@@ -65,12 +69,12 @@ void setLevelFromFile(int level_num) {
 
                     case 2: // set the darkness layer
                     level_active.darkness[i][j] = temp_layer[i][j] - '0';
+                    level_active_starting_darkness[i][j] = temp_layer[i][j] - '0';
                     break;
                 }
             }
         }
     }
-
     logPrintLevelActive();
 
     fclose(file);
@@ -84,4 +88,62 @@ bool tileIsWalkable(int pos_x, int pos_y) {
 bool tileHasItem(int pos_x, int pos_y) {
 
     return level_active.objects[pos_y][pos_x] != '0';
+}
+
+void lightReset() {
+
+    for (int i = 0; i < level_active.height; i++) {
+        for (int j = 0; j < level_active.width; j++) {
+
+            level_active.darkness[i][j] = level_active_starting_darkness[i][j];
+
+        }
+    }
+
+}
+
+void lightPorcessLayers() {
+
+    logPrint("Processing light\n");
+
+    lightReset();
+    
+    for (int i = 0; i < level_active.height; i++) {
+        for (int j = 0; j < level_active.width; j++) {
+
+            if (level_active.objects[i][j] == CHAR_TORCH) {
+                lightProcess(j, i, LIGHT_RADIUS_TORCH);
+            }
+            else if (level_active.tiles[i][j] == CHAR_WALL_TORCH) {
+                lightProcess(j, i, LIGHT_RADIUS_WALL_TORCH);
+            }
+
+        }
+    }
+    if (player.item == ITEM_TORCH) {
+        lightProcess(player.pos_x, player.pos_y, LIGHT_RADIUS_TORCH);
+        logPrint("Processing player light\n");
+    }
+    logPrint("\n");
+}
+
+void lightProcess(int pos_x, int pos_y, double light_radius) {
+
+    logPrint("Light source at position x:%d y:%d\n", pos_x, pos_y);
+
+    for (int i = -light_radius; i <= light_radius; i++) {
+        for (int j = -light_radius; j <= light_radius; j++) {
+
+            if (getDistance(0, 0, j, i) <= light_radius)
+
+                level_active.darkness[pos_y + i][pos_x + j] = 1; 
+
+        }
+    }
+}
+
+double getDistance(int pos1_x, int pos1_y, int pos2_x, int pos2_y) {
+
+    return sqrt(pow(abs(pos1_x - pos2_x), 2) + pow(abs(pos1_y - pos2_y), 2));
+
 }

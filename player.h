@@ -2,6 +2,11 @@
 
 //#include "level.h"
 
+// labels for item characters
+#define ITEM_TORCH 'T'
+#define ITEM_PLANK 'L'
+#define ITEM_RELIC 'R'
+
 #ifndef PLAYER_H
 #define PLAYER_H
 

@@ -46,7 +46,7 @@ void playerMoveDirection(char dir) {
         case 'A':
             if(tileIsWalkable(player.pos_x - 1, player.pos_y)) {
                 
-            player.pos_x--;
+                player.pos_x--;
             }
             break;
 
@@ -54,7 +54,7 @@ void playerMoveDirection(char dir) {
         case 'D':
             if(tileIsWalkable(player.pos_x + 1, player.pos_y)) {
                 
-            player.pos_x++;
+                player.pos_x++;
             }
             break;
     }
