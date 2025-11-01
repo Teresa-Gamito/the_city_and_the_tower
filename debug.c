@@ -36,6 +36,7 @@ void logPrint(char * message,...) {
     va_list args;
     va_start(args, message);
     vfprintf(logFile, message, args);
+    fflush(logFile);
     va_end(args);
 }
 

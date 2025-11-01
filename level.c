@@ -28,27 +28,27 @@ void setLevelFromFile(int level_num) {
 
 
     char temp_layer[MAX_HEIGHT][MAX_WIDTH]; // temp layer
-    char c; // temp char holder
+    char temp_char; // temp char holder
     
     
-    for (int k = 0; k < 3; k++) { // iterate for each layer
+    for (int k = 0; k < MAX_LAYERS; k++) { // iterate for each layer
 
         // Create temp_layer with current layer
         for (int i = 0; i < level_active.height + 1; i++) { // iterate for each row
             for (int j = 0; j < level_active.width + 1; j++) { // iterate for each column
 
-                c = fgetc(file);
+                temp_char = fgetc(file);
             
-                if (c == '\n') { // if its the end of the line
+                if (temp_char == '\n') { // if its the end of the line
                     if (k == 0 && i == 0) level_active.width = j; // get the width of the first row
                     break;
                 }
-                else if (c == '-' || c == EOF) { // if its the end of the layer or end of file
+                else if (temp_char == '-' || temp_char == EOF) { // if its the end of the layer or end of file
                     if (k == 0) level_active.height = i; // get the height of thee first column
                     fgetc(file); // skip the '\n' that comes after '-'
                     goto break2; // break twice
                 }
-                else temp_layer[i][j] = c;
+                else temp_layer[i][j] = temp_char;
             }
         }
 

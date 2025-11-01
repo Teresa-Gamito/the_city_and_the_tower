@@ -3,6 +3,7 @@
 
 #define MAX_WIDTH 60
 #define MAX_HEIGHT 33
+#define MAX_LAYERS 3
 
 #define LEVEL_FILE_NAME "level/lvl%02d.txt\0"
 
