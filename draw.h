@@ -5,7 +5,7 @@
 #include "player.h"
 //#include "items.h"
 
-#define DRAW_CHARACTER_DARKNESS '*'
+#define DRAW_CHARACTER_LIGHT '*'
 #define DRAW_CHARACTER_PLAYER 'P'
 #define DRAW_CHARACTER_GROUND 255
 #define DRAW_CHARACTER_WALL 178
@@ -24,14 +24,14 @@
 extern char level_to_draw[MAX_HEIGHT][MAX_WIDTH];
 
 // needs changing
-// Draw order: Tiles -> Items -> Player -> Darkness -> Highlight
+// Draw order: Tiles -> Items -> Player -> light -> Highlight
 void setLevelToDraw(); // to set the following functions in order
 
 // This actions will be set in this order to print
 void setTiles(); // set the Tiles layer
 void setItems(); // set the items
 void setPlayer(); // set the player
-void setDarkness(); // set the Darkness layer
+void setLight(); // set the light layer
 void setHighlight(int pos_x, int pos_y, char highlight_type); // set the highlighting
 
 // Draw level

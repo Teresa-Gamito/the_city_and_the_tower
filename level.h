@@ -23,9 +23,9 @@
 #define CHAR_TORCH 'T'
 #define CHAR_PLANK 'L'
 #define CHAR_EMPTY '0'
-// darkness layer
-#define CHAR_LIT 1
-#define CHAR_UNLIT 0
+// light layer
+#define CHAR_LIT '1'
+#define CHAR_UNLIT '0'
 
 #ifndef LEVEL_H
 #define LEVEL_H
@@ -35,37 +35,38 @@ typedef struct {
     int height;
     char tiles[MAX_HEIGHT][MAX_WIDTH]; // this includes tiles
     char objects[MAX_HEIGHT][MAX_WIDTH]; // this includes only items and the player
-    bool darkness[MAX_HEIGHT][MAX_WIDTH]; // setting this layer allows to define permanently lit spaces
+    char light[MAX_HEIGHT][MAX_WIDTH]; // setting this layer allows to define permanently lit spaces
+    char starting_light[MAX_HEIGHT][MAX_WIDTH];
 } Level;
 
 extern Level level_active; // this will be the current level
 
-// gets the level and sets it as level_active
-void loadLayoutLevel(int level_num);
-void setLevelFromFile(int level_num);
-char * getLevelFileName(int level_num);
+// file interaction
+char * levelFileGetName(int level_num);
+FILE * levelFileOpen(int level_num);
+void levelFileClose(FILE * level_file);
 
-/* Save system
+// set level_active structure
+void levelFileGetLayerNext(FILE * level_file, char layer[MAX_HEIGHT][MAX_WIDTH]); // get next layer from file
+void levelActiveSetFromFile(int level_num); // sets the active level as the one from the file
 
-Here we can save the current level progress
-Will be added when working on menus
+// gets current level size
+int levelFileGetWidth(int level_num);
+int levelFileGetHight(int level_num);
 
-*/
-
-// ===== Get info from level =====
-// checks for specific positions within the level selected
+// checks for specific tiles
 bool tileIsWalkable(int pos_x, int pos_y);
 bool tileHasItem(int pos_x, int pos_y);
 
-// gets current level size
-int levelGetWidth();
-int levelGetHight();
 
+
+// light
 void lightReset(); // resets light to starting values
 void lightPorcessLayers(); // find light emitting tiles and process the light coming from them
 void lightProcess(int pos_x, int pos_y, double light_radius); // from a light source, set the surrounding tiles as lit
 
 // other functions
+void layerCopy(char * layer_to_copy, char * layer_destiny, int max_width, int max_height);
 double getDistance(int pos1_x, int pos1_y, int pos2_x, int pos2_y); // get distance btwwen two points
 
 #endif

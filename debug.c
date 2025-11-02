@@ -44,6 +44,17 @@ void logClose() {
     fclose(logFile);
 }
 
+void logPrintLayer(char layer[33][60], int width, int height) {
+    printf("test");
+
+    for (int i = 0; i < height; i++) {
+        for (int j = 0; j < width; j++) {
+            logPrint("%c", layer[i][j]);
+        }
+        logPrint("\n");
+    }
+}
+
 void logPrintLevelActive() {
 
     logPrint("level_active : \nTiles :\n");
@@ -66,7 +77,7 @@ void logPrintLevelActive() {
 
     for (int i = 0; i < level_active.height; i++) {
         for (int j = 0; j < level_active.width; j++) {
-            logPrint("%d", level_active.darkness[i][j]);
+            logPrint("%d", level_active.light[i][j]);
         }
         logPrint("\n");
     }

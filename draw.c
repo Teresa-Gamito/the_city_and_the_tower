@@ -14,7 +14,7 @@ void setLevelToDraw() {
     setTiles();
     setItems();
     setPlayer();
-    setDarkness();
+    setLight();
 
 }
 
@@ -29,7 +29,7 @@ void setTiles() {
     }
 }
 
-void setDarkness() {
+void setLight() {
     
     lightPorcessLayers();
     
@@ -37,8 +37,8 @@ void setDarkness() {
 
         for(int j = 0 ; j < level_active.width ; j++) {
 
-            if (level_active.darkness[i][j] == 0) 
-                level_to_draw[i][j] = DRAW_CHARACTER_DARKNESS;
+            if (level_active.light[i][j] == '0') 
+                level_to_draw[i][j] = DRAW_CHARACTER_LIGHT;
         }
     }
 }

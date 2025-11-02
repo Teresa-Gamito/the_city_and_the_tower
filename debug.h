@@ -11,6 +11,7 @@ void logOpen();
 void logPrint(char * message,...);
 void logClose();
 
+void logPrintLayer(char layer[33][60], int width, int height);
 void logPrintLevelActive();
 
 void debugCommand(char * msg); // run debug commands

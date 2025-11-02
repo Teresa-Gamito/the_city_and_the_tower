@@ -15,7 +15,7 @@ int main() {
     logPrint("Game start\n\n");
     //drawStartMenu(getInput());
     
-    setLevelFromFile(1);
+    levelActiveSetFromFile(1);
     playerSpawn();
 
     while(1) {
