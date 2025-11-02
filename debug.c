@@ -21,7 +21,7 @@ void logOpen() {
 
     // file name
     char file_name[30];
-    sprintf(file_name, "logs/log%02d%02d%02d%02d.txt\0", 
+    sprintf(file_name, LOG_NAME, 
         t->tm_mon + 1,  //month
         t->tm_mday,     //day
         t->tm_hour,     //hour

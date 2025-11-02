@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdarg.h>
 
+#define LOG_NAME "logs/log%02d%02d%02d%02d%02d.txt\0"
+
 #ifndef DEBUG_H
 #define DEBUG_H
 

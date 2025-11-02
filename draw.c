@@ -7,7 +7,7 @@
 #include "player.h"
 #include "items.h"
 
-char level_to_draw[MAX_HEIGHT][MAX_WIDTH] = {{0}};
+char level_to_draw[MAX_HEIGHT][MAX_WIDTH][EMOJI_SIZE] = {{0}};
 
 void setLevelToDraw() {
 
@@ -24,7 +24,17 @@ void setTiles() {
 
         for(int j = 0 ; j < level_active.width ; j++) {
 
-            level_to_draw[i][j] = level_active.tiles[i][j];
+            switch (level_active.tiles[i][j]) {
+                case CHAR_WALL:
+                sprintf(level_to_draw[i][j], DRAW_CHARACTER_WALL);
+                break;
+                case CHAR_PIT:
+                sprintf(level_to_draw[i][j], DRAW_CHARACTER_PIT);
+                break;
+                case CHAR_GROUND:
+                sprintf(level_to_draw[i][j], DRAW_CHARACTER_GROUND);
+                break;
+            }
         }
     }
 }
@@ -37,8 +47,8 @@ void setLight() {
 
         for(int j = 0 ; j < level_active.width ; j++) {
 
-            if (level_active.light[i][j] == '0') 
-                level_to_draw[i][j] = DRAW_CHARACTER_LIGHT;
+            if (level_active.light[i][j] == CHAR_UNLIT) 
+                sprintf(level_to_draw[i][j], DRAW_CHARACTER_DARK);
         }
     }
 }
@@ -49,15 +59,25 @@ void setItems() {
 
         for(int j = 0 ; j < level_active.width ; j++) {
 
-            if (level_active.objects[i][j] != '0')
-                level_to_draw[i][j] = level_active.objects[i][j];
+            switch (level_active.objects[i][j]) {
+                case CHAR_PLANK:
+                sprintf(level_to_draw[i][j], DRAW_CHARACTER_PLANK);
+                break;
+                case CHAR_TORCH:
+                sprintf(level_to_draw[i][j], DRAW_CHARACTER_TORCH);
+                break;
+                case CHAR_RELIC:
+                sprintf(level_to_draw[i][j], DRAW_CHARACTER_RELIC);
+                break;
+            }
+
         }
     }    
 }
 
 void setPlayer() {
 
-    level_to_draw[player.pos_y][player.pos_x] = DRAW_CHARACTER_PLAYER;
+    sprintf(level_to_draw[player.pos_y][player.pos_x], DRAW_CHARACTER_PLAYER);
 }
 
 void drawLevel() {
@@ -70,7 +90,7 @@ void drawLevel() {
 
         for(int j = 0 ; j < level_active.width ; j++) {
 
-            printf("%c ", level_to_draw[i][j]);
+            printf("%s", level_to_draw[i][j]);
         }
     
         printf("\n");

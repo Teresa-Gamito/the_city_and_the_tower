@@ -1,20 +1,29 @@
-change visuals
-    -make them work - saturday R
-    -define emojis - saturday R
+Priority of features (in this order):
 
-create items
-    -player pick up mechanics (same tile)
-    -better pick up (next tiles)
-    -make items
-    -relic first
-    -then plank - friday R
-    -then torch - friday T
+ - showing the level - done
+ - player movement and collisions - done
+ R plank + pit mechanics
+ R interaction highlighting
+ T simple darkness mechanics
+ T torch implementation
+ - good level design 
+(until here we can have a okay product)
 
-create menus
-    -main menu
-    -options menu
-    -pause menu
+ T wall torches
+ T relic item (without level transformation)
+ T level transformation
+ - even better level design 
+(until here we can have a good product)
 
-makefile
-    -make this thing work
+ R basic menu
+ - better visuals (for clarity and easy reading) - done
+ R pause menu
+ R settings menus
+(until here we can get an ideal product)
 
+ - loading levels from files - done
+ T saving system
+ - visual extras
+ T debugging commands
+ - log file system - done
+ - other extras 

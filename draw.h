@@ -5,14 +5,31 @@
 #include "player.h"
 //#include "items.h"
 
-#define DRAW_CHARACTER_LIGHT '*'
-#define DRAW_CHARACTER_PLAYER 'P'
-#define DRAW_CHARACTER_GROUND 255
-#define DRAW_CHARACTER_WALL 178
-#define DRAW_CHARACTER_PIT 'X'
-#define DRAW_CHARACTER_PLANK 205
-#define DRAW_CHARACTER_RELIC 'R'
-#define DRAW_CHARACTER_TORCH 173
+// tiles
+#define DRAW_CHARACTER_WALL "🟨"
+#define DRAW_CHARACTER_GROUND "⬜"
+#define DRAW_CHARACTER_PIT "🟥"
+// objects
+#define DRAW_CHARACTER_PLAYER "🐐"
+#define DRAW_CHARACTER_PLANK "📏"
+#define DRAW_CHARACTER_RELIC "🏆"
+#define DRAW_CHARACTER_TORCH "💡"
+// light
+#define DRAW_CHARACTER_DARK "⬛"
+
+/* // tiles
+#define DRAW_CHARACTER_WALL "a"
+#define DRAW_CHARACTER_GROUND "b"
+#define DRAW_CHARACTER_PIT "c"
+// objects
+#define DRAW_CHARACTER_PLAYER "d"
+#define DRAW_CHARACTER_PLANK "e"
+#define DRAW_CHARACTER_RELIC "f"
+#define DRAW_CHARACTER_TORCH "g"
+// light
+#define DRAW_CHARACTER_DARK "h" */
+
+#define EMOJI_SIZE 5
 
 
 #ifndef DRAW_H
@@ -21,7 +38,7 @@
 
 // ===== prepare level to be drawn =====
 // this matrix will be updated with each added layer
-extern char level_to_draw[MAX_HEIGHT][MAX_WIDTH];
+extern char level_to_draw[MAX_HEIGHT][MAX_WIDTH][EMOJI_SIZE];
 
 // needs changing
 // Draw order: Tiles -> Items -> Player -> light -> Highlight

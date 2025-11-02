@@ -42,7 +42,7 @@ void levelFileClose(FILE * level_file) {
 }
 
 
-void fileGetLayerNext(FILE * level_file, char layer[MAX_HEIGHT][MAX_WIDTH]) {
+void levelFileGetLayerNext(FILE * level_file, char layer[MAX_HEIGHT][MAX_WIDTH]) {
 
     logPrint("Getting next layer\n");
 
