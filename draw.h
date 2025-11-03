@@ -6,7 +6,7 @@
 //#include "items.h"
 
 // tiles
-#define DRAW_CHARACTER_WALL "🟨"
+#define DRAW_CHARACTER_WALL "❌"
 #define DRAW_CHARACTER_GROUND "⬜"
 #define DRAW_CHARACTER_PIT "🟥"
 // objects
@@ -18,9 +18,9 @@
 #define DRAW_CHARACTER_DARK "⬛"
 
 /* // tiles
-#define DRAW_CHARACTER_WALL "a"
-#define DRAW_CHARACTER_GROUND "b"
-#define DRAW_CHARACTER_PIT "c"
+#define DRAW_CHARACTER_WALL "X"
+#define DRAW_CHARACTER_GROUND "."
+#define DRAW_CHARACTER_PIT "O"
 // objects
 #define DRAW_CHARACTER_PLAYER "d"
 #define DRAW_CHARACTER_PLANK "e"
@@ -38,7 +38,7 @@
 
 // ===== prepare level to be drawn =====
 // this matrix will be updated with each added layer
-extern char level_to_draw[MAX_HEIGHT][MAX_WIDTH][EMOJI_SIZE];
+extern char level_to_draw[MAX_HEIGHT][MAX_WIDTH];
 
 // needs changing
 // Draw order: Tiles -> Items -> Player -> light -> Highlight
@@ -53,6 +53,7 @@ void setHighlight(int pos_x, int pos_y, char highlight_type); // set the highlig
 
 // Draw level
 void drawLevel();
+void printEmoji(char character);
 
 //Draw menus
 int drawStartMenu(char opt);

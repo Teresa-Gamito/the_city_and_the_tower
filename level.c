@@ -149,15 +149,19 @@ int levelFileGetHight(int level_num) {
 
 bool tileIsWalkable(int pos_x, int pos_y) {
 
-    return level_active.tiles[pos_y][pos_x] != 'W' 
-        && level_active.tiles[pos_y][pos_x] != 'P' 
-        && level_active.light[pos_y][pos_x] != '0';
+    return level_active.tiles[pos_y][pos_x] != CHAR_WALL 
+        && level_active.tiles[pos_y][pos_x] != CHAR_PIT 
+        && level_active.light[pos_y][pos_x] != CHAR_UNLIT;
 
 }
 
 bool tileHasItem(int pos_x, int pos_y) {
 
-    return level_active.objects[pos_y][pos_x] != '0';
+    return level_active.objects[pos_y][pos_x] != CHAR_EMPTY;
+}
+
+bool tileBlocksLight(int pos_x, int pos_y) {
+    return level_active.tiles[pos_y][pos_x] != CHAR_WALL;
 }
 
 
@@ -206,11 +210,35 @@ void lightProcess(int pos_x, int pos_y, double light_radius) {
         for (int j = -light_radius; j <= light_radius; j++) {
 
             if (getDistance(0, 0, j, i) <= light_radius)
-
-                level_active.light[pos_y + i][pos_x + j] = '1'; 
+                //if (!lightHasCollision(pos_x, pos_y, pos_x + i, pos_y + j))
+                    level_active.light[pos_y + i][pos_x + j] = CHAR_LIT; 
 
         }
     }
+}
+
+bool lightHasCollision(int pos_source_x, int pos_source_y, int pos_final_x, int pos_final_y) {
+    
+    double distance = getDistance(pos_source_x, pos_source_y, pos_final_x, pos_final_y);
+    double angle = atan2(abs(pos_final_y - pos_source_y), abs(pos_final_x - pos_source_x));
+
+    double increment = 0.1;
+
+    int x, y;
+
+    printf("   %f   ", distance);
+
+
+    for (double d = 0; d < distance; d += increment) {
+
+
+        x = pos_source_x + roundToInt(d * cos(angle));
+        printf("%f", roundToInt(d * cos(angle)));
+
+        y = pos_source_y + roundToInt(d * sin(angle));
+        //if (tileBlocksLight(x, y)) return 1;
+    }
+    return 0;
 }
 
 
@@ -223,5 +251,11 @@ void layerCopy(char * layer_source, char * layer_destiny, int max_width, int max
 double getDistance(int pos1_x, int pos1_y, int pos2_x, int pos2_y) {
 
     return sqrt(pow(abs(pos1_x - pos2_x), 2) + pow(abs(pos1_y - pos2_y), 2));
+
+}
+
+int roundToInt(double x) {
+    if (x - ((int) x) < 0.5) return (int) x;
+    return ((int) x) + 1;
 
 }

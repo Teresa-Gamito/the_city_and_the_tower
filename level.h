@@ -14,7 +14,7 @@
 // these are the characters read from the lvl.txt file
 // tiles layer
 #define CHAR_WALL 'W'
-#define CHAR_GROUND '0'
+#define CHAR_GROUND 'G'
 #define CHAR_PIT 'P'
 #define CHAR_WALL_TORCH 'T'
 // objects layer
@@ -57,6 +57,7 @@ int levelFileGetHight(int level_num);
 // checks for specific tiles
 bool tileIsWalkable(int pos_x, int pos_y);
 bool tileHasItem(int pos_x, int pos_y);
+bool tileBlocksLight(int pos_x, int pox_y);
 
 
 
@@ -64,9 +65,11 @@ bool tileHasItem(int pos_x, int pos_y);
 void lightReset(); // resets light to starting values
 void lightPorcessLayers(); // find light emitting tiles and process the light coming from them
 void lightProcess(int pos_x, int pos_y, double light_radius); // from a light source, set the surrounding tiles as lit
+bool lightHasCollision(int pos_source_x, int pos_source_y, int pos_final_x, int pos_final_y);
 
 // other functions
 void layerCopy(char * layer_to_copy, char * layer_destiny, int max_width, int max_height);
 double getDistance(int pos1_x, int pos1_y, int pos2_x, int pos2_y); // get distance btwwen two points
+int roundToInt(double x);
 
 #endif

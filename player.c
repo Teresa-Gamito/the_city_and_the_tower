@@ -17,6 +17,8 @@ void playerSpawn() {
                 player.pos_y = i;
 
                 level_active.objects[i][j] = '0';
+                
+                return;
             }
         }
     }
