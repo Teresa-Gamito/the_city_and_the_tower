@@ -58,7 +58,7 @@ void itemDrop(int pos_x, int pos_y) {
 
     if (itemCanBeDropped(pos_x, pos_y, player.item)) {
 
-        if (player.item == CHAR_PLANK) {
+        if (player.item == CHAR_PLANK && level_active.tiles[pos_y][pos_y] == CHAR_PIT) {
 
             level_active.tiles[pos_y][pos_x] = CHAR_PLANK_TILE;
 
