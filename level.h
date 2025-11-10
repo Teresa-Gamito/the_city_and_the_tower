@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+#define SIGN(x) x < 0 ? -1 : x > 0 ? 1 : 0
+
 #define MAX_WIDTH 60
 #define MAX_HEIGHT 33
 #define MAX_LAYERS 3
@@ -15,8 +17,9 @@
 // tiles layer
 #define CHAR_WALL 'W'
 #define CHAR_GROUND 'G'
-#define CHAR_PIT 'P'
+#define CHAR_PIT 'V'
 #define CHAR_WALL_TORCH 'T'
+#define CHAR_PLANK_TILE 'Y'
 // objects layer
 #define CHAR_PLAYER 'P'
 #define CHAR_RELIC 'R'
@@ -26,6 +29,8 @@
 // light layer
 #define CHAR_LIT '1'
 #define CHAR_UNLIT '0'
+// highlight
+#define CHAR_HIGHLIGHT 'H'
 
 #ifndef LEVEL_H
 #define LEVEL_H

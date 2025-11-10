@@ -3,14 +3,14 @@
 
 #include "level.h"
 #include "player.h"
-#include "items.h"
 #include "draw.h"
 #include "debug.h"
 
 char getInput();
 
+void actionFromInput(char input);
+
 int main() {
-    char c;
     logOpen(); // creates the log file and opens it
     logPrint("Game start\n\n");
     //drawStartMenu(getInput());
@@ -22,9 +22,10 @@ int main() {
 
         drawLevel();
 
-        c = getInput();
-        playerMoveDirection(c);
-        playerAction(c);
+        actionFromInput(getInput());
+        
+
+        
         
         printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
     }
@@ -37,4 +38,15 @@ char getInput() {
     char input;
     scanf(" %c", &input);
     return input;
+}
+
+void actionFromInput(char input) {
+
+    if (highlight.is_on) {
+        highlightAction(input);
+    }
+    else {
+        playerAction(input);
+    }
+    
 }

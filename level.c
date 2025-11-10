@@ -157,11 +157,12 @@ bool tileIsWalkable(int pos_x, int pos_y) {
 
 bool tileHasItem(int pos_x, int pos_y) {
 
-    return level_active.objects[pos_y][pos_x] != CHAR_EMPTY;
+    return level_active.objects[pos_y][pos_x] != CHAR_EMPTY || 
+        level_active.tiles[pos_x][pos_y] == CHAR_PLANK_TILE;
 }
 
 bool tileBlocksLight(int pos_x, int pos_y) {
-    return level_active.tiles[pos_y][pos_x] != CHAR_WALL;
+    return level_active.tiles[pos_y][pos_x] == CHAR_WALL;
 }
 
 
@@ -222,21 +223,25 @@ bool lightHasCollision(int pos_source_x, int pos_source_y, int pos_final_x, int 
     double distance = getDistance(pos_source_x, pos_source_y, pos_final_x, pos_final_y);
     double angle = atan2(abs(pos_final_y - pos_source_y), abs(pos_final_x - pos_source_x));
 
+    printf("xs:%d  ys:%d   ", pos_source_x,pos_source_y);
+    printf("xf:%d  yf:%d   ", pos_final_x, pos_final_y);
+    printf("distance:%f  angle:%f\n", distance, angle);
+
+
     double increment = 0.1;
 
     int x, y;
-
-    printf("   %f   ", distance);
 
 
     for (double d = 0; d < distance; d += increment) {
 
 
-        x = pos_source_x + roundToInt(d * cos(angle));
-        printf("%f", roundToInt(d * cos(angle)));
+        x = pos_source_x + roundToInt(d * sin(angle));
+        y = pos_source_y + roundToInt(d * cos(angle));
 
-        y = pos_source_y + roundToInt(d * sin(angle));
-        //if (tileBlocksLight(x, y)) return 1;
+        printf("x:%d  y:%d   \n", x,y);
+
+        if (tileBlocksLight(x, y)) return 1;
     }
     return 0;
 }
@@ -256,6 +261,6 @@ double getDistance(int pos1_x, int pos1_y, int pos2_x, int pos2_y) {
 
 int roundToInt(double x) {
     if (x - ((int) x) < 0.5) return (int) x;
-    return ((int) x) + 1;
-
+    return ((int) x) + SIGN(x);
 }
+

@@ -1,11 +1,9 @@
 #include <stdio.h>
-
 #include <stdlib.h>
 
 #include "draw.h"
 #include "level.h"
 #include "player.h"
-#include "items.h"
 
 char level_to_draw[MAX_HEIGHT][MAX_WIDTH] = {{0}};
 
@@ -15,6 +13,7 @@ void setLevelToDraw() {
     setItems();
     setPlayer();
     setLight();
+    setHighlight();
 
 }
 
@@ -57,6 +56,10 @@ void setPlayer() {
     level_to_draw[player.pos_y][player.pos_x] = CHAR_PLAYER;
 }
 
+void setHighlight() {
+    if (highlight.is_on) level_to_draw[highlight.pos_y][highlight.pos_x] = CHAR_HIGHLIGHT;
+}
+
 void drawLevel() {
 
     //system("cls");
@@ -86,9 +89,13 @@ void printEmoji(char character) {
         printf(DRAW_CHARACTER_GROUND);
         break;
 
-        /* case CHAR_PIT:
+        case CHAR_PIT:
         printf(DRAW_CHARACTER_PIT);
-        break; */
+        break;
+
+        case CHAR_PLANK_TILE: 
+        printf(DRAW_CHARACTER_PLANK_TILE); 
+        break;
 
         /* case CHAR_WALL_TORCH:
         printf(DRAW_CHARACTER_WALL_TORCH);
@@ -112,6 +119,12 @@ void printEmoji(char character) {
 
         case CHAR_UNLIT:
         printf(DRAW_CHARACTER_DARK);
+        break;
+
+        case CHAR_HIGHLIGHT:
+        if (!playerCanDropItem(highlight.pos_x, highlight.pos_y) && playerHasItem()) printf(DRAW_CHARACTER_HIGHLIGHT_RED);
+        else if (!playerHasItem()) printf(DRAW_CHARACTER_HIGHLIGHT_GREEN);
+        else printf(DRAW_CHARACTER_HIGHLIGHT_YELLOW);
         break;
     }
 }
