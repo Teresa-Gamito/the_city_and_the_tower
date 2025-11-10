@@ -1,16 +1,12 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#define SIGN(x) x < 0 ? -1 : x > 0 ? 1 : 0
-
 #define MAX_WIDTH 60
 #define MAX_HEIGHT 33
 #define MAX_LAYERS 3
 
-#define LEVEL_FILE_NAME "level/lvl%02d.txt\0"
+#define LEVEL_FILE_NAME "../level/lvl%02d.txt\0"
 
-#define LIGHT_RADIUS_TORCH 3.17
-#define LIGHT_RADIUS_WALL_TORCH 3.17
 
 // labels for level creation
 // these are the characters read from the lvl.txt file
@@ -63,14 +59,7 @@ int levelFileGetHight(int level_num);
 bool tileIsWalkable(int pos_x, int pos_y);
 bool tileHasItem(int pos_x, int pos_y);
 bool tileBlocksLight(int pos_x, int pox_y);
-
-
-
-// light
-void lightReset(); // resets light to starting values
-void lightPorcessLayers(); // find light emitting tiles and process the light coming from them
-void lightProcess(int pos_x, int pos_y, double light_radius); // from a light source, set the surrounding tiles as lit
-bool lightHasCollision(int pos_source_x, int pos_source_y, int pos_final_x, int pos_final_y);
+bool tileCanHaveItem(int pos_x, int pos_y, char item);
 
 // other functions
 void layerCopy(char * layer_to_copy, char * layer_destiny, int max_width, int max_height);

@@ -3,8 +3,8 @@
 #include <stdarg.h>
 #include <time.h>
 
-#include "debug.h"
-#include "level.h"
+#include "../header/debug.h"
+#include "../header/level.h"
 
 FILE *logFile;
 

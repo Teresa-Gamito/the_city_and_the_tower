@@ -2,13 +2,12 @@
 #include <stdio.h>
 
 #include "level.h"
-#include "player.h"
-//#include "items.h"
+
 
 // tiles
 #define DRAW_CHARACTER_WALL "❌"
 #define DRAW_CHARACTER_GROUND "⬜"
-#define DRAW_CHARACTER_PIT "🟥"
+#define DRAW_CHARACTER_PIT "💢"
 #define DRAW_CHARACTER_PLANK_TILE "🌉"
 // objects
 #define DRAW_CHARACTER_PLAYER "🐐"

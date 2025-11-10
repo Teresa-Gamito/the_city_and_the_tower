@@ -1,19 +1,24 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#include "level.h"
-#include "player.h"
-#include "draw.h"
-#include "debug.h"
+#include "../header/level.h"
+#include "../header/player.h"
+#include "../header/draw.h"
+#include "../header/debug.h"
+#include "../header/item.h"
+#include "../header/highlight.h"
+#include "../header/light.h"
+#include "../header/item.h"
 
 char getInput();
-
 void actionFromInput(char input);
 
+void printSpace();
+
 int main() {
-    logOpen(); // creates the log file and opens it
+
+    logOpen();
     logPrint("Game start\n\n");
-    //drawStartMenu(getInput());
     
     levelActiveSetFromFile(1);
     playerSpawn();
@@ -24,10 +29,7 @@ int main() {
 
         actionFromInput(getInput());
         
-
-        
-        
-        printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        printSpace();
     }
     
     return 0;
@@ -35,10 +37,19 @@ int main() {
 }
 
 char getInput() {
+
     char input;
     scanf(" %c", &input);
     return input;
+
 }
+
+void printSpace() {
+
+    printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+
+}
+
 
 void actionFromInput(char input) {
 

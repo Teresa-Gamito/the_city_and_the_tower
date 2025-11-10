@@ -3,9 +3,9 @@
 #include <math.h>
 #include <string.h>
 
-#include "level.h"
-#include "debug.h"
-#include "player.h"
+#include "../header/level.h"
+#include "../header/debug.h"
+#include "../header/player.h"
 
 
 Level level_active = {MAX_WIDTH, MAX_HEIGHT, {{0}}, {{0}}, {{0}}};
@@ -165,84 +165,17 @@ bool tileBlocksLight(int pos_x, int pos_y) {
     return level_active.tiles[pos_y][pos_x] == CHAR_WALL;
 }
 
+bool tileCanHaveItem(int pos_x, int pos_y, char item) {
 
-void lightReset() {
+    if (level_active.light[pos_y][pos_y] == CHAR_UNLIT) return 0;
 
-    for (int i = 0; i < level_active.height; i++) {
-        for (int j = 0; j < level_active.width; j++) {
+    if (level_active.tiles[pos_y][pos_x] == CHAR_PIT) {
 
-            level_active.light[i][j] = level_active.starting_light[i][j];
+        if (item == CHAR_PLANK) return 1;
 
-        }
     }
+    else if (level_active.tiles[pos_y][pos_x] == CHAR_GROUND) return 1;
 
-}
-
-void lightPorcessLayers() {
-
-    logPrint("Processing light\n");
-
-    lightReset();
-    
-    for (int i = 0; i < level_active.height; i++) {
-        for (int j = 0; j < level_active.width; j++) {
-
-            if (level_active.objects[i][j] == CHAR_TORCH) {
-                lightProcess(j, i, LIGHT_RADIUS_TORCH);
-            }
-            else if (level_active.tiles[i][j] == CHAR_WALL_TORCH) {
-                lightProcess(j, i, LIGHT_RADIUS_WALL_TORCH);
-            }
-
-        }
-    }
-    if (player.item == ITEM_TORCH) {
-        lightProcess(player.pos_x, player.pos_y, LIGHT_RADIUS_TORCH);
-        logPrint("Processing player light\n");
-    }
-    logPrint("\n");
-}
-
-void lightProcess(int pos_x, int pos_y, double light_radius) {
-
-    logPrint("Light source at position x:%d y:%d\n", pos_x, pos_y);
-
-    for (int i = -light_radius; i <= light_radius; i++) {
-        for (int j = -light_radius; j <= light_radius; j++) {
-
-            if (getDistance(0, 0, j, i) <= light_radius)
-                //if (!lightHasCollision(pos_x, pos_y, pos_x + i, pos_y + j))
-                    level_active.light[pos_y + i][pos_x + j] = CHAR_LIT; 
-
-        }
-    }
-}
-
-bool lightHasCollision(int pos_source_x, int pos_source_y, int pos_final_x, int pos_final_y) {
-    
-    double distance = getDistance(pos_source_x, pos_source_y, pos_final_x, pos_final_y);
-    double angle = atan2(abs(pos_final_y - pos_source_y), abs(pos_final_x - pos_source_x));
-
-    printf("xs:%d  ys:%d   ", pos_source_x,pos_source_y);
-    printf("xf:%d  yf:%d   ", pos_final_x, pos_final_y);
-    printf("distance:%f  angle:%f\n", distance, angle);
-
-
-    double increment = 0.1;
-
-    int x, y;
-
-
-    for (double d = 0; d < distance; d += increment) {
-
-
-        x = pos_source_x + roundToInt(d * sin(angle));
-        y = pos_source_y + roundToInt(d * cos(angle));
-
-        printf("x:%d  y:%d   \n", x,y);
-
-        if (tileBlocksLight(x, y)) return 1;
-    }
     return 0;
 }
 
@@ -259,8 +192,5 @@ double getDistance(int pos1_x, int pos1_y, int pos2_x, int pos2_y) {
 
 }
 
-int roundToInt(double x) {
-    if (x - ((int) x) < 0.5) return (int) x;
-    return ((int) x) + SIGN(x);
-}
+
 
