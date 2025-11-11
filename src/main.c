@@ -19,9 +19,13 @@ int main() {
 
     logOpen();
     logPrint("Game start\n\n");
-    
-    levelActiveSetFromFile(1);
-    playerSpawn();
+
+    int level_num, phase_num;
+
+    scanf(" %d %d", &level_num, &phase_num);
+
+    // temp
+    phase_num == 1 ? levelLoad(level_num, phase_num, 0, 0, '0') : levelLoad(level_num, phase_num, 0, 0, 'R');
 
     while(1) {
 

@@ -18,7 +18,7 @@ typedef struct Player {
 extern Player player;
 
 // player creation
-void playerSpawn();
+void playerSpawn(int pos_x, int pos_y, char item);
 
 // player movement
 void playerMove(int pos_x, int pos_y); // move the player

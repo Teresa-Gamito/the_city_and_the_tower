@@ -10,7 +10,11 @@
 Player player = {0, 0, '0'};
 
 
-void playerSpawn() {
+void playerSpawn(int pos_x, int pos_y, char item) {
+
+    player.pos_x = pos_x;
+    player.pos_y = pos_y;
+    player.item = item;
 
     for(int i = 0 ; i < level_active.width ; i++) {
 

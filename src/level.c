@@ -8,23 +8,23 @@
 #include "../header/player.h"
 
 
-Level level_active = {MAX_WIDTH, MAX_HEIGHT, {{0}}, {{0}}, {{0}}};
+Level level_active = {MAX_WIDTH, MAX_HEIGHT, {{0}}, {{0}}, {{0}}, 0, 0, 0};
 
 
-char * levelFileGetName(int level_num) {
+char * levelFileGetName(int level_num, int phase_num) {
 
     static char file_name[17];
-    sprintf(file_name, LEVEL_FILE_NAME, level_num);
+    sprintf(file_name, LEVEL_FILE_NAME, level_num, phase_num);
     return file_name;
 
 }
 
-FILE * levelFileOpen(int level_num) {
+FILE * levelFileOpen(int level_num, int phase_num) {
 
     char * file_name;
     FILE * level_file;
 
-    file_name = levelFileGetName(level_num);
+    file_name = levelFileGetName(level_num, phase_num);
     level_file = fopen(file_name, "rt");
 
     if (!level_file) logPrint("Could not opeen file %s\n", file_name);
@@ -65,13 +65,19 @@ void levelFileGetLayerNext(FILE * level_file, char layer[MAX_HEIGHT][MAX_WIDTH])
     }
 }
 
-void levelActiveSetFromFile(int level_num) {
+void levelActiveSetFromFile(int level_num, int phase_num) {
 
-    level_active.width = levelFileGetWidth(level_num);
-    level_active.height = levelFileGetHight(level_num);
+    level_active.width = levelFileGetWidth(level_num, phase_num);
+    level_active.height = levelFileGetHight(level_num, phase_num);
+
+    level_active.level_num = level_num;
+    level_active.phase_num = phase_num;
+
+    if (level_active.phase_num == 1) level_active.relic_was_picked_up = 0;
+    else level_active.relic_was_picked_up = 1;
 
     FILE *level_file;
-    level_file = levelFileOpen(level_num);
+    level_file = levelFileOpen(level_num, phase_num);
 
     char temp_layer[MAX_HEIGHT][MAX_WIDTH];
 
@@ -102,10 +108,38 @@ void levelActiveSetFromFile(int level_num) {
 }
 
 
-int levelFileGetWidth(int level_num) {
+void levelLoad(int level_num, int phase_num, int player_pos_x, int player_pos_y, char item) {
+
+    levelActiveSetFromFile(level_num, phase_num);
+    playerSpawn(player_pos_x, player_pos_y, item);
+
+}
+
+void levelTriggerNextPhase() {
+
+    //...
+
+    levelLoadNextPhase();
+
+}
+
+void levelLoadNextPhase() {
+
+    levelLoad(level_active.level_num, level_active.phase_num + 1, player.pos_x, player.pos_x, player.item);
+
+}
+
+void levelGoToNext() {
+
+    levelLoad(level_active.level_num + 1, 1, player.pos_x, player.pos_x, CHAR_EMPTY);
+
+}
+
+
+int levelFileGetWidth(int level_num, int phase_num) {
 
     FILE * level_file;
-    level_file = levelFileOpen(level_num);
+    level_file = levelFileOpen(level_num, phase_num);
 
     char temp_char;
     int width;
@@ -124,10 +158,10 @@ int levelFileGetWidth(int level_num) {
     return width;
 }
 
-int levelFileGetHight(int level_num) {
+int levelFileGetHight(int level_num, int phase_num) {
 
     FILE * level_file;
-    level_file = levelFileOpen(level_num);
+    level_file = levelFileOpen(level_num, phase_num);
 
     char temp_char[MAX_WIDTH];
     int height;
@@ -177,6 +211,25 @@ bool tileCanHaveItem(int pos_x, int pos_y, char item) {
     else if (level_active.tiles[pos_y][pos_x] == CHAR_GROUND) return 1;
 
     return 0;
+}
+
+char tileGetType(int pos_x, int pos_y) {
+
+    return level_active.tiles[pos_y][pos_x];
+
+}
+
+
+void wallTorchSetLit(int pos_x, int pos_y) {
+    
+    level_active.tiles[pos_y][pos_x] = CHAR_WALL_TORCH_LIT; 
+
+}
+
+void wallTorchSetUnlit(int pos_x, int pos_y) {
+
+    level_active.tiles[pos_y][pos_x] = CHAR_WALL_TORCH_UNLIT; 
+
 }
 
 

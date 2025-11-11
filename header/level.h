@@ -5,7 +5,7 @@
 #define MAX_HEIGHT 33
 #define MAX_LAYERS 3
 
-#define LEVEL_FILE_NAME "../level/lvl%02d.txt\0"
+#define LEVEL_FILE_NAME "../level/lvl%02d-%01d.txt\0"
 
 
 // labels for level creation
@@ -14,7 +14,8 @@
 #define CHAR_WALL 'W'
 #define CHAR_GROUND 'G'
 #define CHAR_PIT 'V'
-#define CHAR_WALL_TORCH 'T'
+#define CHAR_WALL_TORCH_LIT 'I'
+#define CHAR_WALL_TORCH_UNLIT 'O'
 #define CHAR_PLANK_TILE 'Y'
 // objects layer
 #define CHAR_PLAYER 'P'
@@ -38,28 +39,41 @@ typedef struct {
     char objects[MAX_HEIGHT][MAX_WIDTH]; // this includes only items and the player
     char light[MAX_HEIGHT][MAX_WIDTH]; // setting this layer allows to define permanently lit spaces
     char starting_light[MAX_HEIGHT][MAX_WIDTH];
+    int level_num;
+    int phase_num;
+    bool relic_was_picked_up;
 } Level;
 
 extern Level level_active; // this will be the current level
 
 // file interaction
-char * levelFileGetName(int level_num);
-FILE * levelFileOpen(int level_num);
+char * levelFileGetName(int level_num, int phase_num);
+FILE * levelFileOpen(int level_num, int phase_num);
 void levelFileClose(FILE * level_file);
 
 // set level_active structure
 void levelFileGetLayerNext(FILE * level_file, char layer[MAX_HEIGHT][MAX_WIDTH]); // get next layer from file
-void levelActiveSetFromFile(int level_num); // sets the active level as the one from the file
+void levelActiveSetFromFile(int level_num, int phase_num); // sets the active level as the one from the file
+
+void levelLoad(int level_num, int phase_num, int player_pos_x, int player_pos_y, char item);
+void levelTriggerNextPhase();
+void levelLoadNextPhase();
+void levelGoToNext();
 
 // gets current level size
-int levelFileGetWidth(int level_num);
-int levelFileGetHight(int level_num);
+int levelFileGetWidth(int level_num, int phase_num);
+int levelFileGetHight(int level_num, int phase_num);
 
 // checks for specific tiles
 bool tileIsWalkable(int pos_x, int pos_y);
 bool tileHasItem(int pos_x, int pos_y);
 bool tileBlocksLight(int pos_x, int pox_y);
 bool tileCanHaveItem(int pos_x, int pos_y, char item);
+char tileGetType(int pos_x, int pos_y);
+
+//specific tiles
+void wallTorchSetLit(int pos_x, int pos_y);
+void wallTorchSetUnlit(int pos_x, int pos_y);
 
 // other functions
 void layerCopy(char * layer_to_copy, char * layer_destiny, int max_width, int max_height);

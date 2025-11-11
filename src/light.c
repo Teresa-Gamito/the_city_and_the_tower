@@ -34,7 +34,7 @@ void lightPorcessLayers() {
             if (level_active.objects[i][j] == CHAR_TORCH) {
                 lightProcess(j, i, LIGHT_RADIUS_TORCH);
             }
-            else if (level_active.tiles[i][j] == CHAR_WALL_TORCH) {
+            else if (level_active.tiles[i][j] == CHAR_WALL_TORCH_LIT) {
                 lightProcess(j, i, LIGHT_RADIUS_WALL_TORCH);
             }
 

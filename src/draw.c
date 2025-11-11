@@ -20,6 +20,7 @@ void setLevelToDraw() {
 
 }
 
+
 void setTiles() {
 
     for(int i = 0 ; i < level_active.height ; i++) {
@@ -69,6 +70,7 @@ void setHighlight() {
 
 }
 
+
 void drawLevel() {
 
     //system("cls");
@@ -86,6 +88,7 @@ void drawLevel() {
     }
     
 }
+
 void printEmoji(char character) {
 
     switch (character) {
@@ -106,9 +109,13 @@ void printEmoji(char character) {
             printf(DRAW_CHARACTER_PLANK_TILE); 
             break;
 
-        /* case CHAR_WALL_TORCH:
-        printf(DRAW_CHARACTER_WALL_TORCH);
-        break; */
+        case CHAR_WALL_TORCH_LIT:
+            printf(DRAW_CHARACTER_WALL_TORCH_LIT);
+            break;
+
+        case CHAR_WALL_TORCH_UNLIT:
+            printf(DRAW_CHARACTER_WALL_TORCH_UNLIT);
+            break;
 
         case CHAR_PLAYER:
             printf(DRAW_CHARACTER_PLAYER);
