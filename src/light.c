@@ -71,13 +71,15 @@ bool lightHasCollision(int pos_source_x, int pos_source_y, int pos_final_x, int 
 
     int x, y;
 
-
     for (double d = 0; d < distance; d += increment) {
 
         x = pos_source_x + round(d * sin(angle));
         y = pos_source_y + round(d * cos(angle));
 
-        if (tileBlocksLight(x, y)) return 1;
+        if (tileBlocksLight(x, y)) {
+            level_active.light[y][x] = CHAR_LIT; 
+            return 1;
+        }
     }
     return 0;
 }

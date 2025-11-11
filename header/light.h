@@ -12,6 +12,4 @@ void lightPorcessLayers(); // find light emitting tiles and process the light co
 void lightProcess(int pos_x, int pos_y, double light_radius); // from a light source, set the surrounding tiles as lit
 bool lightHasCollision(int pos_source_x, int pos_source_y, int pos_final_x, int pos_final_y);
 
-bool lightHasCollision2(int pos_source_x, int pos_source_y, int pos_final_x, int pos_final_y);
-
 #endif

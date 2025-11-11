@@ -44,7 +44,7 @@ void logClose() {
     fclose(logFile);
 }
 
-void logPrintLayer(char layer[33][60], int width, int height) {
+void logPrintLayer(char layer[MAX_HEIGHT][MAX_WIDTH], int width, int height) {
     printf("test");
 
     for (int i = 0; i < height; i++) {

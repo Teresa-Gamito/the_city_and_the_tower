@@ -5,9 +5,9 @@
 
 
 // tiles
-#define DRAW_CHARACTER_WALL "❌"
+#define DRAW_CHARACTER_WALL "🧱\b"
 #define DRAW_CHARACTER_GROUND "⬜"
-#define DRAW_CHARACTER_PIT "💢"
+#define DRAW_CHARACTER_PIT "🔳"
 #define DRAW_CHARACTER_PLANK_TILE "➕"
 // objects
 #define DRAW_CHARACTER_PLAYER "🐐"
