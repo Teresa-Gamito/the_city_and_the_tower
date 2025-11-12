@@ -1,17 +1,19 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#include "../header/level.h"
-#include "../header/player.h"
-#include "../header/draw.h"
+#include "../header/level/level.h"
+#include "../header/objects/player.h"
+#include "../header/level/draw.h"
 #include "../header/debug.h"
-#include "../header/item.h"
-#include "../header/highlight.h"
-#include "../header/light.h"
-#include "../header/item.h"
+#include "../header/level/highlight.h"
+#include "../header/level/light.h"
+#include "../header/objects/item.h"
+#include "../header/tools.h"
 
-char getInput();
-void actionFromInput(char input);
+#define MAX_INPUT_LENGHT 255
+
+char * getInput();
+void actionFromInput(char * input);
 
 void printSpace();
 
@@ -20,12 +22,13 @@ int main() {
     logOpen();
     logPrint("Game start\n\n");
 
+
     int level_num, phase_num;
 
     scanf(" %d %d", &level_num, &phase_num);
 
     // temp
-    phase_num == 1 ? levelLoad(level_num, phase_num, 0, 0, '0') : levelLoad(level_num, phase_num, 0, 0, 'R');
+    phase_num == 1 ? levelLoad(level_num, phase_num, -1, -1, 0) : levelLoad(level_num, phase_num, 0, 0, 'R');
 
     while(1) {
 
@@ -40,10 +43,10 @@ int main() {
 
 }
 
-char getInput() {
+char * getInput() {
 
-    char input;
-    scanf(" %c", &input);
+    static char input[MAX_INPUT_LENGHT];
+    scanf("%s", input);
     return input;
 
 }
@@ -55,13 +58,16 @@ void printSpace() {
 }
 
 
-void actionFromInput(char input) {
+void actionFromInput(char * input) {
 
-    if (highlight.is_on) {
-        highlightAction(input);
+    if (input[1] == '\0') {
+        if (highlight.is_on) {
+            highlightAction(input[0]);
+        }
+        else {
+            playerAction(input[0]);
+        }
     }
-    else {
-        playerAction(input);
-    }
+    else debugCommand(input);
     
 }

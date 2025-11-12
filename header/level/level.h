@@ -5,11 +5,15 @@
 #define MAX_HEIGHT 33
 #define MAX_LAYERS 3
 
+#define MAX_PHASES 2
+#define MAX_LEVELS 10
+
 #define LEVEL_FILE_NAME "../level/lvl%02d-%01d.txt\0"
 
 
 // labels for level creation
 // these are the characters read from the lvl.txt file
+#define CHAR_LAYER_TRANSITION '-'
 // tiles layer
 #define CHAR_WALL 'W'
 #define CHAR_GROUND 'G'
@@ -28,6 +32,9 @@
 #define CHAR_UNLIT '0'
 // highlight
 #define CHAR_HIGHLIGHT 'H'
+
+// timing
+#define DELAY_WALL_TORCH_ERASE 60
 
 #ifndef LEVEL_H
 #define LEVEL_H
@@ -59,6 +66,10 @@ void levelLoad(int level_num, int phase_num, int player_pos_x, int player_pos_y,
 void levelTriggerNextPhase();
 void levelLoadNextPhase();
 void levelGoToNext();
+void levelComplete();
+void levelRestart();
+
+void levelTransitionAction();
 
 // gets current level size
 int levelFileGetWidth(int level_num, int phase_num);
@@ -74,10 +85,5 @@ char tileGetType(int pos_x, int pos_y);
 //specific tiles
 void wallTorchSetLit(int pos_x, int pos_y);
 void wallTorchSetUnlit(int pos_x, int pos_y);
-
-// other functions
-void layerCopy(char * layer_to_copy, char * layer_destiny, int max_width, int max_height);
-double getDistance(int pos1_x, int pos1_y, int pos2_x, int pos2_y); // get distance btwwen two points
-int roundToInt(double x);
 
 #endif

@@ -2,7 +2,13 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-#include "level.h"
+#include "level/level.h"
+
+// commands
+#define COMMAND_RESTART "restart"
+#define COMMAND_NEXT_PHASE "next_phase"
+#define COMMAND_NEXT_LEVEL "next_level"
+
 
 #define LOG_NAME "../logs/log%02d%02d%02d%02d%02d.txt\0"
 

@@ -2,13 +2,21 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <time.h>
+#include <string.h>
 
 #include "../header/debug.h"
-#include "../header/level.h"
+#include "../header/level/level.h"
 
 FILE *logFile;
 
 void debugCommand(char * msg) {
+
+    if (!strcmp(msg, "restart")) levelRestart();
+
+    else if (!strcmp(msg, "next_phase")) levelLoadNextPhase();
+
+    else if (!strcmp(msg, "next_level")) levelGoToNext();
+    
     
 }
 

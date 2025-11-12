@@ -3,10 +3,11 @@
 #include <stdbool.h>
 #include <math.h>
 
-#include "../header/level.h"
-#include "../header/light.h"
-#include "../header/player.h"
+#include "../header/level/level.h"
+#include "../header/level/light.h"
+#include "../header/objects/player.h"
 #include "../header/debug.h"
+#include "../header/tools.h"
 
 #define SIGN(x) x < 0 ? -1 : x > 0 ? 1 : 0
 

@@ -2,11 +2,11 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#include "../header/highlight.h"
-#include "../header/player.h"
-#include "../header/item.h"
-#include "../header/draw.h"
-#include "../header/level.h"
+#include "../header/level/highlight.h"
+#include "../header/objects/player.h"
+#include "../header/objects/item.h"
+#include "../header/level/draw.h"
+#include "../header/level/level.h"
 
 
 Highlight highlight = {0, 0, 0};

@@ -3,9 +3,11 @@
 #include <math.h>
 #include <string.h>
 
-#include "../header/level.h"
+#include "../header/level/level.h"
 #include "../header/debug.h"
-#include "../header/player.h"
+#include "../header/objects/player.h"
+#include "../header/tools.h"
+#include "../header/level/light.h"
 
 
 Level level_active = {MAX_WIDTH, MAX_HEIGHT, {{0}}, {{0}}, {{0}}, 0, 0, 0};
@@ -56,7 +58,7 @@ void levelFileGetLayerNext(FILE * level_file, char layer[MAX_HEIGHT][MAX_WIDTH])
             if (temp_char == '\n') {
                 break;
             }
-            else if (temp_char == '-' || temp_char == EOF) {
+            else if (temp_char == CHAR_LAYER_TRANSITION || temp_char == EOF) {
                 fgetc(level_file);
                 return;
             }
@@ -117,21 +119,47 @@ void levelLoad(int level_num, int phase_num, int player_pos_x, int player_pos_y,
 
 void levelTriggerNextPhase() {
 
-    //...
-
-    levelLoadNextPhase();
+    if (level_active.phase_num == MAX_PHASES) levelComplete();
+    
+    else levelLoadNextPhase();
 
 }
 
 void levelLoadNextPhase() {
 
-    levelLoad(level_active.level_num, level_active.phase_num + 1, player.pos_x, player.pos_x, player.item);
+    levelLoad(level_active.level_num, level_active.phase_num + 1, player.pos_x, player.pos_y, player.item);
 
 }
 
 void levelGoToNext() {
 
-    levelLoad(level_active.level_num + 1, 1, player.pos_x, player.pos_x, CHAR_EMPTY);
+    levelLoad(level_active.level_num + 1, 1, PLAYER_SPAWN_FROM_FILE, PLAYER_SPAWN_FROM_FILE, CHAR_EMPTY);
+
+}
+
+void levelComplete() {
+
+}
+
+void levelRestart() {
+
+    levelLoad(level_active.level_num, level_active.phase_num, PLAYER_SPAWN_FROM_FILE, PLAYER_SPAWN_FROM_FILE, CHAR_EMPTY);
+
+}
+
+
+void levelTransitionAction() {
+
+    for (int i = 0; i < level_active.width; i++) {
+        for (int j = 0; j < level_active.height; j++) {
+
+            if (tileGetType(j,i) == CHAR_WALL_TORCH_LIT) level_active.tiles[i][j] = CHAR_WALL_TORCH_UNLIT;
+
+        }
+        lightPorcessLayers();
+        delay(DELAY_WALL_TORCH_ERASE);
+        
+    }
 
 }
 
@@ -168,7 +196,7 @@ int levelFileGetHight(int level_num, int phase_num) {
 
     for (int i = 0; i < MAX_HEIGHT + 1; i++)  {
         fgets(temp_char, MAX_WIDTH, level_file);
-        if (temp_char[0] == '-' || temp_char[0] == EOF) {
+        if (temp_char[0] == CHAR_LAYER_TRANSITION || temp_char[0] == EOF) {
             height = i;
             break;
         }
@@ -233,17 +261,7 @@ void wallTorchSetUnlit(int pos_x, int pos_y) {
 }
 
 
-void layerCopy(char * layer_source, char * layer_destiny, int max_width, int max_height) {
 
-    memcpy(layer_destiny, layer_source, sizeof(char) * max_height * max_width);
-
-}
-
-double getDistance(int pos1_x, int pos1_y, int pos2_x, int pos2_y) {
-
-    return sqrt(pow(abs(pos1_x - pos2_x), 2) + pow(abs(pos1_y - pos2_y), 2));
-
-}
 
 
 

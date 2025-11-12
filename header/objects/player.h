@@ -1,6 +1,8 @@
+
 #include <stdbool.h>
 
-//#include "level.h"
+#define PLAYER_SPAWN_FROM_FILE -1
+#define PLAYER_NO_ITEM 0
 
 #ifndef PLAYER_H
 #define PLAYER_H

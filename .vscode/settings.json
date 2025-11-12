@@ -11,7 +11,10 @@
         "draw.h": "c",
         "time.h": "c",
         "highlight.h": "c",
-        "math.h": "c"
+        "math.h": "c",
+        "tools.h": "c",
+        "item.h": "c",
+        "light.h": "c"
     },
     "makefile.configureOnOpen": true
 }

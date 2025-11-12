@@ -2,19 +2,17 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#include "../header/player.h"
-#include "../header/level.h"
-#include "../header/item.h"
-#include "../header/highlight.h"
+#include "../header/objects/player.h"
+#include "../header/level/level.h"
+#include "../header/objects/item.h"
+#include "../header/level/highlight.h"
 
 Player player = {0, 0, '0'};
 
 
 void playerSpawn(int pos_x, int pos_y, char item) {
 
-    player.pos_x = pos_x;
-    player.pos_y = pos_y;
-    player.item = item;
+    if (item != PLAYER_NO_ITEM) player.item = item;
 
     for(int i = 0 ; i < level_active.width ; i++) {
 
@@ -22,8 +20,8 @@ void playerSpawn(int pos_x, int pos_y, char item) {
 
             if(level_active.objects[i][j] == CHAR_PLAYER) {
 
-                player.pos_x = j;
-                player.pos_y = i;
+                if (pos_x == PLAYER_SPAWN_FROM_FILE) player.pos_x = j;
+                if (pos_y == PLAYER_SPAWN_FROM_FILE) player.pos_y = i;
 
                 level_active.objects[i][j] = CHAR_EMPTY;
                 

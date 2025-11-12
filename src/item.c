@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#include "../header/item.h"
-#include "../header/level.h"
-#include "../header/player.h"
+#include "../header/objects/item.h"
+#include "../header/level/level.h"
+#include "../header/objects/player.h"
 
 
 bool itemCanBePickedUp(int pos_x, int pos_y) {
@@ -40,13 +40,6 @@ void itemPickUp(int pos_x, int pos_y) {
 
     if (itemCanBePickedUp(pos_x, pos_y)) {
 
-        if (player.item == CHAR_RELIC) {
-            
-            level_active.relic_was_picked_up = 1;
-            levelTriggerNextPhase();
-
-        }
-
         if (level_active.tiles[pos_y][pos_x] == CHAR_PLANK_TILE) {
 
             player.item = CHAR_PLANK;
@@ -58,6 +51,12 @@ void itemPickUp(int pos_x, int pos_y) {
 
             player.item = level_active.objects[pos_y][pos_x];
             level_active.objects[pos_y][pos_x] = CHAR_EMPTY;
+
+        }
+
+        if (player.item == CHAR_RELIC) {
+            
+            level_active.relic_was_picked_up = 1;
 
         }
     }

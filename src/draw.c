@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "../header/draw.h"
-#include "../header/level.h"
-#include "../header/player.h"
-#include "../header/highlight.h"
-#include "../header/item.h"
-#include "../header/light.h"
+#include "../header/level/draw.h"
+#include "../header/level/level.h"
+#include "../header/objects/player.h"
+#include "../header/level/highlight.h"
+#include "../header/objects/item.h"
+#include "../header/level/light.h"
 
 char level_to_draw[MAX_HEIGHT][MAX_WIDTH] = {{0}};
 
@@ -77,9 +77,20 @@ void drawLevel() {
 
     setLevelToDraw();
 
-    for(int i = 0 ; i < level_active.height ; i++) {
+    for(int i = -BORDER_TOP_BUFFER ; i < level_active.height + BORDER_BOTTOM_BUFFER; i++) {
+        for(int j = -BORDER_LEFT_BUFFER ; j < level_active.width + BORDER_RIGHT_BUFFER; j++) {
 
-        for(int j = 0 ; j < level_active.width ; j++) {
+            /* if (i == -BORDER_TOP_BUFFER && j == BORDER_RIGHT_BUFFER) printf(DRAW_BORDER_TOP_RIGHT);
+            else if (i == -BORDER_TOP_BUFFER && j == -BORDER_LEFT_BUFFER) printf(DRAW_BORDER_TOP_LEFT);
+            else if (i == -BORDER_BOTTOM_BUFFER && j == BORDER_RIGHT_BUFFER) printf(DRAW_BORDER_BOTTOM_RIGHT);
+            else if (i == -BORDER_BOTTOM_BUFFER && j == -BORDER_LEFT_BUFFER) printf(DRAW_BORDER_BOTTOM_LEFT);
+            else if (i == -BORDER_TOP_BUFFER) printf(DRAW_BORDER_TOP);
+            else if (j == BORDER_RIGHT_BUFFER) printf(DRAW_BORDER_RIGHT);
+            else if (j == -BORDER_LEFT_BUFFER) printf(DRAW_BORDER_LEFT);
+            else if (i == BORDER_BOTTOM_BUFFER) printf(DRAW_BORDER_BOTTOM); */
+            
+ 
+
 
             printEmoji(level_to_draw[i][j]);
         }
