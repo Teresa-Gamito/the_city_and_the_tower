@@ -8,6 +8,7 @@
 #include "../header/objects/player.h"
 #include "../header/tools.h"
 #include "../header/level/light.h"
+#include "../header/level/draw.h"
 
 
 Level level_active = {MAX_WIDTH, MAX_HEIGHT, {{0}}, {{0}}, {{0}}, 0, 0, 0};
@@ -121,7 +122,10 @@ void levelTriggerNextPhase() {
 
     if (level_active.phase_num == MAX_PHASES) levelComplete();
     
-    else levelLoadNextPhase();
+    else {
+        levelTransitionAction();
+        levelLoadNextPhase();
+    }
 
 }
 
@@ -150,17 +154,18 @@ void levelRestart() {
 
 void levelTransitionAction() {
 
-    for (int i = 0; i < level_active.width; i++) {
-        for (int j = 0; j < level_active.height; j++) {
+    for (int j = 0; j < level_active.width; j++) {
+        for (int i = 0; i < level_active.height; i++) {
 
-            if (tileGetType(j,i) == CHAR_WALL_TORCH_LIT) level_active.tiles[i][j] = CHAR_WALL_TORCH_UNLIT;
+            if (tileGetType(j,i) == CHAR_WALL_TORCH_LIT) {
+                
+                level_active.tiles[i][j] = CHAR_WALL_TORCH_UNLIT;
+                drawLevel();
+                delay(DELAY_WALL_TORCH_ERASE);
 
+            }
         }
-        lightPorcessLayers();
-        delay(DELAY_WALL_TORCH_ERASE);
-        
     }
-
 }
 
 

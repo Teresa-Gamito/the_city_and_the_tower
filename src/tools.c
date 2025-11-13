@@ -1,9 +1,25 @@
 
+#include <stdio.h>
 #include <math.h>
 #include <string.h>
 #include <time.h>
 
 #include "../header/tools.h"
+
+char * getInput() {
+
+    static char input[MAX_INPUT_LENGHT];
+    scanf("%s", input);
+    return input;
+
+}
+
+void printSpace() {
+
+    printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+
+}
+
 
 void delay(int miliseconds) {
 
@@ -12,6 +28,7 @@ void delay(int miliseconds) {
     while (clock() < start_time + miliseconds);
 
 }
+
 
 void layerCopy(char * layer_source, char * layer_destiny, int max_width, int max_height) {
 

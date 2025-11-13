@@ -77,21 +77,8 @@ void drawLevel() {
 
     setLevelToDraw();
 
-    for(int i = -BORDER_TOP_BUFFER ; i < level_active.height + BORDER_BOTTOM_BUFFER; i++) {
-        for(int j = -BORDER_LEFT_BUFFER ; j < level_active.width + BORDER_RIGHT_BUFFER; j++) {
-
-            /* if (i == -BORDER_TOP_BUFFER && j == BORDER_RIGHT_BUFFER) printf(DRAW_BORDER_TOP_RIGHT);
-            else if (i == -BORDER_TOP_BUFFER && j == -BORDER_LEFT_BUFFER) printf(DRAW_BORDER_TOP_LEFT);
-            else if (i == -BORDER_BOTTOM_BUFFER && j == BORDER_RIGHT_BUFFER) printf(DRAW_BORDER_BOTTOM_RIGHT);
-            else if (i == -BORDER_BOTTOM_BUFFER && j == -BORDER_LEFT_BUFFER) printf(DRAW_BORDER_BOTTOM_LEFT);
-            else if (i == -BORDER_TOP_BUFFER) printf(DRAW_BORDER_TOP);
-            else if (j == BORDER_RIGHT_BUFFER) printf(DRAW_BORDER_RIGHT);
-            else if (j == -BORDER_LEFT_BUFFER) printf(DRAW_BORDER_LEFT);
-            else if (i == BORDER_BOTTOM_BUFFER) printf(DRAW_BORDER_BOTTOM); */
-            
- 
-
-
+    for(int i = 0 ; i < level_active.height; i++) {
+        for(int j = 0 ; j < level_active.width; j++) {
             printEmoji(level_to_draw[i][j]);
         }
     

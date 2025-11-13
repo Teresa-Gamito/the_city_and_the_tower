@@ -55,7 +55,7 @@ void itemPickUp(int pos_x, int pos_y) {
         }
 
         if (player.item == CHAR_RELIC) {
-            
+            levelTriggerNextPhase();
             level_active.relic_was_picked_up = 1;
 
         }

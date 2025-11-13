@@ -1,7 +1,7 @@
 # The City and the Tower
 Game Code
 
-gcc main.c player.c level.c draw.c item.c highlight.c debug.c light.c -o game && game.exe
+gcc main.c player.c level.c draw.c item.c highlight.c debug.c light.c menu.c tools.c -o game && game.exe
 
 Level creating conventions:
  - Create a file in the "level" folder named lvlXX.txt with "XX" being replaced by the level number

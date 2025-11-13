@@ -34,7 +34,7 @@
 #define CHAR_HIGHLIGHT 'H'
 
 // timing
-#define DELAY_WALL_TORCH_ERASE 60
+#define DELAY_WALL_TORCH_ERASE 600
 
 #ifndef LEVEL_H
 #define LEVEL_H
