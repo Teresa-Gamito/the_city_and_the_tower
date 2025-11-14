@@ -21,6 +21,7 @@
 #define CHAR_WALL_TORCH_LIT 'I'
 #define CHAR_WALL_TORCH_UNLIT 'O'
 #define CHAR_PLANK_TILE 'Y'
+#define CHAR_EXIT 'E'
 // objects layer
 #define CHAR_PLAYER 'P'
 #define CHAR_RELIC 'R'
@@ -49,6 +50,8 @@ typedef struct {
     int level_num;
     int phase_num;
     bool relic_was_picked_up;
+    bool level_exit;
+    bool level_won;
 } Level;
 
 extern Level level_active; // this will be the current level
@@ -66,8 +69,9 @@ void levelLoad(int level_num, int phase_num, int player_pos_x, int player_pos_y,
 void levelTriggerNextPhase();
 void levelLoadNextPhase();
 void levelGoToNext();
-void levelComplete();
 void levelRestart();
+void levelExit();
+void levelWin();
 
 void levelTransitionAction();
 

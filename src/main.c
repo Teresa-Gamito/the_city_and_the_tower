@@ -12,31 +12,67 @@
 #include "../header/level/menu.h"
 
 
+#define LEVEL_EXIT_CODE_MAIN_MENU 0
+#define LEVEL_EXIT_CODE_WIN_MENU 1
+
+
 void actionFromInput(char * input);
+
+void goToMainMenu();
+void goToPauseMenu();
+void goToMenuWin();
+void gotoLevel(int level_num);
+
+bool runLevel();
+
 
 
 int main() {
 
+    //-----
     logOpen();
     logPrint("Game start\n\n");
+    //-----
+
+    goToMainMenu();
+
+
+    return 0;
+}
+
+void goToMainMenu() {
 
     int level_to_load;
 
+    while (true) {
 
-    menuTravel(&level_to_load);
-    levelLoad(level_to_load, 1, PLAYER_SPAWN_FROM_FILE, PLAYER_SPAWN_FROM_FILE, CHAR_TORCH);
+        menuTravelMain(&level_to_load);
 
-    while(1) {
-
-        drawLevel();
-
-        actionFromInput(getInput());
-    
+        gotoLevel(level_to_load);
     }
-    
-    return 0;
+
 
 }
+
+void gotoLevel(int level_num) {
+
+    levelLoad(level_num, 1, PLAYER_SPAWN_FROM_FILE, PLAYER_SPAWN_FROM_FILE, CHAR_EMPTY);
+
+    while (runLevel());
+
+}
+
+
+bool runLevel() {
+
+    drawLevel();
+
+    actionFromInput(getInput());
+
+    return !level_active.level_exit;
+
+}
+
 
 
 void actionFromInput(char * input) {

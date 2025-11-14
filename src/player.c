@@ -6,6 +6,7 @@
 #include "../header/level/level.h"
 #include "../header/objects/item.h"
 #include "../header/level/highlight.h"
+#include  "../header/level/menu.h"
 
 Player player = {0, 0, '0'};
 
@@ -45,7 +46,7 @@ void playerAction(char dir) {
                 
                 playerMove(player.pos_x, player.pos_y - 1);
             }
-        break;
+            break;
 
         case 's':
         case 'S':
@@ -53,7 +54,7 @@ void playerAction(char dir) {
                 
                 playerMove(player.pos_x, player.pos_y + 1);
             }
-        break;
+            break;
 
         case 'a':
         case 'A':
@@ -61,7 +62,7 @@ void playerAction(char dir) {
                 
                 playerMove(player.pos_x - 1, player.pos_y);
             }
-        break;
+            break;
 
         case 'd':
         case 'D':
@@ -69,12 +70,17 @@ void playerAction(char dir) {
                 
                 playerMove(player.pos_x + 1, player.pos_y);
             }
-        break;
+            break;
 
         case 'Z':
         case 'z':
             highlightSpawn();
-        break;
+            break;
+
+        case 'P':
+        case 'p':
+            menuTravelPause();
+            break;
         
     }
 }
@@ -84,6 +90,10 @@ void playerMove(int pos_x, int pos_y) {
     player.pos_x = pos_x;
     player.pos_y = pos_y;
     
+    
+    if (player.item == CHAR_RELIC && tileGetType(player.pos_x, player.pos_y) == CHAR_EXIT) 
+        levelWin();
+
 }
 
 bool playerHasItem() {

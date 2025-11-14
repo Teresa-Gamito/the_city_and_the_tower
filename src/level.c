@@ -9,9 +9,10 @@
 #include "../header/tools.h"
 #include "../header/level/light.h"
 #include "../header/level/draw.h"
+#include "../header/level/menu.h"
 
 
-Level level_active = {MAX_WIDTH, MAX_HEIGHT, {{0}}, {{0}}, {{0}}, 0, 0, 0};
+Level level_active = {MAX_WIDTH, MAX_HEIGHT, {{0}}, {{0}}, {{0}}, 0, 0, 0, 0, 0};
 
 
 char * levelFileGetName(int level_num, int phase_num) {
@@ -69,9 +70,14 @@ void levelFileGetLayerNext(FILE * level_file, char layer[MAX_HEIGHT][MAX_WIDTH])
 }
 
 void levelActiveSetFromFile(int level_num, int phase_num) {
+    logPrint("AAAAAAAA");
 
     level_active.width = levelFileGetWidth(level_num, phase_num);
+    logPrint("AAAAAAAA");
+
     level_active.height = levelFileGetHight(level_num, phase_num);
+    logPrint("AAAAAAAA");
+
 
     level_active.level_num = level_num;
     level_active.phase_num = phase_num;
@@ -120,7 +126,7 @@ void levelLoad(int level_num, int phase_num, int player_pos_x, int player_pos_y,
 
 void levelTriggerNextPhase() {
 
-    if (level_active.phase_num == MAX_PHASES) levelComplete();
+    if (level_active.phase_num == MAX_PHASES);
     
     else {
         levelTransitionAction();
@@ -141,13 +147,23 @@ void levelGoToNext() {
 
 }
 
-void levelComplete() {
+void levelExit() {
 
+    level_active.level_exit = true;
+    
+}
+
+void levelWin() {
+
+    printf("test");
+    
+    level_active.level_won = true;
+    menuTravelWin();
 }
 
 void levelRestart() {
 
-    levelLoad(level_active.level_num, level_active.phase_num, PLAYER_SPAWN_FROM_FILE, PLAYER_SPAWN_FROM_FILE, CHAR_EMPTY);
+    levelLoad(level_active.level_num, 1, PLAYER_SPAWN_FROM_FILE, PLAYER_SPAWN_FROM_FILE, CHAR_EMPTY);
 
 }
 
@@ -196,15 +212,18 @@ int levelFileGetHight(int level_num, int phase_num) {
     FILE * level_file;
     level_file = levelFileOpen(level_num, phase_num);
 
-    char temp_char[MAX_WIDTH];
+    char temp_char[MAX_WIDTH + 1];
     int height;
 
     for (int i = 0; i < MAX_HEIGHT + 1; i++)  {
-        fgets(temp_char, MAX_WIDTH, level_file);
-        if (temp_char[0] == CHAR_LAYER_TRANSITION || temp_char[0] == EOF) {
+        fgets(temp_char, MAX_WIDTH * 2, level_file);
+
+        logPrint("%s", temp_char);
+
+        if (temp_char[0] == CHAR_LAYER_TRANSITION) {
             height = i;
             break;
-        }
+        } 
     }
 
     logPrint("level height: %d\n", height);

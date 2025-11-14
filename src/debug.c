@@ -11,11 +11,11 @@ FILE *logFile;
 
 void debugCommand(char * msg) {
 
-    if (!strcmp(msg, "restart")) levelRestart();
+    if (!strcmp(msg, COMMAND_RESTART)) levelRestart();
 
-    else if (!strcmp(msg, "next_phase")) levelLoadNextPhase();
+    else if (!strcmp(msg, COMMAND_NEXT_PHASE)) levelLoadNextPhase();
 
-    else if (!strcmp(msg, "next_level")) levelGoToNext();
+    else if (!strcmp(msg, COMMAND_NEXT_LEVEL)) levelGoToNext();
     
     
 }

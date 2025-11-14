@@ -6,8 +6,18 @@
 
 // commands
 #define COMMAND_RESTART "restart"
-#define COMMAND_NEXT_PHASE "next_phase"
+#define COMMAND_NEXT_PHASE "next_phase" // fix
 #define COMMAND_NEXT_LEVEL "next_level"
+
+
+/*
+- cheats
+
+spawn item
+illuminate
+phase theough walls
+*/
+
 
 
 #define LOG_NAME "../logs/log%02d%02d%02d%02d%02d.txt\0"

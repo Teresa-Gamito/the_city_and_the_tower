@@ -4,27 +4,9 @@
 #include <stdlib.h>
 
 #include "../header/level/menu.h"
+#include "../header/level/level.h"
 #include "../header/tools.h"
 
-
-void menuTravel(int * level_to_load) {
-
-    int current_menu = MENU_STARTING_SCREEN;
-    int current_buttons = 0;
-
-    char * temp_input;
-    int input;
-
-    do {
-        system("cls");
-        menuPrint(current_menu);
-
-        temp_input = getInput();
-        input = temp_input[0] - '0';
-        
-    } while (menuAction(&current_menu, input, level_to_load));
-    
-}
 
 void menuPrint(int current_menu) {
 
@@ -52,14 +34,56 @@ void menuPrint(int current_menu) {
         case MENU_CREDITS:
             menuPrintCredits();
             break;
-        
-        
 
+        case MENU_PAUSE:
+            menuPrintPause();
+            break;
+
+        case MENU_WIN:
+            menuPrintWin();
+            break;
+        
     }
-
 }
 
+
+
+
+
+void menuTravelMain(int * level_to_load) {
+
+    int current_menu = MENU_STARTING_SCREEN;
+
+    char * temp_input;
+    int input;
+
+    do {
+        system("cls");
+        menuPrint(current_menu);
+
+        temp_input = getInput();
+        input = temp_input[0] - '0';
+        
+    } while (menuAction(&current_menu, input, level_to_load));
+    
+}
+
+
+
+
 void menuPrintStartingScreen() {
+    
+    FILE *logo;
+    logo = fopen(IMAGE_LOGO, "rt");
+
+    char temp_c;
+
+    while (temp_c = fgetc(logo)) {
+        if (temp_c != EOF) printf("%c", temp_c);
+        else break;
+    }
+    printf("\n\n                               <Press any key to start>\n");
+
 
 }
 
@@ -78,7 +102,7 @@ void menuPrintOptions() {
 
 void menuPrintCredits() {
 
-    printf(" Game made by:\n\n 🦥 Rodrigo Valente\n 🐐 Teresa Gamito\n\n\n Back\n ");
+    printf(" Game made by:\n\n 🦥 Rodrigo Valente\n 🐐 Teresa Gamito\n\n\n 0 - Back\n ");
 
 }
 
@@ -89,9 +113,6 @@ void menuPrintLevel() {
 }
 
 
-void menuPrintPause() {
-
-}
 
 
 
@@ -154,7 +175,7 @@ void menuMainAction(int * current_menu, int option) {
 
 bool menuLevelAction(int * current_menu, int option, int * level_to_load) {
 
-    if (option == 0) {
+    if (option <= 0) {
         *current_menu = MENU_MAIN;
         return false;
     }
@@ -199,5 +220,115 @@ void menuOptionsAction(int * current_menu, int option) {
 void menuCreditsAction(int * current_menu, int option) {
 
     *current_menu = MENU_MAIN;
+
+}
+
+
+
+
+
+void menuTravelWin() {
+
+    int current_menu = MENU_WIN;
+
+    char * temp_input;
+    int input;
+
+    do {
+        system("cls");
+        menuPrint(current_menu);
+
+        temp_input = getInput();
+        input = temp_input[0] - '0';
+        
+    } while (menuWinAction(input));
+}
+
+bool menuWinAction(int option) {
+
+    switch (option) {
+
+        case WIN_MENU_NEXT_LEVEL:
+            levelGoToNext();
+            return false;
+            break;
+        
+        case WIN_MENU_RESTART_LEVEL:
+            levelRestart();
+            return false;
+            break;
+
+        case WIN_MENU_MAIN_MENU:
+            levelExit();
+            return false;
+            break;
+
+        case WIN_MENU_EXIT_GAME:
+            exit(0);
+            break;
+    }
+    return true;
+}
+
+void menuPrintWin() {
+
+    printf(" Level Complete!\n\n 1 - Next level\n 2 - Restart level\n 3 - Main menu\n 4 - Exit Game\n");
+
+}
+
+
+
+
+
+void menuTravelPause() {
+
+    int current_menu = MENU_PAUSE;
+
+    char * temp_input;
+    int input;
+
+    do {
+        system("cls");
+        menuPrint(current_menu);
+
+        temp_input = getInput();
+        input = temp_input[0] - '0';
+        
+    } while (menuPauseAction(input));
+
+}
+
+bool menuPauseAction(int option) {
+
+     switch (option) {
+
+        case PAUSE_CONTINUE:
+            return false;
+            break;
+        
+        case PAUSE_OPTIONS:
+            
+            break;
+
+        case PAUSE_RESTART:
+            levelRestart();
+            return false;
+            break;
+        
+        case PAUSE_MAIN_MENU:
+            levelExit();
+            return false;
+            break;
+
+        case PAUSE_EXIT:
+            exit(0);
+            break;
+    }
+    return true;
+}
+
+void menuPrintPause() {
+
+    printf("Pause\n\n 1 - Continue\n 2 - Options\n 3 - Restart level\n 4 - Main menu\n 5 - Exit Game\n");
 
 }
