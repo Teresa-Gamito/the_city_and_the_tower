@@ -1,6 +1,15 @@
+
+// ========================================
+// Level loading and analizing related functions
+// opens a level file and stores it as the current level
+// analizes the current level's properties
+// ========================================
+
+
 #include <stdio.h>
 #include <stdbool.h>
 
+// max level properties
 #define MAX_WIDTH 60
 #define MAX_HEIGHT 33
 #define MAX_LAYERS 3
@@ -8,7 +17,9 @@
 #define MAX_PHASES 2
 #define MAX_LEVELS 10
 
-#define LEVEL_FILE_NAME "../level/lvl%02d-%01d.txt\0"
+// level naming
+// inside the "level" folder - 'lvl' + number of level + '-' + phase of level
+#define LEVEL_FILE_NAME "level/lvl%02d-%01d.txt\0"
 
 
 // labels for level creation
@@ -37,24 +48,26 @@
 // timing
 #define DELAY_WALL_TORCH_ERASE 600
 
+
 #ifndef LEVEL_H
 #define LEVEL_H
 
-typedef struct {
-    int width;
-    int height;
-    char tiles[MAX_HEIGHT][MAX_WIDTH]; // this includes tiles
-    char objects[MAX_HEIGHT][MAX_WIDTH]; // this includes only items and the player
-    char light[MAX_HEIGHT][MAX_WIDTH]; // setting this layer allows to define permanently lit spaces
-    char starting_light[MAX_HEIGHT][MAX_WIDTH];
-    int level_num;
-    int phase_num;
-    bool relic_was_picked_up;
-    bool level_exit;
-    bool level_won;
+
+typedef struct { // loaded level structure
+    int width;                                      // current level width
+    int height;                                     // current level height
+    char tiles[MAX_HEIGHT][MAX_WIDTH];              // tiles layer
+    char objects[MAX_HEIGHT][MAX_WIDTH];            // items and player layer
+    char light[MAX_HEIGHT][MAX_WIDTH];              // light layer
+    char starting_light[MAX_HEIGHT][MAX_WIDTH];     // initial light layer
+    int level_num;                                  // number of current level
+    int phase_num;                                  // number of current phase
+    bool relic_was_picked_up;                       // relic pick up status
+    bool level_exit;                                // asks to exit the level
+    bool level_won;                                 // completes the level
 } Level;
 
-extern Level level_active; // this will be the current level
+extern Level level_active; // the current level
 
 // file interaction
 char * levelFileGetName(int level_num, int phase_num);
@@ -65,15 +78,15 @@ void levelFileClose(FILE * level_file);
 void levelFileGetLayerNext(FILE * level_file, char layer[MAX_HEIGHT][MAX_WIDTH]); // get next layer from file
 void levelActiveSetFromFile(int level_num, int phase_num); // sets the active level as the one from the file
 
-void levelLoad(int level_num, int phase_num, int player_pos_x, int player_pos_y, char item);
-void levelTriggerNextPhase();
-void levelLoadNextPhase();
-void levelGoToNext();
-void levelRestart();
-void levelExit();
-void levelWin();
+void levelLoad(int level_num, int phase_num, int player_pos_x, int player_pos_y, char item); // loads a level
+void levelTriggerNextPhase(); // triggers the next phase of the level
+void levelLoadNextPhase(); // loads the next phase of the level
+void levelGoToNext(); // goes to the next level
+void levelRestart(); // restarts the level
+void levelExit(); // exits the level
+void levelWin(); // completes the level with win status
 
-void levelTransitionAction();
+void levelTransitionAction(); // level transition cutscene
 
 // gets current level size
 int levelFileGetWidth(int level_num, int phase_num);
@@ -89,5 +102,6 @@ char tileGetType(int pos_x, int pos_y);
 //specific tiles
 void wallTorchSetLit(int pos_x, int pos_y);
 void wallTorchSetUnlit(int pos_x, int pos_y);
+
 
 #endif

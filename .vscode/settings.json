@@ -14,7 +14,8 @@
         "math.h": "c",
         "tools.h": "c",
         "item.h": "c",
-        "light.h": "c"
+        "light.h": "c",
+        "menu.h": "c"
     },
     "makefile.configureOnOpen": true
 }

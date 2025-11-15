@@ -3,11 +3,11 @@
 #include <stdbool.h>
 #include <math.h>
 
-#include "../header/level/level.h"
-#include "../header/level/light.h"
-#include "../header/objects/player.h"
-#include "../header/debug.h"
-#include "../header/tools.h"
+#include "../../header/level/level.h"
+#include "../../header/level/light.h"
+#include "../../header/level/objects/player.h"
+#include "../../header/debug.h"
+#include "../../header/tools.h"
 
 #define SIGN(x) x < 0 ? -1 : x > 0 ? 1 : 0
 
@@ -33,16 +33,16 @@ void lightPorcessLayers() {
         for (int j = 0; j < level_active.width; j++) {
 
             if (level_active.objects[i][j] == CHAR_TORCH) {
-                lightProcess(j, i, LIGHT_RADIUS_TORCH);
+                lightProcess(j, i, LIGHT_RADIUS_TORCH + debug_light_buffer);
             }
             else if (level_active.tiles[i][j] == CHAR_WALL_TORCH_LIT) {
-                lightProcess(j, i, LIGHT_RADIUS_WALL_TORCH);
+                lightProcess(j, i, LIGHT_RADIUS_WALL_TORCH + debug_light_buffer);
             }
 
         }
     }
     if (player.item == CHAR_TORCH) {
-        lightProcess(player.pos_x, player.pos_y, LIGHT_RADIUS_TORCH);
+        lightProcess(player.pos_x, player.pos_y, LIGHT_RADIUS_TORCH + debug_light_buffer);
         logPrint("Processing player light\n");
     }
     logPrint("\n");

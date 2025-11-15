@@ -2,11 +2,12 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#include "../header/objects/player.h"
-#include "../header/level/level.h"
-#include "../header/objects/item.h"
-#include "../header/level/highlight.h"
-#include  "../header/level/menu.h"
+#include "../../../header/level/objects/player.h"
+#include "../../../header/level/level.h"
+#include "../../../header/level/objects/item.h"
+#include "../../../header/level/highlight.h"
+#include  "../../../header/draw/menu.h"
+#include  "../../../header/debug.h"
 
 Player player = {0, 0, '0'};
 
@@ -31,6 +32,9 @@ void playerSpawn(int pos_x, int pos_y, char item) {
         }
     }
 
+    logPrint("Player Spawned\n");
+
+
     highlight.pos_x = player.pos_x;
     highlight.pos_y = player.pos_y;
 
@@ -42,34 +46,26 @@ void playerAction(char dir) {
 
         case 'w':
         case 'W':
-            if(tileIsWalkable(player.pos_x, player.pos_y - 1)) {
-                
-                playerMove(player.pos_x, player.pos_y - 1);
-            }
+            if(tileIsWalkable(player.pos_x, player.pos_y - 1) || debug_phase_through_walls)
+            playerMove(player.pos_x, player.pos_y - 1);
             break;
 
         case 's':
         case 'S':
-            if(tileIsWalkable(player.pos_x, player.pos_y + 1)) {
-                
+            if(tileIsWalkable(player.pos_x, player.pos_y + 1) || debug_phase_through_walls)
                 playerMove(player.pos_x, player.pos_y + 1);
-            }
             break;
 
         case 'a':
         case 'A':
-            if(tileIsWalkable(player.pos_x - 1, player.pos_y)) {
-                
+            if(tileIsWalkable(player.pos_x - 1, player.pos_y) || debug_phase_through_walls)
                 playerMove(player.pos_x - 1, player.pos_y);
-            }
             break;
 
         case 'd':
         case 'D':
-            if(tileIsWalkable(player.pos_x + 1, player.pos_y)) {
-                
+            if(tileIsWalkable(player.pos_x + 1, player.pos_y) || debug_phase_through_walls)
                 playerMove(player.pos_x + 1, player.pos_y);
-            }
             break;
 
         case 'Z':
@@ -89,6 +85,8 @@ void playerMove(int pos_x, int pos_y) {
 
     player.pos_x = pos_x;
     player.pos_y = pos_y;
+
+    logPrint("Player move: x:%d, y%d\n", pos_x, pos_y);
     
     
     if (player.item == CHAR_RELIC && tileGetType(player.pos_x, player.pos_y) == CHAR_EXIT) 

@@ -3,13 +3,13 @@
 #include <math.h>
 #include <string.h>
 
-#include "../header/level/level.h"
-#include "../header/debug.h"
-#include "../header/objects/player.h"
-#include "../header/tools.h"
-#include "../header/level/light.h"
-#include "../header/level/draw.h"
-#include "../header/level/menu.h"
+#include "../../header/level/level.h"
+#include "../../header/debug.h"
+#include "../../header/level/objects/player.h"
+#include "../../header/tools.h"
+#include "../../header/level/light.h"
+#include "../../header/draw/draw.h"
+#include "../../header/draw/menu.h"
 
 
 Level level_active = {MAX_WIDTH, MAX_HEIGHT, {{0}}, {{0}}, {{0}}, 0, 0, 0, 0, 0};
@@ -70,13 +70,10 @@ void levelFileGetLayerNext(FILE * level_file, char layer[MAX_HEIGHT][MAX_WIDTH])
 }
 
 void levelActiveSetFromFile(int level_num, int phase_num) {
-    logPrint("AAAAAAAA");
 
     level_active.width = levelFileGetWidth(level_num, phase_num);
-    logPrint("AAAAAAAA");
 
     level_active.height = levelFileGetHight(level_num, phase_num);
-    logPrint("AAAAAAAA");
 
 
     level_active.level_num = level_num;
@@ -119,12 +116,17 @@ void levelActiveSetFromFile(int level_num, int phase_num) {
 
 void levelLoad(int level_num, int phase_num, int player_pos_x, int player_pos_y, char item) {
 
+    logPrint("Loading level\n");
+
     levelActiveSetFromFile(level_num, phase_num);
     playerSpawn(player_pos_x, player_pos_y, item);
+
 
 }
 
 void levelTriggerNextPhase() {
+
+    logPrint("Triggered next phase\n");
 
     if (level_active.phase_num == MAX_PHASES);
     
@@ -137,11 +139,15 @@ void levelTriggerNextPhase() {
 
 void levelLoadNextPhase() {
 
+    logPrint("Loaded next phase");
+
     levelLoad(level_active.level_num, level_active.phase_num + 1, player.pos_x, player.pos_y, player.item);
 
 }
 
 void levelGoToNext() {
+
+    logPrint("Next level\n");
 
     levelLoad(level_active.level_num + 1, 1, PLAYER_SPAWN_FROM_FILE, PLAYER_SPAWN_FROM_FILE, CHAR_EMPTY);
 
@@ -149,19 +155,24 @@ void levelGoToNext() {
 
 void levelExit() {
 
+    logPrint("level exited\n");
+
     level_active.level_exit = true;
     
 }
 
 void levelWin() {
 
-    printf("test");
+    logPrint("level Won\n");
     
     level_active.level_won = true;
     menuTravelWin();
+
 }
 
 void levelRestart() {
+
+    logPrint("level restarted\n");
 
     levelLoad(level_active.level_num, 1, PLAYER_SPAWN_FROM_FILE, PLAYER_SPAWN_FROM_FILE, CHAR_EMPTY);
 
@@ -169,6 +180,8 @@ void levelRestart() {
 
 
 void levelTransitionAction() {
+
+    logPrint("level transition action\n");
 
     for (int j = 0; j < level_active.width; j++) {
         for (int i = 0; i < level_active.height; i++) {
@@ -216,14 +229,14 @@ int levelFileGetHight(int level_num, int phase_num) {
     int height;
 
     for (int i = 0; i < MAX_HEIGHT + 1; i++)  {
-        fgets(temp_char, MAX_WIDTH * 2, level_file);
 
-        logPrint("%s", temp_char);
+        fgets(temp_char, MAX_WIDTH * 2, level_file);
 
         if (temp_char[0] == CHAR_LAYER_TRANSITION) {
             height = i;
             break;
-        } 
+        }
+
     }
 
     logPrint("level height: %d\n", height);
@@ -248,7 +261,9 @@ bool tileHasItem(int pos_x, int pos_y) {
 }
 
 bool tileBlocksLight(int pos_x, int pos_y) {
+
     return level_active.tiles[pos_y][pos_x] == CHAR_WALL;
+
 }
 
 bool tileCanHaveItem(int pos_x, int pos_y, char item) {
@@ -273,12 +288,16 @@ char tileGetType(int pos_x, int pos_y) {
 
 
 void wallTorchSetLit(int pos_x, int pos_y) {
+
+    logPrint("Wall torch set unlit at: x:%d, y%d\n", pos_x, pos_y);
     
     level_active.tiles[pos_y][pos_x] = CHAR_WALL_TORCH_LIT; 
 
 }
 
 void wallTorchSetUnlit(int pos_x, int pos_y) {
+
+    logPrint("Wall torch set lit at: x:%d, y%d\n", pos_x, pos_y);
 
     level_active.tiles[pos_y][pos_x] = CHAR_WALL_TORCH_UNLIT; 
 

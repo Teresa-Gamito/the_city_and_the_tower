@@ -1,11 +1,11 @@
 
 #include <stdio.h>
 #include <stdbool.h>
-#include <stdlib.h>
 
-#include "../header/level/menu.h"
-#include "../header/level/level.h"
-#include "../header/tools.h"
+#include "../../header/draw/menu.h"
+#include "../../header/level/level.h"
+#include "../../header/tools.h"
+#include "../../header/debug.h"
 
 
 void menuPrint(int current_menu) {
@@ -14,40 +14,44 @@ void menuPrint(int current_menu) {
 
         case MENU_STARTING_SCREEN:
             menuPrintStartingScreen();
+            logPrint("Printed Menu: Starting screen\n");
             break;
 
 
         case MENU_MAIN:
             menuPrintMain();
+            logPrint("Printed Menu: Main\n");
             break;
 
         case MENU_LEVELS:
             menuPrintLevel();
+            logPrint("Printed Menu: Levels\n");
             break;
 
 
         case MENU_OPTIONS:
             menuPrintOptions();
+            logPrint("Printed Menu: Options\n");
             break;
 
 
         case MENU_CREDITS:
             menuPrintCredits();
+            logPrint("Printed Menu: Credits\n");
             break;
 
         case MENU_PAUSE:
             menuPrintPause();
+            logPrint("Printed Menu: Pause\n");
             break;
 
         case MENU_WIN:
             menuPrintWin();
+            logPrint("Printed Menu: Win\n");
             break;
         
     }
 }
-
-
-
 
 
 void menuTravelMain(int * level_to_load) {
@@ -58,7 +62,9 @@ void menuTravelMain(int * level_to_load) {
     int input;
 
     do {
-        system("cls");
+
+        clear();
+
         menuPrint(current_menu);
 
         temp_input = getInput();
@@ -73,17 +79,7 @@ void menuTravelMain(int * level_to_load) {
 
 void menuPrintStartingScreen() {
     
-    FILE *logo;
-    logo = fopen(IMAGE_LOGO, "rt");
-
-    char temp_c;
-
-    while (temp_c = fgetc(logo)) {
-        if (temp_c != EOF) printf("%c", temp_c);
-        else break;
-    }
-    printf("\n\n                               <Press any key to start>\n");
-
+    printImage(IMAGE_LOGO);
 
 }
 
@@ -96,19 +92,19 @@ void menuPrintMain() {
 
 void menuPrintOptions() {
 
-    printf(" 1 - Main sound\n 2 - Sound Effects\n 3 - Music\n 4 - Accessibility\n 5 - Errase all data\n 6 - Back\n ");
+    printf(" 1 - Main sound\n 2 - Sound Effects\n 3 - Music\n 4 - Accessibility\n 5 - Errase all data\n\n 0 - Back\n ");
 
 }
 
 void menuPrintCredits() {
 
-    printf(" Game made by:\n\n 🦥 Rodrigo Valente\n 🐐 Teresa Gamito\n\n\n 0 - Back\n ");
+    printf(" Game made by:\n\n 🦥 Rodrigo Valente\n 🐐 Teresa Gamito\n\n Thanks: 🦊\n 0 - Back\n ");
 
 }
 
 void menuPrintLevel() {
 
-    printf(" 1 - Level 1 ()\n 2 - Level 2 ()\n 3 - Level 3 ()\n ");
+    printf(" 1 - Level 1 ()\n 2 - Level 2 ()\n 3 - Level 3 ()\n\n 0 - Back\n ");
 
 }
 
@@ -117,6 +113,8 @@ void menuPrintLevel() {
 
 
 bool menuAction(int * current_menu, int option, int * level_to_load) {
+    
+    logPrint("Menu Action: key %d\n", option);
 
     switch (*current_menu) {
 
@@ -167,7 +165,7 @@ void menuMainAction(int * current_menu, int option) {
             break;
         
         case MAIN_MENU_QUIT:
-            exit(0);
+            gameExit();
             break;
     }
 
@@ -235,7 +233,7 @@ void menuTravelWin() {
     int input;
 
     do {
-        system("cls");
+        clear();
         menuPrint(current_menu);
 
         temp_input = getInput();
@@ -245,6 +243,8 @@ void menuTravelWin() {
 }
 
 bool menuWinAction(int option) {
+
+    logPrint("Menu Win Action: key %d\n", option);
 
     switch (option) {
 
@@ -264,7 +264,7 @@ bool menuWinAction(int option) {
             break;
 
         case WIN_MENU_EXIT_GAME:
-            exit(0);
+            gameExit();
             break;
     }
     return true;
@@ -288,7 +288,7 @@ void menuTravelPause() {
     int input;
 
     do {
-        system("cls");
+        clear();
         menuPrint(current_menu);
 
         temp_input = getInput();
@@ -299,6 +299,8 @@ void menuTravelPause() {
 }
 
 bool menuPauseAction(int option) {
+
+    logPrint("Menu Pause Action: key %d\n", option);
 
      switch (option) {
 
@@ -321,7 +323,7 @@ bool menuPauseAction(int option) {
             break;
 
         case PAUSE_EXIT:
-            exit(0);
+            gameExit();
             break;
     }
     return true;
