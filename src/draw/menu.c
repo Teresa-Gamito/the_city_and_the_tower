@@ -104,7 +104,7 @@ void menuPrintCredits() {
 
 void menuPrintLevel() {
 
-    printf(" 1 - Level 1 ()\n 2 - Level 2 ()\n 3 - Level 3 ()\n\n 0 - Back\n ");
+    printf(" 1 - Level 1 ()\n 2 - Level 2 ()\n 3 - Level 3 ()\n 4 - Level 4 ()\n 5 - Level 5 ()\n 6 - Level 6 ()\n 7 - Level 7 ()\n 8 - Level 8 ()\n 9 - Level 9 ()\n\n 0 - Back\n ");
 
 }
 
