@@ -11,7 +11,7 @@
 
 bool debug_phase_through_walls = false;
 int debug_light_buffer = 0;
-bool debug_screen_clear = 1;
+bool debug_screen_clear = 0;
 
 FILE *logFile;
 
