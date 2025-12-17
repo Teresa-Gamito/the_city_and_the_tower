@@ -533,6 +533,7 @@ void renderMenu(SDL_Renderer *renderer, SDL_Window *window) {
     rendererPresent(renderer);
 }
 
+
 void renderMenuMain(SDL_Renderer *renderer, int scale) {
 
     int pencil_x, pencil_y;
@@ -547,253 +548,257 @@ void renderMenuMain(SDL_Renderer *renderer, int scale) {
 
     switch (gamestate.current_submenu) {
     case SUBMENU_MAIN_MAIN:
-        renderPNG(
-            renderer, 
-            spr_menu_main_main, 
-            OFFSET_MENU_MAIN_X, 
-            OFFSET_MENU_MAIN_Y, 
-            WIDTH_MENU_MAIN, 
-            HEIGHT_MENU_MAIN
-        );
-        switch (gamestate.current_option) {
-        case OPTION_MAIN_MAIN_LEVEL_SELECT:
-            pencil_x = OFFSET_OPTION_MENU_MAIN_MAIN_LEVEL_SELECT_X;
-            pencil_y = OFFSET_OPTION_MENU_MAIN_MAIN_LEVEL_SELECT_Y;
-            break;
-
-        case OPTION_MAIN_MAIN_OPTIONS:
-            pencil_x = OFFSET_OPTION_MENU_MAIN_MAIN_OPTIONS_X;
-            pencil_y = OFFSET_OPTION_MENU_MAIN_MAIN_OPTIONS_Y;
-            break;
-
-        case OPTION_MAIN_MAIN_CREDITS:
-            pencil_x = OFFSET_OPTION_MENU_MAIN_MAIN_CREDITS_X;
-            pencil_y = OFFSET_OPTION_MENU_MAIN_MAIN_CREDITS_Y;
-            break;
-
-        case OPTION_MAIN_MAIN_EXIT:
-            pencil_x = OFFSET_OPTION_MENU_MAIN_MAIN_EXIT_X;
-            pencil_y = OFFSET_OPTION_MENU_MAIN_MAIN_EXIT_Y;
-            break;
-        }
-        renderPNG(
-            renderer, 
-            spr_menu_main_pencil, 
-            OFFSET_MENU_MAIN_X + pencil_x, 
-            OFFSET_MENU_MAIN_Y + pencil_y, 
-            WIDTH_MENU_MAIN_PENCIL, 
-            HEIGHT_MENU_MAIN_PENCIL
-        );
+        renderMenuMainMain(renderer);
         break;
-    
+
     case SUBMENU_MAIN_LEVEL_SELECT:
-        renderPNG(
-            renderer, 
-            spr_menu_main_level_select, 
-            OFFSET_MENU_MAIN_X, 
-            OFFSET_MENU_MAIN_Y, 
-            WIDTH_MENU_MAIN, 
-            HEIGHT_MENU_MAIN
-        );
-        switch (gamestate.current_option) {
-        case 1:
-            pencil_x = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_1_X;
-            pencil_y = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_1_Y;
-            break;
-
-        case 2:
-            pencil_x = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_2_X;
-            pencil_y = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_2_Y;
-            break;
-
-        case 3:
-            pencil_x = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_3_X;
-            pencil_y = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_3_Y;
-            break;
-
-        case 4:
-            pencil_x = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_4_X;
-            pencil_y = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_4_Y;
-            break;
-
-        case 5:
-            pencil_x = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_5_X;
-            pencil_y = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_5_Y;
-            break;
-
-        case 6:
-            pencil_x = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_6_X;
-            pencil_y = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_6_Y;
-            break;
-
-        case 7:
-            pencil_x = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_7_X;
-            pencil_y = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_7_Y;
-            break;
-
-        case 8:
-            pencil_x = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_8_X;
-            pencil_y = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_8_Y;
-            break;
-
-        case 9:
-            pencil_x = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_9_X;
-            pencil_y = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_9_Y;
-            break;
-
-        case 10:
-            pencil_x = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_10_X;
-            pencil_y = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_10_Y;
-            break;
-
-        case OPTION_MAIN_CREDITS_BACK:
-            pencil_x = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_BACK_X;
-            pencil_y = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_BACK_Y;
-            break;
-        }
-        renderPNG(
-            renderer, 
-            spr_menu_main_pencil, 
-            OFFSET_MENU_MAIN_X + pencil_x, 
-            OFFSET_MENU_MAIN_Y + pencil_y, 
-            WIDTH_MENU_MAIN_PENCIL, 
-            HEIGHT_MENU_MAIN_PENCIL
-        );
+        renderMenuMainLevelSelect(renderer);
         break;
     
     case SUBMENU_MAIN_OPTIONS:
-        renderPNG(
-            renderer, 
-            spr_menu_main_options, 
-            OFFSET_MENU_MAIN_X, 
-            OFFSET_MENU_MAIN_Y, 
-            WIDTH_MENU_MAIN, 
-            HEIGHT_MENU_MAIN
-        );
-        switch (gamestate.current_option) {
-        case OPTION_MAIN_OPTIONS_MAIN_SOUND:
-            renderPNG(
-                renderer, 
-                spr_menu_main_pencil, 
-                OFFSET_MENU_MAIN_X + OFFSET_OPTION_MENU_MAIN_OPTIONS_MAIN_SOUND_X, 
-                OFFSET_MENU_MAIN_Y + OFFSET_OPTION_MENU_MAIN_OPTIONS_MAIN_SOUND_Y, 
-                WIDTH_MENU_MAIN_PENCIL, 
-                HEIGHT_MENU_MAIN_PENCIL
-            );
-            break;
-
-        case OPTION_MAIN_OPTIONS_SFX:
-            renderPNG(
-                renderer, 
-                spr_menu_main_pencil, 
-                OFFSET_MENU_MAIN_X + OFFSET_OPTION_MENU_MAIN_OPTIONS_SFX_X, 
-                OFFSET_MENU_MAIN_Y + OFFSET_OPTION_MENU_MAIN_OPTIONS_SFX_Y, 
-                WIDTH_MENU_MAIN_PENCIL, 
-                HEIGHT_MENU_MAIN_PENCIL
-            );
-            break;
-
-        case OPTION_MAIN_OPTIONS_MUSIC:
-            renderPNG(
-                renderer, 
-                spr_menu_main_pencil, 
-                OFFSET_MENU_MAIN_X + OFFSET_OPTION_MENU_MAIN_OPTIONS_MUSIC_X, 
-                OFFSET_MENU_MAIN_Y + OFFSET_OPTION_MENU_MAIN_OPTIONS_MUSIC_Y, 
-                WIDTH_MENU_MAIN_PENCIL, 
-                HEIGHT_MENU_MAIN_PENCIL
-            );
-            break;
-
-        case OPTION_MAIN_OPTIONS_BACK:
-            renderPNG(
-                renderer, 
-                spr_menu_main_pencil, 
-                OFFSET_MENU_MAIN_X + OFFSET_OPTION_MENU_MAIN_OPTIONS_BACK_X, 
-                OFFSET_MENU_MAIN_Y + OFFSET_OPTION_MENU_MAIN_OPTIONS_BACK_Y, 
-                WIDTH_MENU_MAIN_PENCIL, 
-                HEIGHT_MENU_MAIN_PENCIL
-            );
-            break;
-        }
-        if (gamestate.volume_main)
-            renderPNG(
-                renderer, 
-                spr_menu_main_options_checkmark, 
-                OFFSET_MENU_MAIN_X + OFFSET_MENU_MAIN_MAIN_SOUND_CHECKMARK_X, 
-                OFFSET_MENU_MAIN_Y + OFFSET_MENU_MAIN_MAIN_SOUND_CHECKMARK_Y, 
-                WIDTH_MENU_MAIN_CHECKMARK, 
-                HEIGHT_MENU_MAIN_CHECKMARK
-            );
-        else
-            renderPNG(
-                renderer, 
-                spr_menu_main_options_cross, 
-                OFFSET_MENU_MAIN_X + OFFSET_MENU_MAIN_MAIN_SOUND_CHECKMARK_X, 
-                OFFSET_MENU_MAIN_Y + OFFSET_MENU_MAIN_MAIN_SOUND_CHECKMARK_Y, 
-                WIDTH_MENU_MAIN_CROSS, 
-                HEIGHT_MENU_MAIN_CROSS
-            );
-
-        if (gamestate.volume_music)
-            renderPNG(
-                renderer, 
-                spr_menu_main_options_checkmark, 
-                OFFSET_MENU_MAIN_X + OFFSET_MENU_MAIN_MUSIC_CHECKMARK_X, 
-                OFFSET_MENU_MAIN_Y + OFFSET_MENU_MAIN_MUSIC_CHECKMARK_Y, 
-                WIDTH_MENU_MAIN_CHECKMARK, 
-                HEIGHT_MENU_MAIN_CHECKMARK
-            );
-        else
-            renderPNG(
-                renderer, 
-                spr_menu_main_options_cross, 
-                OFFSET_MENU_MAIN_X + OFFSET_MENU_MAIN_MUSIC_CHECKMARK_X, 
-                OFFSET_MENU_MAIN_Y + OFFSET_MENU_MAIN_MUSIC_CHECKMARK_Y, 
-                WIDTH_MENU_MAIN_CROSS, 
-                HEIGHT_MENU_MAIN_CROSS
-            );
-        
-        if (gamestate.volume_sfx)
-            renderPNG(
-                renderer, 
-                spr_menu_main_options_checkmark, 
-                OFFSET_MENU_MAIN_X + OFFSET_MENU_MAIN_SFX_CHECKMARK_X, 
-                OFFSET_MENU_MAIN_Y + OFFSET_MENU_MAIN_SFX_CHECKMARK_Y, 
-                WIDTH_MENU_MAIN_CHECKMARK, 
-                HEIGHT_MENU_MAIN_CHECKMARK
-            );
-        else
-            renderPNG(
-                renderer, 
-                spr_menu_main_options_cross, 
-                OFFSET_MENU_MAIN_X + OFFSET_MENU_MAIN_SFX_CHECKMARK_X, 
-                OFFSET_MENU_MAIN_Y + OFFSET_MENU_MAIN_SFX_CHECKMARK_Y, 
-                WIDTH_MENU_MAIN_CROSS, 
-                HEIGHT_MENU_MAIN_CROSS
-            );
+        renderMenuMainOptions(renderer);
         break;
     
     case SUBMENU_MAIN_CREDITS:
-        renderPNG(
-            renderer, 
-            spr_menu_main_credits, 
-            OFFSET_MENU_MAIN_X, 
-            OFFSET_MENU_MAIN_Y, 
-            WIDTH_MENU_MAIN, 
-            HEIGHT_MENU_MAIN
-        );
-        renderPNG(
-            renderer, 
-            spr_menu_main_pencil, 
-            OFFSET_MENU_MAIN_X + OFFSET_OPTION_MENU_MAIN_CREDITS_BACK_X, 
-            OFFSET_MENU_MAIN_Y + OFFSET_OPTION_MENU_MAIN_CREDITS_BACK_Y, 
-            WIDTH_MENU_MAIN_PENCIL, 
-            HEIGHT_MENU_MAIN_PENCIL
-        );
+        renderMenuMainCredits(renderer);
         break;
 
     }  
 }
+
+void renderMenuMainMain(SDL_Renderer *renderer) {
+    int pencil_x, pencil_y;
+    renderPNG(
+        renderer, 
+        spr_menu_main_main, 
+        OFFSET_MENU_MAIN_X, 
+        OFFSET_MENU_MAIN_Y, 
+        WIDTH_MENU_MAIN, 
+        HEIGHT_MENU_MAIN
+    );
+    switch (gamestate.current_option) {
+    case OPTION_MAIN_MAIN_LEVEL_SELECT:
+        pencil_x = OFFSET_OPTION_MENU_MAIN_MAIN_LEVEL_SELECT_X;
+        pencil_y = OFFSET_OPTION_MENU_MAIN_MAIN_LEVEL_SELECT_Y;
+        break;
+
+    case OPTION_MAIN_MAIN_OPTIONS:
+        pencil_x = OFFSET_OPTION_MENU_MAIN_MAIN_OPTIONS_X;
+        pencil_y = OFFSET_OPTION_MENU_MAIN_MAIN_OPTIONS_Y;
+        break;
+
+    case OPTION_MAIN_MAIN_CREDITS:
+        pencil_x = OFFSET_OPTION_MENU_MAIN_MAIN_CREDITS_X;
+        pencil_y = OFFSET_OPTION_MENU_MAIN_MAIN_CREDITS_Y;
+        break;
+
+    case OPTION_MAIN_MAIN_EXIT:
+        pencil_x = OFFSET_OPTION_MENU_MAIN_MAIN_EXIT_X;
+        pencil_y = OFFSET_OPTION_MENU_MAIN_MAIN_EXIT_Y;
+        break;
+    }
+    renderPNG(
+        renderer, 
+        spr_menu_main_pencil, 
+        OFFSET_MENU_MAIN_X + pencil_x, 
+        OFFSET_MENU_MAIN_Y + pencil_y, 
+        WIDTH_MENU_MAIN_PENCIL, 
+        HEIGHT_MENU_MAIN_PENCIL
+    );
+}
+
+void renderMenuMainLevelSelect(SDL_Renderer *renderer) {
+    int pencil_x, pencil_y;
+    renderPNG(
+        renderer, 
+        spr_menu_main_level_select, 
+        OFFSET_MENU_MAIN_X, 
+        OFFSET_MENU_MAIN_Y, 
+        WIDTH_MENU_MAIN, 
+        HEIGHT_MENU_MAIN
+    );
+    switch (gamestate.current_option) {
+    case 1:
+        pencil_x = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_1_X;
+        pencil_y = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_1_Y;
+        break;
+
+    case 2:
+        pencil_x = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_2_X;
+        pencil_y = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_2_Y;
+        break;
+
+    case 3:
+        pencil_x = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_3_X;
+        pencil_y = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_3_Y;
+        break;
+
+    case 4:
+        pencil_x = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_4_X;
+        pencil_y = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_4_Y;
+        break;
+
+    case 5:
+        pencil_x = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_5_X;
+        pencil_y = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_5_Y;
+        break;
+
+    case 6:
+        pencil_x = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_6_X;
+        pencil_y = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_6_Y;
+        break;
+
+    case 7:
+        pencil_x = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_7_X;
+        pencil_y = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_7_Y;
+        break;
+
+    case 8:
+        pencil_x = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_8_X;
+        pencil_y = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_8_Y;
+        break;
+
+    case 9:
+        pencil_x = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_9_X;
+        pencil_y = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_9_Y;
+        break;
+
+    case 10:
+        pencil_x = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_10_X;
+        pencil_y = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_10_Y;
+        break;
+
+    case OPTION_MAIN_CREDITS_BACK:
+        pencil_x = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_BACK_X;
+        pencil_y = OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_BACK_Y;
+        break;
+    }
+    renderPNG(
+        renderer, 
+        spr_menu_main_pencil, 
+        OFFSET_MENU_MAIN_X + pencil_x, 
+        OFFSET_MENU_MAIN_Y + pencil_y, 
+        WIDTH_MENU_MAIN_PENCIL, 
+        HEIGHT_MENU_MAIN_PENCIL
+    );
+}
+
+void renderMenuMainOptions(SDL_Renderer *renderer) {
+    int pencil_x, pencil_y;
+    renderPNG(
+        renderer, 
+        spr_menu_main_options, 
+        OFFSET_MENU_MAIN_X, 
+        OFFSET_MENU_MAIN_Y, 
+        WIDTH_MENU_MAIN, 
+        HEIGHT_MENU_MAIN
+    );
+    switch (gamestate.current_option) {
+    case OPTION_MAIN_OPTIONS_MAIN_SOUND:
+        pencil_x = OFFSET_MENU_MAIN_X + OFFSET_OPTION_MENU_MAIN_OPTIONS_MAIN_SOUND_X;
+        pencil_y = OFFSET_MENU_MAIN_Y + OFFSET_OPTION_MENU_MAIN_OPTIONS_MAIN_SOUND_Y;
+        break;
+
+    case OPTION_MAIN_OPTIONS_SFX:
+        pencil_x = OFFSET_MENU_MAIN_X + OFFSET_OPTION_MENU_MAIN_OPTIONS_SFX_X;
+        pencil_y = OFFSET_MENU_MAIN_Y + OFFSET_OPTION_MENU_MAIN_OPTIONS_SFX_Y;
+        break;
+
+    case OPTION_MAIN_OPTIONS_MUSIC:
+        pencil_x = OFFSET_MENU_MAIN_X + OFFSET_OPTION_MENU_MAIN_OPTIONS_MUSIC_X;
+        pencil_y = OFFSET_MENU_MAIN_Y + OFFSET_OPTION_MENU_MAIN_OPTIONS_MUSIC_Y;
+        break;
+
+    case OPTION_MAIN_OPTIONS_BACK:
+        pencil_x = OFFSET_MENU_MAIN_X + OFFSET_OPTION_MENU_MAIN_OPTIONS_BACK_X;
+        pencil_y = OFFSET_MENU_MAIN_Y + OFFSET_OPTION_MENU_MAIN_OPTIONS_BACK_Y;
+        break;
+    }
+    renderPNG(
+        renderer, 
+        spr_menu_main_pencil, 
+        pencil_x, 
+        pencil_y, 
+        WIDTH_MENU_MAIN_PENCIL, 
+        HEIGHT_MENU_MAIN_PENCIL
+    );
+    if (gamestate.volume_main)
+        renderPNG(
+            renderer, 
+            spr_menu_main_options_checkmark, 
+            OFFSET_MENU_MAIN_X + OFFSET_MENU_MAIN_MAIN_SOUND_CHECKMARK_X, 
+            OFFSET_MENU_MAIN_Y + OFFSET_MENU_MAIN_MAIN_SOUND_CHECKMARK_Y, 
+            WIDTH_MENU_MAIN_CHECKMARK, 
+            HEIGHT_MENU_MAIN_CHECKMARK
+        );
+    else
+        renderPNG(
+            renderer, 
+            spr_menu_main_options_cross, 
+            OFFSET_MENU_MAIN_X + OFFSET_MENU_MAIN_MAIN_SOUND_CHECKMARK_X, 
+            OFFSET_MENU_MAIN_Y + OFFSET_MENU_MAIN_MAIN_SOUND_CHECKMARK_Y, 
+            WIDTH_MENU_MAIN_CROSS, 
+            HEIGHT_MENU_MAIN_CROSS
+        );
+
+    if (gamestate.volume_music)
+        renderPNG(
+            renderer, 
+            spr_menu_main_options_checkmark, 
+            OFFSET_MENU_MAIN_X + OFFSET_MENU_MAIN_MUSIC_CHECKMARK_X, 
+            OFFSET_MENU_MAIN_Y + OFFSET_MENU_MAIN_MUSIC_CHECKMARK_Y, 
+            WIDTH_MENU_MAIN_CHECKMARK, 
+            HEIGHT_MENU_MAIN_CHECKMARK
+        );
+    else
+        renderPNG(
+            renderer, 
+            spr_menu_main_options_cross, 
+            OFFSET_MENU_MAIN_X + OFFSET_MENU_MAIN_MUSIC_CHECKMARK_X, 
+            OFFSET_MENU_MAIN_Y + OFFSET_MENU_MAIN_MUSIC_CHECKMARK_Y, 
+            WIDTH_MENU_MAIN_CROSS, 
+            HEIGHT_MENU_MAIN_CROSS
+        );
+    
+    if (gamestate.volume_sfx)
+        renderPNG(
+            renderer, 
+            spr_menu_main_options_checkmark, 
+            OFFSET_MENU_MAIN_X + OFFSET_MENU_MAIN_SFX_CHECKMARK_X, 
+            OFFSET_MENU_MAIN_Y + OFFSET_MENU_MAIN_SFX_CHECKMARK_Y, 
+            WIDTH_MENU_MAIN_CHECKMARK, 
+            HEIGHT_MENU_MAIN_CHECKMARK
+        );
+    else
+        renderPNG(
+            renderer, 
+            spr_menu_main_options_cross, 
+            OFFSET_MENU_MAIN_X + OFFSET_MENU_MAIN_SFX_CHECKMARK_X, 
+            OFFSET_MENU_MAIN_Y + OFFSET_MENU_MAIN_SFX_CHECKMARK_Y, 
+            WIDTH_MENU_MAIN_CROSS, 
+            HEIGHT_MENU_MAIN_CROSS
+        );
+}
+
+void renderMenuMainCredits(SDL_Renderer *renderer) {
+    renderPNG(
+        renderer, 
+        spr_menu_main_credits, 
+        OFFSET_MENU_MAIN_X, 
+        OFFSET_MENU_MAIN_Y, 
+        WIDTH_MENU_MAIN, 
+        HEIGHT_MENU_MAIN
+    );
+    renderPNG(
+        renderer, 
+        spr_menu_main_pencil, 
+        OFFSET_MENU_MAIN_X + OFFSET_OPTION_MENU_MAIN_CREDITS_BACK_X, 
+        OFFSET_MENU_MAIN_Y + OFFSET_OPTION_MENU_MAIN_CREDITS_BACK_Y, 
+        WIDTH_MENU_MAIN_PENCIL, 
+        HEIGHT_MENU_MAIN_PENCIL
+    );
+}
+
 
 void renderMenuPause(SDL_Renderer *renderer, int scale) {
 

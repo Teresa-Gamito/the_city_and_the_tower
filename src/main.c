@@ -113,4 +113,14 @@ void gameUpdate() {
         renderLevel(renderer, window);
         break;
     }
+
+    if (gamestate.current_screen == SCREEN_LEVEL) {
+        if (gamestate.volume_music && gamestate.volume_main) {
+            if (SDL_GetAudioStreamQueued(msc_main.stream) < ((int) msc_main.wav_data_lenght)) {
+                SDL_PutAudioStreamData(msc_main.stream, msc_main.wav_data, msc_main.wav_data_lenght);
+            }
+        }
+        else SDL_PauseAudioStreamDevice(msc_main.stream);
+    }
+
 }

@@ -1,6 +1,8 @@
 
 #include "../../header/draw/audio.h"
 
+Sound msc_main;
+
 Sound snd_player_move_ground[2];
 
 Sound snd_item_pick_up;
@@ -17,6 +19,8 @@ Sound snd_menu_option_select;
 void loadSounds(SDL_AudioDeviceID audio_device) {
 
     logPrint("loading sounds\n");
+
+    msc_main = loadSoundFromWAV(audio_device, MUSIC_MAIN);
 
     snd_player_move_ground[0] = loadSoundFromWAV(audio_device, SOUND_PLAYER_MOVE_GROUND_1);
     snd_player_move_ground[1] = loadSoundFromWAV(audio_device, SOUND_PLAYER_MOVE_GROUND_2);

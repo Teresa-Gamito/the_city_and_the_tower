@@ -15,20 +15,29 @@
 #include "../../draw/audio.h"
 #include "../../debug.h"
 
+
 // player spawning
+
 #define PLAYER_SPAWN_FROM_FILE -1
 #define PLAYER_NO_ITEM '0'
 
+
 // player sprite info
+
 #define PLAYER_SPRITE_DIRECTION_LEFT 0
 #define PLAYER_SPRITE_DIRECTION_RIGHT 1
+
+
+// player sprites
 
 #define PLAYER_SPRITE_ITEM_NONE 0
 #define PLAYER_SPRITE_ITEM_TORCH 1
 #define PLAYER_SPRITE_ITEM_PLANK 2
 #define PLAYER_SPRITE_ITEM_RELIC 3
 
+
 // player movement
+
 #define PLAYER_MOVE_UP      0
 #define PLAYER_MOVE_DOWN    1
 #define PLAYER_MOVE_LEFT    2
@@ -37,6 +46,7 @@
 
 #ifndef PLAYER_H
 #define PLAYER_H
+
 
 // define the player as an object
 typedef struct Player {
@@ -51,11 +61,15 @@ typedef struct Player {
 // global player
 extern Player player;
 
-void playerSpawn(int pos_x, int pos_y, char item); // spawns the player into the level
+// spawns the player into the level
+void playerSpawn(int pos_x, int pos_y, char item); 
 
-void playerMove(int pos_x, int pos_y); // move the player
-void playerAction(int input); // execute actions related to the player with given input
+// move the player
+void playerMove(int pos_x, int pos_y); 
+// execute actions related to the player with given input
+void playerAction(int input); 
 
-bool playerHasItem(); // return true if the player has an item
+// return true if the player has an item
+bool playerHasItem(); 
 
 #endif

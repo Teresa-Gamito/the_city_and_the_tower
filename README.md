@@ -9,6 +9,7 @@ gcc src/main.c src/tools.c src/debug.c src/draw/draw.c src/draw/menu.c src/level
 TODO:
 if we have time:
     add algorithm for planks
+    fix pit tileset
 
 
 Presentation Parts:
@@ -38,9 +39,6 @@ After:
     Playtesting and assessment
     Bring laptop
     take notes from observations and feedback
-
-
-
 
 
 

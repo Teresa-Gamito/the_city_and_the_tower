@@ -23,25 +23,32 @@
 #define HIGHLIGHT_MOVE_LEFT 3
 #define HIGHLIGHT_MOVE_RIGHT 4
 
-#define DELAY_HIGHLIGHT_RESET_POSITION 1000
+#define DELAY_HIGHLIGHT_RESET_POSITION 5000
 
 
+// Highlight associated with player interactions with the environment
 typedef struct Highlight {
 
-    int pos_x; // highlight position x
-    int pos_y; // highlight position y
-    bool is_on; // is the highlight active
+    int pos_x;      // highlight position x
+    int pos_y;      // highlight position y
+    bool is_on;     // is the highlight active
 
 } Highlight;
 
-extern Highlight highlight;
+// global highlight
+extern Highlight highlight; 
 
-void highlightSpawn(); // spawns the highlight ui
-void highlightDespawn(); // deespawns the highlight ui
+// spawns the highlight ui
+void highlightSpawn();
+// deespawns the highlight ui
+void highlightDespawn(); 
 
-void highlightAction(int input); // actions when highlight is on
-void highlightMove(int pos_x, int pos_y); // move highlight
+// actions when the highlight is on
+void highlightAction(int input); 
+// move the highlight
+void highlightMove(int pos_x, int pos_y); 
 
-Uint32 highlightResetPosition(void *userdata, SDL_TimerID timerID, Uint32 interval);
+// callback function associated with a timer
+Uint32 highlightResetPosition(void *userdata, SDL_TimerID timerID, Uint32 interval); 
 
 #endif

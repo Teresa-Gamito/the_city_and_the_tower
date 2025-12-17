@@ -2,7 +2,7 @@
 // ========================================
 // Debugging tools
 // Logging
-// Commands
+// Commands / cheats
 // ========================================
 
 #pragma once
@@ -17,28 +17,27 @@
 #include "tools.h"
 
 
-
 #define MAX_WIDTH 60
 #define MAX_HEIGHT 33
 
-// command naming
-#define COMMAND_RESTART SDL_SCANCODE_R               // restart level
-#define COMMAND_NEXT_PHASE SDL_SCANCODE_M         // go to next phase
-#define COMMAND_NEXT_LEVEL SDL_SCANCODE_N          // go to next leevel
+// command keys
+#define COMMAND_RESTART SDL_SCANCODE_R                  // restart level
+#define COMMAND_NEXT_PHASE SDL_SCANCODE_M               // go to next phase
+#define COMMAND_NEXT_LEVEL SDL_SCANCODE_N               // go to next leevel
 #define COMMAND_TORCH SDL_SCANCODE_T                    // spawn torch
 #define COMMAND_RELIC SDL_SCANCODE_Y                    // spawn relic
 #define COMMAND_PLANK SDL_SCANCODE_U                    // spawn plank
 #define COMMAND_LIGHT SDL_SCANCODE_L                    // light up room
 #define COMMAND_PHASE SDL_SCANCODE_G                    // toggle phasing through obstacles
-#define COMMAND_LIGHT_RADIUS_UP SDL_SCANCODE_PERIOD       // increse light radius
+#define COMMAND_LIGHT_RADIUS_UP SDL_SCANCODE_PERIOD     // increse light radius
 #define COMMAND_LIGHT_RADIUS_DOWN SDL_SCANCODE_COMMA    // decrese light radius
 
 
 // debug variables
-// extern bool debug_is_active;                 // enable debug commands
-extern bool debug_phase_through_walls;          // ability to phase through walls
-extern int debug_light_buffer;                  // light up whole level (requires restart level to reset)
-extern bool debug_screen_clear;                 // toggles between clear cmd and printing a bunch of new lines
+// extern bool debug_is_active;            // enable debug commands
+extern bool debug_phase_through_walls;     // ability to phase through walls
+extern int debug_light_buffer;             // light up whole level (requires restart level to reset)
+extern bool debug_screen_clear;            // toggles between clear cmd and printing a bunch of new lines
 
 
 // debug file
