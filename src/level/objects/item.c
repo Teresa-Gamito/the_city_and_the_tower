@@ -39,12 +39,16 @@ void pickUpDefault(int pos_x, int pos_y) {
     player.item = level_active.objects[pos_y][pos_x];
     level_active.objects[pos_y][pos_x] = CHAR_EMPTY;
 
+    soundPlay(snd_item_pick_up);
+
 }
 
 void pickUpPlank(int pos_x, int pos_y) {
 
     player.item = CHAR_PLANK;
     level_active.tiles[pos_y][pos_x] = CHAR_PIT;
+
+    soundPlay(snd_item_pick_up);
 
 }
 
@@ -109,6 +113,9 @@ void dropPlank(int pos_x, int pos_y) {
         else level_active.objects[pos_y][pos_x] = player.item;
         
         player.item = CHAR_EMPTY;
+
+        soundPlay(snd_item_drop);
+
     }
 
 }
@@ -120,12 +127,14 @@ void dropTorch(int pos_x, int pos_y) {
         if (tileGetType(pos_x, pos_y) == CHAR_WALL_TORCH_UNLIT) {
 
             wallTorchSetLit(pos_x, pos_y);
+            soundPlay(snd_wall_torch_lit);
 
         }
         else {
         
             level_active.objects[pos_y][pos_x] = player.item;
             player.item = CHAR_EMPTY;
+            soundPlay(snd_item_drop);
         
         }
     }
@@ -137,6 +146,7 @@ void dropDefault(int pos_x, int pos_y) {
 
         level_active.objects[pos_y][pos_x] = player.item;
         player.item = CHAR_EMPTY;
+        soundPlay(snd_item_drop);
 
     }
 

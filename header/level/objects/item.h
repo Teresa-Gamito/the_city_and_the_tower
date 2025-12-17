@@ -8,7 +8,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#include "../../level/level.h"
+#include "../level.h"
+#include "../../draw/audio.h"
 #include "../../debug.h"
 #include "player.h"
 

@@ -2,7 +2,7 @@
 #include "../../header/level/level.h"
 
 
-Level level_active = {MAX_WIDTH, MAX_HEIGHT, {{0}}, {{0}}, {{0}}, 0, 0, 0, 0, 0};
+Level level_active = {MAX_WIDTH, MAX_HEIGHT, {{0}}, {{0}}, {{0}}, {{0}}, 0, 0, 0};
 
 
 void inLevelAction(SDL_Event *event) {
@@ -38,6 +38,8 @@ void inLevelAction(SDL_Event *event) {
         case SDL_SCANCODE_ESCAPE:
             gamestate.current_screen = SCREEN_MENU;
             gamestate.current_menu = MENU_PAUSE;
+            gamestate.current_submenu = SUBMENU_PAUSE_MAIN;
+
             break;
 
         }
@@ -231,15 +233,16 @@ void levelTransitionAction() {
         for (int i = 0; i < level_active.height; i++) {
 
             if (tileGetType(j,i) == CHAR_WALL_TORCH_LIT) {
-                
+
                 level_active.tiles[i][j] = CHAR_WALL_TORCH_UNLIT;
-                delay(DELAY_WALL_TORCH_ERASE);
+                soundPlay(snd_wall_torch_unlit);
+                gameUpdate();
+                SDL_Delay(DELAY_WALL_TORCH_ERASE);
 
             }
         }
     }
 }
-
 
 int levelFileGetWidth(int level_num, int phase_num) {
 

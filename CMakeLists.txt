@@ -24,6 +24,7 @@ add_executable(game WIN32
     header/level/objects/item.h
     header/draw/draw.h
     header/draw/menu.h
+    header/draw/audio.h
     src/main.c
     src/debug.c
     src/tools.c
@@ -35,6 +36,7 @@ add_executable(game WIN32
     src/level/objects/item.c
     src/draw/draw.c
     src/draw/menu.c
+    src/draw/audio.c
 )
 
 # Link to the actual SDL3 library.

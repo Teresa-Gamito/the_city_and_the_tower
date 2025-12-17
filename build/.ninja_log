@@ -1,5 +1,5 @@
 # ninja log v7
-31	69	7874539385372458	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+29	69	7876856099816615	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
 107	1232	7861429503758862	vendored/SDL/CMakeFiles/SDL_uclibc.dir/src/libm/e_atan2.c.obj	6266743f7cbb7d0c
 125	1293	7861429503928415	vendored/SDL/CMakeFiles/SDL_uclibc.dir/src/libm/e_log10.c.obj	220e76a607b25fce
 128	1302	7861429503973375	vendored/SDL/CMakeFiles/SDL_uclibc.dir/src/libm/e_pow.c.obj	7f1288fc3fe1d41a
@@ -265,258 +265,528 @@
 22352	22985	7861429726229520	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/offscreen/SDL_offscreenvideo.c.obj	9b31f041d96e0278
 22033	23116	7861429723008122	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/dialog/windows/SDL_windowsdialog.c.obj	1fda6078e4d4dfaa
 22822	23132	7861429730907001	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/main/generic/SDL_sysmain_callbacks.c.obj	3d3ce8cefa1a375b
-86	586	7874539385923061	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+88	409	7876814462537569	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
 22862	23248	7861429731305934	vendored/SDL/libSDL_uclibc.a	cc066f47d6129a0c
 22622	23789	7861429728912341	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/gpu/vulkan/SDL_gpu_vulkan.c.obj	a669babc4fd31807
 22612	23959	7861429728842517	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/gpu/d3d12/SDL_gpu_d3d12.c.obj	8411fcf04989399a
 92	614	7861472988005895	SDL3.dll	a736de28be5c63e1
 92	614	7861472988005895	vendored/SDL/libSDL3.dll.a	a736de28be5c63e1
-840	1257	7874539393458109	game.exe	3be9f6a8162139b8
-70	2121	7865522028651772	build.ninja	d2277602e865a2d1
-70	2121	7865522028651772	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/cmake_install.cmake	d2277602e865a2d1
-70	2121	7865522028651772	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/vendored/SDL/cmake_install.cmake	d2277602e865a2d1
-103	585	7874539386088780	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
-89	579	7874539385949204	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
-92	556	7874539385989055	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
-98	690	7874539386038913	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
-100	668	7874539386068829	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
-105	641	7874539386118702	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
-561	840	7874539390676734	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
-579	822	7874539390856247	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
-95	664	7874539386008991	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+645	759	7876814468112683	game.exe	3be9f6a8162139b8
+70	2121	7876856123741221	build.ninja	d2277602e865a2d1
+70	2121	7876856122880155	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/cmake_install.cmake	d2277602e865a2d1
+70	2121	7876856123359838	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/vendored/SDL/cmake_install.cmake	d2277602e865a2d1
+110	480	7876814462776948	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+91	476	7876814462577481	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+94	416	7876814462597419	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+100	405	7876814462657266	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+103	475	7876814462717093	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+115	473	7876814462816830	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+405	644	7876814465709098	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+409	598	7876814465748998	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+97	477	7876814462637313	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
 92	160	7862333539710457	CMakeFiles/game.dir/test.c.obj	528891a971d661ad
 90	582	7861470367738162	vendored/SDL/SDL3.dll	42fbeb7af7029526
-35	74	7874539993424505	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-92	457	7874539993995997	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
-104	502	7874539994115682	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
-95	531	7874539994025920	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
-101	570	7874539994085763	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
-111	584	7874539994185508	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
-107	596	7874539994145602	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
-98	604	7874539994055844	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
-114	626	7874539994215418	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
-503	734	7874539998100741	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
-464	795	7874539997711542	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
-795	917	7874540001022487	game.exe	3be9f6a8162139b8
-32	71	7874540566059214	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-20	62	7874540922918902	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-78	296	7874540923491235	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
-297	456	7874540925687565	game.exe	3be9f6a8162139b8
-31	67	7874541309241806	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-85	316	7874541309788224	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
-317	444	7874541312098565	game.exe	3be9f6a8162139b8
-32	72	7874548021341914	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-105	570	7874548022068099	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
-108	578	7874548022127950	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
-90	589	7874548021908821	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
-102	606	7874548022028211	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
-99	634	7874548022008264	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
-96	641	7874548021972332	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
-93	661	7874548021938441	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
-114	673	7874548022227679	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
-586	799	7874548026870340	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
-574	845	7874548026760644	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
-845	965	7874548029467540	game.exe	3be9f6a8162139b8
-27	67	7874548536953255	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-83	308	7874548537514210	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
-309	435	7874548539772099	game.exe	3be9f6a8162139b8
-35	117	7874553316744962	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-138	523	7874553317782949	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
-135	571	7874553317741678	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
-152	576	7874553317912601	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
-163	581	7874553318027390	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
-160	582	7874553317997476	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
-132	589	7874553317711755	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
-156	647	7874553317967550	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
-141	654	7874553317812880	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
-573	776	7874553322116459	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
-536	813	7874553321757417	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
-814	932	7874553324537919	game.exe	3be9f6a8162139b8
-27	67	7874556629504228	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-82	586	7874556630051075	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
-88	610	7874556630110923	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
-110	670	7874556630370223	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
-85	696	7874556630080995	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
-118	700	7874556630410124	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
-94	702	7874556630180731	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
-90	722	7874556630140837	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
-121	740	7874556630489914	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
-611	837	7874556635377047	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
-26	67	7874556768225075	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-86	607	7874556768827331	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
-99	614	7874556768966655	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
-111	621	7874556769106280	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
-90	638	7874556768866927	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
-103	778	7874556769036466	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
-83	780	7874556768797387	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
-124	794	7874556769215991	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
-95	801	7874556768916791	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
-608	935	7874556774038338	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
-614	939	7874556774098178	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
-940	1064	7874556777354664	game.exe	3be9f6a8162139b8
-29	70	7874556936997315	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-18	60	7874565578992991	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-18	57	7874566256085869	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-17	59	7874566328091478	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-81	498	7874566328742046	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
-87	552	7874566328793004	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
-124	563	7874566329181972	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
-76	568	7874566328682445	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
-79	583	7874566328712120	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
-129	584	7874566329231836	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
-96	585	7874566329092205	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
-84	590	7874566328763086	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
-553	755	7874566333455641	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
-499	765	7874566333006833	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
-765	886	7874566335574005	game.exe	3be9f6a8162139b8
-27	65	7874566732008442	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-94	558	7874566732667769	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
-81	616	7874566732538765	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
-84	649	7874566732578001	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
-87	710	7874566732607919	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
-90	717	7874566732637842	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
-97	722	7874566732717636	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
-258	747	7874566734343275	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
-104	765	7874566733016827	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
-616	857	7874566737894062	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
-558	858	7874566737315326	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
-858	973	7874566740311715	game.exe	3be9f6a8162139b8
-31	71	7874567194835365	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-17	56	7874568422034179	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-71	237	7874568422577127	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
-238	357	7874568424245308	game.exe	3be9f6a8162139b8
-29	67	7874568561648361	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-83	239	7874568562187267	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
-239	356	7874568563739833	game.exe	3be9f6a8162139b8
-33	73	7874568661881302	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-20	62	7874568891937404	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-100	607	7874568892809554	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
-86	619	7874568892580161	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
-118	625	7874568892929337	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
-78	626	7874568892510355	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
-93	628	7874568892669920	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
-113	645	7874568892869389	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
-82	646	7874568892540269	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
-88	652	7874568892610092	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
-620	806	7874568897926063	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
-616	844	7874568897886171	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
-844	965	7874568900162366	game.exe	3be9f6a8162139b8
-33	71	7874569214038878	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-112	555	7874569214826129	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
-96	561	7874569214668121	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
-89	573	7874569214596742	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
-102	587	7874569214726395	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
-108	612	7874569214796208	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
-93	614	7874569214636944	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
-105	644	7874569214746345	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
-99	660	7874569214696475	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
-563	764	7874569219400537	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
-556	826	7874569219280695	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
-826	945	7874569221964910	game.exe	3be9f6a8162139b8
-29	68	7874570091320511	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-84	294	7874570091873874	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
-295	418	7874570093980402	game.exe	3be9f6a8162139b8
-68	117	7875114595804778	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-132	1135	7875114596443066	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
-1136	1536	7875114606473242	game.exe	3be9f6a8162139b8
-26	62	7875117862874534	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-17	55	7875120528870781	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-70	246	7875120529399382	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
-73	293	7875120529429290	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
-293	410	7875120531633703	game.exe	3be9f6a8162139b8
-28	68	7875120787320921	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-84	242	7875120787869678	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
-243	363	7875120789455200	game.exe	3be9f6a8162139b8
-29	73	7875138311437584	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-16	57	7875138586336855	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-20	59	7875143788742674	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-81	519	7875143789356119	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
-79	552	7875143789326189	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
-95	556	7875143789495749	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
-87	580	7875143789405982	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
-76	605	7875143789296270	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
-92	681	7875143789455848	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
-99	687	7875143789535635	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
-84	687	7875143789386036	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
-552	780	7875143794064552	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
-519	810	7875143793724753	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
-810	936	7875143796631782	game.exe	3be9f6a8162139b8
-28	64	7875143884778208	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-18	58	7875154852881611	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-74	289	7875154853440116	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
-297	418	7875154855669260	game.exe	3be9f6a8162139b8
-30	67	7875156169783596	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-18	53	7875157594733781	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-68	392	7875157595232439	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
-73	421	7875157595292284	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
-76	426	7875157595322207	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
-71	437	7875157595262360	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
-98	438	7875157595541622	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
-95	450	7875157595501720	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
-79	480	7875157595441884	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
-101	494	7875157595581520	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
-421	622	7875157598765902	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
-394	646	7875157598496027	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
-647	762	7875157601020922	game.exe	3be9f6a8162139b8
-29	67	7875159196356368	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-19	56	7875159363908575	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-17	56	7875160028572525	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-18	61	7875160494356931	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-18	59	7875160876347062	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-16	53	7875164260904450	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-17	51	7875165251128791	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-19	63	7875166569978966	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-79	367	7875166570587186	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
-28	66	7875166634949094	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-81	199	7875166635477683	game.exe	3be9f6a8162139b8
-20	61	7875169075583939	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-47	98	7875215897659682	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-130	1424	7875215898507430	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
-127	1431	7875215898457560	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
-119	1447	7875215898377778	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
-135	1450	7875215898547320	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
-115	1456	7875215898337869	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
-122	1458	7875215898407691	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
-124	1459	7875215898437611	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
-139	1460	7875215898577242	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
-1431	1618	7875215911499133	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
-29	68	7875216087178179	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-84	292	7875216087726722	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
-295	592	7875216089841068	game.exe	3be9f6a8162139b8
-27	69	7875217378042216	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-101	532	7875217378785289	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
-86	540	7875217378630623	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
-89	545	7875217378660556	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
-98	547	7875217378745399	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
-95	554	7875217378710411	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
-110	654	7875217378875067	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
-114	663	7875217378964813	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
-105	665	7875217378835166	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
-541	798	7875217383188604	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
-533	846	7875217383138731	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
-846	962	7875217386230477	game.exe	3be9f6a8162139b8
-28	66	7875220860669288	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-91	492	7875220861307317	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
-94	502	7875220861337225	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
-97	509	7875220861367165	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
-86	511	7875220861247464	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
-83	517	7875220861217540	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
-101	520	7875220861407047	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
-89	529	7875220861277386	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
-105	537	7875220861452011	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
-504	676	7875220865436448	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
-494	714	7875220865336724	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
-715	832	7875220867533923	game.exe	3be9f6a8162139b8
-28	67	7875232137865247	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
-83	525	7875232138413790	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
-85	535	7875232138443711	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
-97	544	7875232138563392	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
-88	556	7875232138473633	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
-91	558	7875232138503551	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
-104	617	7875232138633210	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
-94	621	7875232138533472	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
-100	622	7875232138593324	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
-535	741	7875232142946786	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
-525	781	7875232142837072	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
-781	901	7875232145399286	game.exe	3be9f6a8162139b8
-27	66	7875236154875866	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+69	2467	7876856123741221	build.ninja	d2277602e865a2d1
+69	2467	7876856123741221	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/cmake_install.cmake	d2277602e865a2d1
+69	2467	7876856123741221	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/vendored/SDL/cmake_install.cmake	d2277602e865a2d1
+29	69	7876856124494527	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+17	56	7876857222051547	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+75	499	7876857222628352	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+86	510	7876857222747632	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+94	516	7876857222847355	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+72	525	7876857222598273	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+77	526	7876857222647890	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+90	527	7876857222797492	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+83	530	7876857222707729	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+80	537	7876857222677815	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+27	67	7876858247447973	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+19	58	7876858541618854	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+19	58	7876858643454809	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+77	267	7876858644029017	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+26	65	7876858966632410	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+20	61	7876859624169979	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+20	62	7876859864382519	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+78	299	7876859864968853	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+27	68	7876861011918326	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+20	69	7876861123657886	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+89	243	7876861124351134	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+245	382	7876861125901011	game.exe	6f2eeb23c3e2ada2
+28	66	7876861392892761	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+21	69	7876863239257438	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+25	76	7876863469366268	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+97	806	7876863470088316	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+100	823	7876863470118234	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+110	827	7876863470217973	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+93	919	7876863470048419	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+113	941	7876863470247890	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+104	942	7876863470158146	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+107	943	7876863470188050	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+116	949	7876863470277818	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+828	1130	7876863477392786	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+824	1170	7876863477358889	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+808	1230	7876863477209283	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+26	66	7876863544210995	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+82	204	7876863544784757	game.exe	6f2eeb23c3e2ada2
+17	57	7876863568132658	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+17	58	7876863705669488	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+74	219	7876863706231514	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+220	341	7876863707691233	game.exe	6f2eeb23c3e2ada2
+24	70	7876863836619557	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+86	231	7876863837242970	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+231	352	7876863838688068	game.exe	6f2eeb23c3e2ada2
+29	74	7876864098554674	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+90	234	7876864099169989	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+234	358	7876864100609498	game.exe	6f2eeb23c3e2ada2
+28	67	7876864198815634	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+85	271	7876864199589726	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+272	402	7876864201259298	game.exe	6f2eeb23c3e2ada2
+30	70	7876864298302244	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+86	242	7876864298867323	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+245	376	7876864300458789	game.exe	6f2eeb23c3e2ada2
+28	69	7876864330026186	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+85	226	7876864330588373	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+227	349	7876864332018477	game.exe	6f2eeb23c3e2ada2
+29	65	7876865766208083	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+80	215	7876865766721321	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+217	332	7876865768089425	game.exe	6f2eeb23c3e2ada2
+27	64	7876865926149637	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+82	443	7876865926702620	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+96	449	7876865926832278	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+79	459	7876865926672695	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+98	465	7876865926862194	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+92	466	7876865926792376	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+85	467	7876865926722569	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+104	469	7876865926922034	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+88	492	7876865926762467	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+460	618	7876865930492491	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+450	638	7876865930392765	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+444	676	7876865930332926	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+678	789	7876865932656372	game.exe	6f2eeb23c3e2ada2
+26	62	7876866009281356	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+18	54	7876866406257938	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+70	205	7876866406781482	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+206	319	7876866408136845	game.exe	6f2eeb23c3e2ada2
+26	67	7876866503748552	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+83	219	7876866504311585	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+220	332	7876866505687505	game.exe	6f2eeb23c3e2ada2
+27	67	7876866577717310	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+82	218	7876866578265768	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+218	331	7876866579618148	game.exe	6f2eeb23c3e2ada2
+26	65	7876866718228363	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+80	215	7876866718769214	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+216	333	7876866720124488	game.exe	6f2eeb23c3e2ada2
+28	70	7876866932984311	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+89	221	7876866933589034	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+85	252	7876866933556131	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+253	367	7876866935225149	game.exe	6f2eeb23c3e2ada2
+25	62	7876867026360317	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+78	212	7876867026889931	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+213	327	7876867028229881	game.exe	6f2eeb23c3e2ada2
+30	75	7876867461797999	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+93	241	7876867462429525	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+242	363	7876867463914745	game.exe	6f2eeb23c3e2ada2
+25	64	7876867532042685	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+80	216	7876867532586414	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+216	329	7876867533944636	game.exe	6f2eeb23c3e2ada2
+25	64	7876867590209659	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+81	218	7876867590770130	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+219	332	7876867592142311	game.exe	6f2eeb23c3e2ada2
+27	65	7876867655968068	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+82	217	7876867656517661	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+217	331	7876867657868893	game.exe	6f2eeb23c3e2ada2
+23	61	7876867715550701	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+77	212	7876867716091164	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+213	327	7876867717448705	game.exe	6f2eeb23c3e2ada2
+27	65	7876868522256498	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+82	217	7876868522814664	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+218	332	7876868524166859	game.exe	6f2eeb23c3e2ada2
+25	63	7876868579955742	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+78	213	7876868580488689	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+213	328	7876868581834084	game.exe	6f2eeb23c3e2ada2
+24	61	7876869685107856	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+92	446	7876869685779696	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+88	470	7876869685749781	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+83	474	7876869685689943	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+80	477	7876869685663412	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+85	477	7876869685709882	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+95	478	7876869685819587	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+99	480	7876869685849510	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+77	481	7876869685633484	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+474	628	7876869689599648	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+470	654	7876869689559759	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+447	693	7876869689350312	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+693	809	7876869691782442	game.exe	6f2eeb23c3e2ada2
+7	48	7876870241513458	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+64	227	7876870242087763	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+228	346	7876870243719518	game.exe	6f2eeb23c3e2ada2
+26	63	7876870513499969	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+80	225	7876870514043703	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+225	339	7876870515494799	game.exe	6f2eeb23c3e2ada2
+24	64	7876871065875654	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+79	213	7876871066423468	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+214	328	7876871067772435	game.exe	6f2eeb23c3e2ada2
+26	65	7876873197422103	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+84	225	7876873197991098	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+80	286	7876873197961167	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+286	453	7876873200020850	game.exe	6f2eeb23c3e2ada2
+28	66	7876875307845184	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+26	68	7876875383407839	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+85	225	7876875384001628	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+225	357	7876875385402473	game.exe	6f2eeb23c3e2ada2
+28	67	7876876588499363	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+84	236	7876876589057580	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+237	361	7876876590588633	game.exe	6f2eeb23c3e2ada2
+28	71	7876876829610884	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+89	255	7876876830210792	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+25	63	7876876889428277	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+79	198	7876876889972049	game.exe	6f2eeb23c3e2ada2
+17	59	7876877417897130	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+20	61	7876878039368902	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+77	213	7876878039947640	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+214	335	7876878041301563	game.exe	6f2eeb23c3e2ada2
+26	67	7876878353468928	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+85	262	7876878354081605	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+262	387	7876878355831010	game.exe	6f2eeb23c3e2ada2
+33	78	7876878604798416	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+95	291	7876878605427009	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+292	415	7876878607400372	game.exe	6f2eeb23c3e2ada2
+27	66	7876886245811731	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+96	438	7876886246511393	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+99	458	7876886246541311	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+87	460	7876886246421632	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+102	462	7876886246582838	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+109	466	7876886246651031	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+84	467	7876886246391981	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+90	472	7876886246461530	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+25	66	7876886692902852	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+85	453	7876886693499897	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+87	461	7876886693519852	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+82	468	7876886693468072	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+103	474	7876886693679428	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+97	477	7876886693619588	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+90	481	7876886693549772	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+93	495	7876886693579702	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+100	518	7876886693649513	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+461	647	7876886697259856	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+454	689	7876886697200019	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+26	65	7876887466997343	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+85	388	7876887467579795	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+99	396	7876887467726994	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+82	400	7876887467547464	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+88	419	7876887467617291	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+96	465	7876887467697085	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+91	468	7876887467657179	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+102	469	7876887467756916	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+105	471	7876887467816760	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+396	605	7876887470699044	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+389	633	7876887470629234	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+32	73	7876887728867521	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+94	428	7876887729500316	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+89	483	7876887729450723	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+92	488	7876887729480364	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+104	494	7876887729600051	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+107	496	7876887729629962	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+100	498	7876887729570132	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+109	501	7876887729669854	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+97	502	7876887729530237	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+484	667	7876887733399883	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+429	699	7876887732841372	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+25	61	7876888028238383	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+18	56	7876888548429981	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+17	57	7876889316896054	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+17	55	7876889422556158	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+17	54	7876889598090265	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+18	57	7876890699800854	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+73	217	7876890700359364	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+217	337	7876890701799937	game.exe	6f2eeb23c3e2ada2
+32	70	7876891569615395	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+86	306	7876891570163604	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+26	64	7876891996356926	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+90	430	7876891997003155	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+85	447	7876891996933341	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+87	450	7876891996963272	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+79	454	7876891996881972	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+94	491	7876891997043045	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+82	502	7876891996903398	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+101	504	7876891997112856	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+97	507	7876891997072972	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+447	640	7876892000553671	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+433	666	7876892000414035	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+31	69	7876892191804981	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+85	223	7876892192344826	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+224	344	7876892193723491	game.exe	6f2eeb23c3e2ada2
+27	67	7876892359723704	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+82	220	7876892360270930	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+220	334	7876892361652853	game.exe	6f2eeb23c3e2ada2
+26	64	7876893059369127	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+83	255	7876893059935088	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+80	259	7876893059914864	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+259	377	7876893061702363	game.exe	6f2eeb23c3e2ada2
+26	64	7876893617018367	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+79	241	7876893617548795	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+241	356	7876893619176872	game.exe	6f2eeb23c3e2ada2
+28	66	7876894795977106	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+17	55	7876896096083475	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+71	230	7876896096619653	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+231	346	7876896098218883	game.exe	6f2eeb23c3e2ada2
+26	71	7876896841260015	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+18	62	7876897352030816	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+81	234	7876897352663635	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+235	366	7876897354199446	game.exe	6f2eeb23c3e2ada2
+32	74	7876898107223041	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+90	439	7876898107799323	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+93	446	7876898107829238	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+101	499	7876898107909466	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+98	529	7876898107889525	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+110	529	7876898108009205	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+96	534	7876898107859171	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+105	565	7876898107949366	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+114	586	7876898108049098	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+449	692	7876898111388318	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+442	735	7876898111331595	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+499	748	7876898111888308	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+748	867	7876898114383138	game.exe	6f2eeb23c3e2ada2
+29	69	7876898813990426	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+92	514	7876898814619629	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+108	518	7876898814791620	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+101	521	7876898814709380	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+98	526	7876898814679459	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+85	527	7876898814553588	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+89	527	7876898814589709	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+103	570	7876898814739302	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+95	579	7876898814649543	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+523	803	7876898818928368	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+518	819	7876898818878488	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+515	844	7876898818848582	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+844	968	7876898822144002	game.exe	6f2eeb23c3e2ada2
+27	67	7876901268520474	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+86	399	7876901269109022	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+101	472	7876901269278456	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+106	477	7876901269318353	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+95	487	7876901269208648	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+83	488	7876901269078984	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+89	488	7876901269138829	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+99	489	7876901269238566	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+92	493	7876901269168753	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+403	643	7876901272300371	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+474	655	7876901272988541	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+484	666	7876901273088280	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+666	783	7876901274913394	game.exe	6f2eeb23c3e2ada2
+30	73	7876901532885275	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+92	507	7876901533512234	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+101	571	7876901533602000	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+105	574	7876901533631925	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+119	594	7876901533781530	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+96	600	7876901533542166	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+108	602	7876901533671815	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+112	603	7876901533721682	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+116	620	7876901533751600	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+571	821	7876901538299447	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+574	834	7876901538329368	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+508	858	7876901537730962	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+26	67	7876901585690608	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+83	197	7876901586259089	game.exe	6f2eeb23c3e2ada2
+17	55	7876903758126712	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+71	434	7876903758655300	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+76	439	7876903758715150	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+82	462	7876903758765018	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+85	468	7876903758824855	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+93	469	7876903758874724	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+73	470	7876903758685505	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+90	470	7876903758854777	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+79	496	7876903758745072	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+447	649	7876903762465123	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+464	651	7876903762604748	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+434	665	7876903762285596	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+665	782	7876903764599420	game.exe	6f2eeb23c3e2ada2
+26	63	7876905210391297	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+17	54	7876905749761500	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+17	56	7876906822262370	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+72	257	7876906822810908	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+258	398	7876906824665962	game.exe	6f2eeb23c3e2ada2
+28	66	7876907139098679	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+81	262	7876907139627272	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+262	375	7876907141442422	game.exe	6f2eeb23c3e2ada2
+30	70	7876910165974590	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+17	60	7876910352800677	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+17	56	7876911071266301	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+75	481	7876911071854429	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+82	489	7876911071924252	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+85	492	7876911071954171	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+78	495	7876911071884355	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+91	498	7876911072133682	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+72	499	7876911071824516	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+88	502	7876911071984087	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+140	508	7876911072502704	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+492	672	7876911076013322	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+489	699	7876911075983398	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+486	729	7876911075953481	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+731	852	7876911078406931	game.exe	6f2eeb23c3e2ada2
+30	69	7876911580903142	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+86	316	7876911581460631	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+317	520	7876911583772498	game.exe	6f2eeb23c3e2ada2
+29	65	7876912767332032	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+81	251	7876912767860323	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+26	66	7876912875726074	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+99	449	7876912876453828	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+85	453	7876912876314197	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+82	457	7876912876284552	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+87	462	7876912876344123	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+96	464	7876912876433883	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+93	465	7876912876403963	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+101	482	7876912876493720	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+91	490	7876912876374045	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+454	639	7876912880004343	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+459	652	7876912880054202	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+450	683	7876912879974418	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+684	803	7876912882298207	game.exe	6f2eeb23c3e2ada2
+25	65	7876913483643979	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+19	60	7876914908735915	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+19	58	7876915437901636	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+18	60	7876915866895850	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+81	455	7876915867533876	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+91	468	7876915867673500	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+87	492	7876915867593717	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+75	522	7876915867474020	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+100	523	7876915867723360	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+107	535	7876915867783209	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+79	557	7876915867503950	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+84	569	7876915867563787	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+470	689	7876915871420180	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+492	714	7876915871639589	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+457	746	7876915871300498	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+32	76	7876916100690824	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+94	310	7876916101299197	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+27	68	7876916603295533	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+87	446	7876916603883963	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+89	484	7876916603923857	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+106	523	7876916604083432	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+97	534	7876916603983705	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+102	541	7876916604053515	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+84	569	7876916603854033	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+100	575	7876916604013621	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+93	584	7876916603943811	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+489	715	7876916607913188	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+446	727	7876916607494325	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+525	736	7876916608272228	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+736	856	7876916610376611	game.exe	6f2eeb23c3e2ada2
+26	65	7876916679670431	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+82	275	7876916680238909	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+28	67	7876917106167730	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+98	467	7876917106875855	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+86	477	7876917106746490	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+83	480	7876917106726247	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+101	484	7876917106895794	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+89	500	7876917106776116	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+93	505	7876917106816020	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+96	506	7876917106845933	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+103	516	7876917106925712	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+480	704	7876917110685665	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+477	704	7876917110655748	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+473	729	7876917110615848	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+730	853	7876917113179005	game.exe	6f2eeb23c3e2ada2
+28	68	7876917250838009	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+19	60	7876917650332455	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+24	75	7876918249594614	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+95	375	7876918250305676	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+30	72	7876918294843333	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+89	207	7876918295432042	game.exe	6f2eeb23c3e2ada2
+17	55	7876919659350443	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+70	418	7876919659880416	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+76	422	7876919659939990	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+79	427	7876919659969901	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+73	432	7876919659910331	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+82	537	7876919659999825	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+85	554	7876919660029746	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+87	556	7876919660049688	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+90	558	7876919660109533	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+427	698	7876919663450602	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+422	717	7876919663400735	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+419	730	7876919663360840	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+731	850	7876919666482498	game.exe	6f2eeb23c3e2ada2
+30	70	7876920137391499	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+87	258	7876920137969960	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+259	377	7876920139695354	game.exe	6f2eeb23c3e2ada2
+26	66	7876921056721399	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+18	55	7876922360467758	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+77	406	7876922361056188	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+104	411	7876922361345415	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+71	421	7876922360996621	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+94	460	7876922361255656	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+86	463	7876922361155925	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+83	464	7876922361116028	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+80	468	7876922361096084	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+74	469	7876922361026259	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+421	610	7876922364496985	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+411	627	7876922364407229	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+406	649	7876922364347384	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+649	765	7876922366780892	game.exe	6f2eeb23c3e2ada2
+54	90	7876923337600553	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+105	265	7876923338119165	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+266	377	7876923339724879	game.exe	6f2eeb23c3e2ada2
+25	61	7876923980470154	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+80	405	7876923981018697	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+77	418	7876923980988767	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+83	455	7876923981048622	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+90	465	7876923981128402	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+85	480	7876923981068567	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+93	489	7876923981148346	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+96	491	7876923981208189	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+88	509	7876923981098479	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+406	643	7876923984279976	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+456	654	7876923984778642	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+418	659	7876923984399658	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+659	776	7876923986813205	game.exe	6f2eeb23c3e2ada2
+27	66	7876924146729625	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+82	229	7876924147278150	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+230	344	7876924148754207	game.exe	6f2eeb23c3e2ada2
+27	66	7876925713035545	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+82	301	7876925713580802	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+301	440	7876925715764994	game.exe	6f2eeb23c3e2ada2
+30	69	7876926371558463	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+19	58	7876929574663683	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+84	411	7876929575311964	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+93	459	7876929575401716	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+76	469	7876929575222192	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+87	473	7876929575341879	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+99	474	7876929575471534	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+79	476	7876929575282040	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+90	524	7876929575371797	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+103	537	7876929575501453	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+470	687	7876929579171652	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+461	692	7876929579081891	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+415	716	7876929578702899	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+717	837	7876929581635059	game.exe	6f2eeb23c3e2ada2
+30	70	7876932522483423	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+90	307	7876932523071854	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+308	431	7876932525256014	game.exe	6f2eeb23c3e2ada2
+27	67	7876934449133695	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+18	58	7876935668420551	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+17	57	7876936916813921	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+20	64	7876944361335175	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+80	593	7876944361943553	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+83	610	7876944361973472	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+86	621	7876944362003398	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+94	622	7876944362083189	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+97	626	7876944362113109	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+109	634	7876944362222821	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+90	648	7876944362053273	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+31	71	7876944948904298	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+92	435	7876944949522386	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+98	467	7876944949592187	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+108	488	7876944949701905	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+95	492	7876944949552308	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+104	497	7876944949652028	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+89	513	7876944949492449	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+87	521	7876944949462528	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+101	532	7876944949612140	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+489	726	7876944953481790	CMakeFiles/game.dir/src/draw/audio.c.obj	aec047324c6e47c8
+473	730	7876944953322218	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+436	746	7876944952963179	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+746	869	7876944956054927	game.exe	6f2eeb23c3e2ada2
+28	66	7876947005243661	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+83	259	7876947005801894	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+259	386	7876947007567185	game.exe	6f2eeb23c3e2ada2
+30	73	7876950195717136	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+19	59	7876954709831413	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+19	59	7876962901306137	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44

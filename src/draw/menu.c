@@ -67,7 +67,23 @@ int getSubmenuOptionsLenght() {
         break;
 
     case MENU_PAUSE:
-        return LENGHT_OPTIONS_PAUSE_MAIN;
+        switch (gamestate.current_submenu) {
+        case SUBMENU_PAUSE_MAIN:
+            return LENGHT_OPTIONS_PAUSE_MAIN;
+            break;
+
+        case SUBMENU_PAUSE_OPTIONS:
+            return LENGHT_OPTIONS_PAUSE_OPTIONS;
+            break;
+
+        case SUBMENU_PAUSE_CONFIRM_EXIT:
+            return LENGHT_OPTIONS_PAUSE_EXIT_CONFIRM;
+            break;
+            
+        case SUBMENU_PAUSE_CONFIRM_MAIN_MENU:
+            return LENGHT_OPTIONS_PAUSE_MAIN_MENU_CONFIRM;
+            break;
+        }
         break;
 
     case MENU_WIN:
@@ -90,7 +106,6 @@ void menuOptionSelect() {
 
         case SUBMENU_MAIN_MAIN:
             switch (gamestate.current_option) {
-            
                 case OPTION_MAIN_MAIN_LEVEL_SELECT:
                     gamestate.current_submenu = SUBMENU_MAIN_LEVEL_SELECT;
                     break;
@@ -105,7 +120,6 @@ void menuOptionSelect() {
                 case OPTION_MAIN_MAIN_EXIT:
                     game_quit();
                     break;
-            
             }
             break;
             
@@ -114,7 +128,7 @@ void menuOptionSelect() {
                 gamestate.current_option = 0;
                 gamestate.current_submenu = SUBMENU_MAIN_MAIN;
             }
-            else if (gamestate.current_option > 0 || gamestate.current_option <= 3) {
+            else if (gamestate.current_option > 0 || gamestate.current_option <= 9) {
                 levelLoad(
                     gamestate.current_option,
                     1,
@@ -130,12 +144,15 @@ void menuOptionSelect() {
             switch (gamestate.current_option) {
 
                 case OPTION_MAIN_OPTIONS_MAIN_SOUND:
+                    gamestate.volume_main = !gamestate.volume_main;
                     break;
                     
                 case OPTION_MAIN_OPTIONS_MUSIC:
+                    gamestate.volume_music = !gamestate.volume_music;
                     break;
 
                 case OPTION_MAIN_OPTIONS_SFX:
+                    gamestate.volume_sfx = !gamestate.volume_sfx;
                     break;
                     
                 case OPTION_MAIN_OPTIONS_BACK:
@@ -151,31 +168,79 @@ void menuOptionSelect() {
             break;
 
         }
+        soundPlay(snd_menu_main_option_select);
         break;
 
     case MENU_PAUSE:
-        switch (gamestate.current_option) {
-        case OPTION_PAUSE_CONTINUE:
-            gamestate.current_option = 0;
-            gamestate.current_screen = SCREEN_LEVEL;
+        switch (gamestate.current_submenu) {
+        case SUBMENU_PAUSE_MAIN:
+            switch (gamestate.current_option) {
+            case OPTION_PAUSE_CONTINUE:
+                gamestate.current_option = 0;
+                gamestate.current_screen = SCREEN_LEVEL;
+                break;
+            case OPTION_PAUSE_RESTART:
+                levelRestart();
+                gamestate.current_option = 0;
+                gamestate.current_screen = SCREEN_LEVEL;
+                break;
+            case OPTION_PAUSE_OPTIONS:
+                gamestate.current_option = 0;
+                gamestate.current_submenu = SUBMENU_PAUSE_OPTIONS;
+                break;
+            case OPTION_PAUSE_MAIN_MENU:
+                gamestate.current_option = 1;
+                gamestate.current_submenu = SUBMENU_PAUSE_CONFIRM_MAIN_MENU;
+                break;
+            case OPTION_PAUSE_QUIT:
+                gamestate.current_option = 1;
+                gamestate.current_submenu = SUBMENU_PAUSE_CONFIRM_EXIT;
+                break;
+            }
             break;
-
-        case OPTION_PAUSE_RESTART:
-            levelRestart();
-            gamestate.current_option = 0;
-            gamestate.current_screen = SCREEN_LEVEL;
+        case SUBMENU_PAUSE_OPTIONS:
+            switch (gamestate.current_option) {
+            case OPTION_PAUSE_OPTIONS_MAIN_SOUND:
+                gamestate.volume_main = !gamestate.volume_main;
+                break;
+            case OPTION_PAUSE_OPTIONS_MUSIC:
+                gamestate.volume_music = !gamestate.volume_music;
+                break;
+            case OPTION_PAUSE_OPTIONS_SFX:
+                gamestate.volume_sfx = !gamestate.volume_sfx;
+                break;
+            case OPTION_PAUSE_OPTIONS_BACK:
+                gamestate.current_option = 0;
+                gamestate.current_submenu = SUBMENU_PAUSE_MAIN;
+                break;
+            }
             break;
-
-        case OPTION_PAUSE_MAIN_MENU:
-            gamestate.current_option = 0;
-            gamestate.current_submenu = SUBMENU_MAIN_MAIN;
-            gamestate.current_menu = MENU_MAIN;
+        case SUBMENU_PAUSE_CONFIRM_MAIN_MENU:
+            switch (gamestate.current_option) {
+            case OPTION_PAUSE_CONFIRM_MAIN_MENU_EXIT:
+                gamestate.current_option = 0;
+                gamestate.current_submenu = SUBMENU_MAIN_MAIN;
+                gamestate.current_menu = MENU_MAIN;
+                break;
+            case OPTION_PAUSE_CONFIRM_MAIN_MENU_BACK:
+                gamestate.current_option = 0;
+                gamestate.current_submenu = SUBMENU_PAUSE_MAIN;
+                break;
+            }
             break;
-            
-        case OPTION_PAUSE_QUIT:
-            game_quit();
+        case SUBMENU_PAUSE_CONFIRM_EXIT:
+            switch (gamestate.current_option) {
+            case OPTION_PAUSE_CONFIRM_MAIN_MENU_EXIT:
+                game_quit();
+                break;
+            case OPTION_PAUSE_CONFIRM_EXIT_BACK:
+                gamestate.current_option = 0;
+                gamestate.current_submenu = SUBMENU_PAUSE_MAIN;
+                break;
+            }
             break;
         }
+        soundPlay(snd_menu_option_select);
         break;
 
     case MENU_WIN:
@@ -185,19 +250,18 @@ void menuOptionSelect() {
             gamestate.current_option = 0;
             gamestate.current_screen = SCREEN_LEVEL;
             break;
-
         case OPTION_WIN_RESTART:
             levelRestart();
             gamestate.current_option = 0;
             gamestate.current_screen = SCREEN_LEVEL;
             break;
-            
         case OPTION_WIN_MAIN_MENU:
             gamestate.current_option = 0;
             gamestate.current_submenu = SUBMENU_MAIN_MAIN;
             gamestate.current_menu = MENU_MAIN;
             break;
         }
+        soundPlay(snd_menu_option_select);
         break;
     }
 }

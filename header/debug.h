@@ -7,10 +7,10 @@
 
 #pragma once
 
-#include <stdio.h>
 #include <stdarg.h>
 #include <time.h>
 #include <string.h>
+#include <SDL3/SDL.h>
 
 #include "level/level.h"
 #include "level/objects/player.h"
@@ -22,17 +22,16 @@
 #define MAX_HEIGHT 33
 
 // command naming
-#define COMMAND_RESTART "restart"               // restart level
-#define COMMAND_NEXT_PHASE "next_phase"         // go to next phase
-#define COMMAND_NEXT_LEVEL "next_level"         // go to next leevel
-#define COMMAND_TORCH "torch"                   // spawn torch
-#define COMMAND_RELIC "relic"                   // spawn relic
-#define COMMAND_PLANK "plank"                   // spawn plank
-#define COMMAND_LIGHT "light"                   // light up room
-#define COMMAND_PHASE "phase"                   // toggle phasing through obstacles
-#define COMMAND_LIGHT_RADIUS_UP "rad_up"        // increse light radius
-#define COMMAND_LIGHT_RADIUS_DOWN "rad_down"    // decrese light radius
-#define COMMAND_CLEAR_TOGGLE "clr"              // decrese light radius
+#define COMMAND_RESTART SDL_SCANCODE_R               // restart level
+#define COMMAND_NEXT_PHASE SDL_SCANCODE_M         // go to next phase
+#define COMMAND_NEXT_LEVEL SDL_SCANCODE_N          // go to next leevel
+#define COMMAND_TORCH SDL_SCANCODE_T                    // spawn torch
+#define COMMAND_RELIC SDL_SCANCODE_Y                    // spawn relic
+#define COMMAND_PLANK SDL_SCANCODE_U                    // spawn plank
+#define COMMAND_LIGHT SDL_SCANCODE_L                    // light up room
+#define COMMAND_PHASE SDL_SCANCODE_G                    // toggle phasing through obstacles
+#define COMMAND_LIGHT_RADIUS_UP SDL_SCANCODE_PERIOD       // increse light radius
+#define COMMAND_LIGHT_RADIUS_DOWN SDL_SCANCODE_COMMA    // decrese light radius
 
 
 // debug variables
@@ -63,6 +62,6 @@ void logPrintLevelActive(); // logs all layers of current level
 
 
 // debug commands
-void debugCommand(char * msg); // run debug commands
+void debugCommand(SDL_Event *event); // run debug commands
 
 #endif

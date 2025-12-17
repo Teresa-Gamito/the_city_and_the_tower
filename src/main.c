@@ -12,10 +12,9 @@
 
 static SDL_Window *window = NULL;
 static SDL_Renderer *renderer = NULL;
-static SDL_Surface *surface = NULL;
-static SDL_Texture *texture = NULL;
+static SDL_AudioDeviceID audio_device = 0;
 
-Gamestate gamestate = {SCREEN_MENU, MENU_MAIN, SUBMENU_MAIN_STARTING_SCREEN, 0};
+Gamestate gamestate = {SCREEN_MENU, MENU_MAIN, SUBMENU_MAIN_STARTING_SCREEN, 0, 1, 1, 1};
 
 
 SDL_AppResult SDL_AppInit(void **appstate, int argc, char *argv[]) {
@@ -23,8 +22,6 @@ SDL_AppResult SDL_AppInit(void **appstate, int argc, char *argv[]) {
 
     logOpen();
     logPrint("Game start\n\n");
-
-    levelLoad(1, 1, -1, -1, '0');
 
     SDL_SetAppMetadata(APP_NAME, APP_VERSION, APP_IDENTIFIER);
 
@@ -37,6 +34,9 @@ SDL_AppResult SDL_AppInit(void **appstate, int argc, char *argv[]) {
         logPrint("Couldn't create window/renderer: %s\n", SDL_GetError());
         return SDL_APP_FAILURE;
     }
+
+    audio_device = SDL_OpenAudioDevice(SDL_AUDIO_DEVICE_DEFAULT_PLAYBACK, NULL);
+
     SDL_SetDefaultTextureScaleMode(renderer, SDL_SCALEMODE_NEAREST);
 
 
@@ -44,29 +44,19 @@ SDL_AppResult SDL_AppInit(void **appstate, int argc, char *argv[]) {
 
     loadWindowIcon(window);
 
+    loadSounds(audio_device);
+
     loadTextures(renderer);
-
-
 
     return SDL_APP_CONTINUE;
 }
 
 SDL_AppResult SDL_AppEvent(void *appstate, SDL_Event *event) {
 
-
-
     if (event->type == SDL_EVENT_QUIT) {
         return SDL_APP_SUCCESS;
     }
     else if (event->type == SDL_EVENT_KEY_DOWN || event->type == SDL_EVENT_KEY_UP) {
-    SDL_Log(
-        "Screen: %d\nMenu: %d\nSubmenu: %d\nOption: %d\n\n", 
-        gamestate.current_screen, 
-        gamestate.current_menu, 
-        gamestate.current_submenu, 
-        gamestate.current_option
-    );
-
         switch (gamestate.current_screen) {
         case SCREEN_MENU:
             inMenuAction(event);
@@ -74,6 +64,7 @@ SDL_AppResult SDL_AppEvent(void *appstate, SDL_Event *event) {
         
         case SCREEN_LEVEL:
             inLevelAction(event);
+            debugCommand(event);
             break;
         }
     }
@@ -84,33 +75,17 @@ SDL_AppResult SDL_AppEvent(void *appstate, SDL_Event *event) {
 
 SDL_AppResult SDL_AppIterate(void *appstate) {
 
-
-    switch (gamestate.current_screen) {
-        
-    case SCREEN_MENU:
-        renderMenu(
-            renderer, 
-            window, 
-            gamestate.current_menu, 
-            gamestate.current_submenu, 
-            gamestate.current_option
-        );
-        break;
-
-    case SCREEN_LEVEL:
-        lightPorcessLayers();
-        renderLevel(renderer, window);
-        break;
-
-    }
-
+    gameUpdate();
     return SDL_APP_CONTINUE;
 }
 
 void SDL_AppQuit(void *appstate, SDL_AppResult result) {
 
+    SDL_CloseAudioDevice(audio_device);
+
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
+
     SDL_Quit();
     logClose();
     exit(0);
@@ -125,4 +100,17 @@ void game_quit() {
     logClose();
     exit(0);
     
+}
+
+void gameUpdate() {
+    switch (gamestate.current_screen) {
+        
+    case SCREEN_MENU:
+        renderMenu(renderer, window);
+        break;
+    case SCREEN_LEVEL:
+        lightPorcessLayers();
+        renderLevel(renderer, window);
+        break;
+    }
 }

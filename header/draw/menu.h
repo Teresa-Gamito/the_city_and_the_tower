@@ -5,15 +5,15 @@
 // ==============================
 
 #pragma once
-#include <stdio.h>
 #include <stdbool.h>
 
 #include <SDL3/SDL.h>
 
-#include "../level/level.h"
+#include "audio.h"
 #include "../tools.h"
 #include "../debug.h"
 #include "../main.h"
+#include "../level/level.h"
 
 // =====screns=====
 #define SCREEN_MENU 0
@@ -29,6 +29,11 @@
 #define SUBMENU_MAIN_LEVEL_SELECT 2
 #define SUBMENU_MAIN_OPTIONS 3
 #define SUBMENU_MAIN_CREDITS 4
+// pause
+#define SUBMENU_PAUSE_MAIN 0
+#define SUBMENU_PAUSE_OPTIONS 1
+#define SUBMENU_PAUSE_CONFIRM_MAIN_MENU 2
+#define SUBMENU_PAUSE_CONFIRM_EXIT 3
 
 // =====options=====
 // main
@@ -43,7 +48,6 @@
 #define LENGHT_OPTIONS_MAIN_MAIN 4
 
 #define LENGHT_OPTIONS_MAIN_LEVEL_SELECT 11
-
 // options
 #define OPTION_MAIN_OPTIONS_MAIN_SOUND 0
 #define OPTION_MAIN_OPTIONS_SFX 1
@@ -53,47 +57,36 @@
 // credits
 #define OPTION_MAIN_CREDITS_BACK 0
 #define LENGHT_OPTIONS_MAIN_CREDITS 1
+
 // pause
 // main
 #define OPTION_PAUSE_CONTINUE 0
 #define OPTION_PAUSE_RESTART 1
-#define OPTION_PAUSE_MAIN_MENU 2
-#define OPTION_PAUSE_QUIT 3
-#define LENGHT_OPTIONS_PAUSE_MAIN 4
+#define OPTION_PAUSE_OPTIONS 2
+#define OPTION_PAUSE_MAIN_MENU 3
+#define OPTION_PAUSE_QUIT 4
+#define LENGHT_OPTIONS_PAUSE_MAIN 5
+// options
+#define OPTION_PAUSE_OPTIONS_MAIN_SOUND 0
+#define OPTION_PAUSE_OPTIONS_MUSIC 1
+#define OPTION_PAUSE_OPTIONS_SFX 2
+#define OPTION_PAUSE_OPTIONS_BACK 3
+#define LENGHT_OPTIONS_PAUSE_OPTIONS 4
+// confirm main menu
+#define OPTION_PAUSE_CONFIRM_MAIN_MENU_EXIT 0
+#define OPTION_PAUSE_CONFIRM_MAIN_MENU_BACK 1
+#define LENGHT_OPTIONS_PAUSE_MAIN_MENU_CONFIRM 2
+// confirm exit
+#define OPTION_PAUSE_CONFIRM_EXIT_EXIT 0
+#define OPTION_PAUSE_CONFIRM_EXIT_BACK 1
+#define LENGHT_OPTIONS_PAUSE_EXIT_CONFIRM 2
+
 // win
 // main
 #define OPTION_WIN_NEXT_LEVEL 0
 #define OPTION_WIN_RESTART 1
 #define OPTION_WIN_MAIN_MENU 2
 #define LENGHT_OPTIONS_WIN_MAIN 3
-
-// awawa
-// options
-// main menu options
-#define MAIN_MENU_START 0
-#define MAIN_MENU_OPTIONS 1
-#define MAIN_MENU_CREDITS 2
-#define MAIN_MENU_QUIT 3
-// options options
-#define OPTIONS_MAIN_SOUND 0
-#define OPTIONS_SOUND_EFFECTS 1
-#define OPTIONS_MUSIC 2
-#define OPTIONS_ACCESSIBILITY 3
-#define OPTIONS_ERRASE_ALL_DATA 4
-#define OPTIONS_BACK 5
-// pause options
-#define PAUSE_CONTINUE 0
-#define PAUSE_RESTART 1
-#define PAUSE_MAIN_MENU 2
-#define PAUSE_EXIT 3
-// win menu options
-#define WIN_MENU_NEXT_LEVEL 0
-#define WIN_MENU_RESTART_LEVEL 1
-#define WIN_MENU_MAIN_MENU 2
-
-// images
-#define IMAGE_LOGO "images/logo.txt"
-// end of awawa
 
 #ifndef MENU_H
 #define MENU_H

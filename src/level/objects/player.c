@@ -10,7 +10,7 @@ void playerSpawn(int pos_x, int pos_y, char item) {
 
     player.sprite_direction = PLAYER_SPRITE_DIRECTION_RIGHT;
 
-    if (item != PLAYER_NO_ITEM) player.item = item;
+    player.item = item;
 
     for(int i = 0 ; i < level_active.width ; i++) {
 
@@ -41,23 +41,31 @@ void playerAction(int input) {
     switch(input) {
 
         case PLAYER_MOVE_UP:
-        if(tileIsWalkable(player.pos_x, player.pos_y - 1) || debug_phase_through_walls)
+        if(tileIsWalkable(player.pos_x, player.pos_y - 1) || debug_phase_through_walls) {
+            soundPlay(snd_player_move_ground[rand() % 2]);
             playerMove(player.pos_x, player.pos_y - 1);
+        }
         break;
 
         case PLAYER_MOVE_DOWN:
-        if(tileIsWalkable(player.pos_x, player.pos_y + 1) || debug_phase_through_walls)
+        if(tileIsWalkable(player.pos_x, player.pos_y + 1) || debug_phase_through_walls) {
+            soundPlay(snd_player_move_ground[rand() % 2]);
             playerMove(player.pos_x, player.pos_y + 1);
+        }
         break;
 
         case PLAYER_MOVE_LEFT:
-        if(tileIsWalkable(player.pos_x - 1, player.pos_y) || debug_phase_through_walls)
+        if(tileIsWalkable(player.pos_x - 1, player.pos_y) || debug_phase_through_walls) {
+            soundPlay(snd_player_move_ground[rand() % 2]);
             playerMove(player.pos_x - 1, player.pos_y);
+        }
         break;
 
         case PLAYER_MOVE_RIGHT:
-        if(tileIsWalkable(player.pos_x + 1, player.pos_y) || debug_phase_through_walls)
+        if(tileIsWalkable(player.pos_x + 1, player.pos_y) || debug_phase_through_walls) {
+            soundPlay(snd_player_move_ground[rand() % 2]);
             playerMove(player.pos_x + 1, player.pos_y);
+        }
         break;
     
     }

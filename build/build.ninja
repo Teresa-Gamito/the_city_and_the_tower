@@ -114,6 +114,13 @@ build CMakeFiles/game.dir/src/draw/menu.c.obj: C_COMPILER__game_unscanned_ C$:/U
   OBJECT_FILE_DIR = CMakeFiles\game.dir\src\draw
   TARGET_SUPPORT_DIR = CMakeFiles\game.dir
 
+build CMakeFiles/game.dir/src/draw/audio.c.obj: C_COMPILER__game_unscanned_ C$:/Users/Copygoat/Downloads/Uni/Project/Game$ Program/The-City-and-the-Tower/src/draw/audio.c || cmake_object_order_depends_target_game
+  DEP_FILE = CMakeFiles\game.dir\src\draw\audio.c.obj.d
+  INCLUDES = -I"C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/header" -I"C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/vendored/SDL/include-revision" -I"C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/vendored/SDL/include"
+  OBJECT_DIR = CMakeFiles\game.dir
+  OBJECT_FILE_DIR = CMakeFiles\game.dir\src\draw
+  TARGET_SUPPORT_DIR = CMakeFiles\game.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target game
@@ -122,7 +129,7 @@ build CMakeFiles/game.dir/src/draw/menu.c.obj: C_COMPILER__game_unscanned_ C$:/U
 #############################################
 # Link the executable game.exe
 
-build game.exe: C_EXECUTABLE_LINKER__game_ CMakeFiles/game.dir/src/main.c.obj CMakeFiles/game.dir/src/debug.c.obj CMakeFiles/game.dir/src/tools.c.obj CMakeFiles/game.dir/src/level/level.c.obj CMakeFiles/game.dir/src/level/highlight.c.obj CMakeFiles/game.dir/src/level/light.c.obj CMakeFiles/game.dir/src/level/objects/player.c.obj CMakeFiles/game.dir/src/level/objects/item.c.obj CMakeFiles/game.dir/src/draw/draw.c.obj CMakeFiles/game.dir/src/draw/menu.c.obj | vendored/SDL/libSDL3.dll.a C$:/Users/Copygoat/Downloads/Uni/Project/Game$ Program/The-City-and-the-Tower/vendored/SDL/src/dynapi/SDL_dynapi.sym || SDL3.dll
+build game.exe: C_EXECUTABLE_LINKER__game_ CMakeFiles/game.dir/src/main.c.obj CMakeFiles/game.dir/src/debug.c.obj CMakeFiles/game.dir/src/tools.c.obj CMakeFiles/game.dir/src/level/level.c.obj CMakeFiles/game.dir/src/level/highlight.c.obj CMakeFiles/game.dir/src/level/light.c.obj CMakeFiles/game.dir/src/level/objects/player.c.obj CMakeFiles/game.dir/src/level/objects/item.c.obj CMakeFiles/game.dir/src/draw/draw.c.obj CMakeFiles/game.dir/src/draw/menu.c.obj CMakeFiles/game.dir/src/draw/audio.c.obj | vendored/SDL/libSDL3.dll.a C$:/Users/Copygoat/Downloads/Uni/Project/Game$ Program/The-City-and-the-Tower/vendored/SDL/src/dynapi/SDL_dynapi.sym || SDL3.dll
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = vendored/SDL/libSDL3.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\game.dir

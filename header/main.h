@@ -15,11 +15,16 @@ typedef struct Gamestate {
     int current_menu;
     int current_submenu;
     int current_option;
+    bool volume_main;
+    bool volume_music;
+    bool volume_sfx;
 } Gamestate;
 
 extern Gamestate gamestate;
 
 void game_quit();
+
+void gameUpdate();
 
 
 

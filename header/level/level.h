@@ -77,8 +77,6 @@ typedef struct { // loaded level structure
     int level_num;                                  // number of current level
     int phase_num;                                  // number of current phase
     bool relic_was_picked_up;                       // relic pick up status
-    bool level_exit;                                // asks to exit the level
-    bool level_won;                                 // completes the level
 } Level;
 
 extern Level level_active; // the current level

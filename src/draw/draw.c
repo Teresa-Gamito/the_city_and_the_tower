@@ -39,18 +39,16 @@ static SDL_Texture *spr_menu_main_level_select = NULL;
 static SDL_Texture *spr_menu_main_options = NULL;
 static SDL_Texture *spr_menu_main_credits = NULL;
 static SDL_Texture *spr_menu_main_pencil = NULL;
+static SDL_Texture *spr_menu_main_options_checkmark = NULL;
+static SDL_Texture *spr_menu_main_options_cross = NULL;
 
-static SDL_Texture *spr_menu_pause_main[4];
+static SDL_Texture *spr_menu_pause_main[5];
+static SDL_Texture *spr_menu_pause_options[4];
+static SDL_Texture *spr_menu_pause_confirm[2];
+static SDL_Texture *spr_menu_pause_checkmark = NULL;
+static SDL_Texture *spr_menu_pause_cross = NULL;
+
 static SDL_Texture *spr_menu_win_main[3];
-
-
-static SDL_AudioSpec *snd_menu_main_option_select = NULL;
-static SDL_AudioSpec *snd_menu_option_select = NULL;
-
-static SDL_AudioSpec *snd_player_move[2];
-
-static Uint8 *wav_data = NULL;
-static Uint32 wav_data_len = 0;
 
 
 void loadWindowIcon(SDL_Window *window) {
@@ -119,11 +117,24 @@ void loadTextures(SDL_Renderer * renderer) {
     spr_menu_main_options = loadTextureFromPNG(renderer, SPRITE_MENU_MAIN_OPTIONS);
     spr_menu_main_credits = loadTextureFromPNG(renderer, SPRITE_MENU_MAIN_CREDITS);
     spr_menu_main_pencil = loadTextureFromPNG(renderer, SPRITE_MENU_MAIN_PENCIL);
+    spr_menu_main_options_checkmark = loadTextureFromPNG(renderer, SPRITE_MENU_MAIN_OPTIONS_CHECKMARK);
+    spr_menu_main_options_cross = loadTextureFromPNG(renderer, SPRITE_MENU_MAIN_OPTIONS_CROSS);
     
-    spr_menu_pause_main[0] = loadTextureFromPNG(renderer, SPRITE_MENU_PAUSE_1);
-    spr_menu_pause_main[1] = loadTextureFromPNG(renderer, SPRITE_MENU_PAUSE_2);
-    spr_menu_pause_main[2] = loadTextureFromPNG(renderer, SPRITE_MENU_PAUSE_3);
-    spr_menu_pause_main[3] = loadTextureFromPNG(renderer, SPRITE_MENU_PAUSE_4);
+    spr_menu_pause_main[0] = loadTextureFromPNG(renderer, SPRITE_MENU_PAUSE_MAIN_1);
+    spr_menu_pause_main[1] = loadTextureFromPNG(renderer, SPRITE_MENU_PAUSE_MAIN_2);
+    spr_menu_pause_main[2] = loadTextureFromPNG(renderer, SPRITE_MENU_PAUSE_MAIN_3);
+    spr_menu_pause_main[3] = loadTextureFromPNG(renderer, SPRITE_MENU_PAUSE_MAIN_4);
+    spr_menu_pause_main[4] = loadTextureFromPNG(renderer, SPRITE_MENU_PAUSE_MAIN_5);
+
+    spr_menu_pause_options[0] = loadTextureFromPNG(renderer, SPRITE_MENU_PAUSE_OPTIONS_1);
+    spr_menu_pause_options[1] = loadTextureFromPNG(renderer, SPRITE_MENU_PAUSE_OPTIONS_2);
+    spr_menu_pause_options[2] = loadTextureFromPNG(renderer, SPRITE_MENU_PAUSE_OPTIONS_3);
+    spr_menu_pause_options[3] = loadTextureFromPNG(renderer, SPRITE_MENU_PAUSE_OPTIONS_4);
+    spr_menu_pause_checkmark = loadTextureFromPNG(renderer, SPRITE_MENU_PAUSE_OPTIONS_CHECKMARK);
+    spr_menu_pause_cross = loadTextureFromPNG(renderer, SPRITE_MENU_PAUSE_OPTIONS_CROSS);
+    
+    spr_menu_pause_confirm[0] = loadTextureFromPNG(renderer, SPRITE_MENU_PAUSE_CONFIRM_1);
+    spr_menu_pause_confirm[1] = loadTextureFromPNG(renderer, SPRITE_MENU_PAUSE_CONFIRM_2);
 
     spr_menu_win_main[0] = loadTextureFromPNG(renderer, SPRITE_MENU_WIN_1);
     spr_menu_win_main[1] = loadTextureFromPNG(renderer, SPRITE_MENU_WIN_2);
@@ -131,15 +142,10 @@ void loadTextures(SDL_Renderer * renderer) {
 
 }
 
-void loadTexturesTilesetPit(SDL_Renderer * renderer) {
-
-    
-
-}
 
 SDL_Texture * loadTextureFromPNG(SDL_Renderer * renderer, const char * path) {
 
-    char * png_path = NULL;
+    char *png_path = NULL;
 
     SDL_Surface *surface = NULL;
     SDL_Texture *texture = NULL;
@@ -384,7 +390,14 @@ void renderLayerTilesMiddle(SDL_Renderer * renderer, int pos_x, int pos_y) {
 
     for(int i = 0 ; i < level_active.height - 1; i++) {
         for(int j = 0 ; j < level_active.width; j++) {
-
+            if (level_active.tiles[i][j] == CHAR_EXIT)
+            renderSprite(
+                renderer, 
+                getTextureFromChar(level_active.tiles[i][j], LAYER_TILES_MIDDLE, j, i), 
+                pos_x + (j * SPRITE_SIZE), 
+                pos_y + (i * SPRITE_SIZE) + OFFSET_PIXELS_LAYER_ITEMS
+            );
+            else
             renderSprite(
                 renderer, 
                 getTextureFromChar(level_active.tiles[i][j], LAYER_TILES_MIDDLE, j, i), 
@@ -491,26 +504,26 @@ void renderLayerHighlight(SDL_Renderer * renderer, int pos_x, int pos_y) {
 
 
 
-void renderMenu(SDL_Renderer *renderer, SDL_Window *window, int menu, int submenu, int option) {
+void renderMenu(SDL_Renderer *renderer, SDL_Window *window) {
 
     SDL_GetWindowSize(window, &window_width, &window_height);
 
     double scale = window_width / ((double)NUM_TILES_WIDTH * (double)SPRITE_SIZE);
 
-    switch (menu) {
+    switch (gamestate.current_menu) {
 
     case MENU_MAIN:
         SDL_SetRenderDrawColor(renderer, 0x1a, 0x1e, 0x2b, SDL_ALPHA_OPAQUE_FLOAT);
         SDL_RenderClear(renderer);
-        renderMenuMain(renderer, submenu, option, scale);  
+        renderMenuMain(renderer, scale);  
         break;
     
     case MENU_PAUSE:
-        renderMenuPause(renderer, submenu, option, scale);
+        renderMenuPause(renderer, scale);
         break;
 
     case MENU_WIN:
-        renderMenuWin(renderer, submenu, option, scale);
+        renderMenuWin(renderer, scale);
         break;
 
     }
@@ -520,7 +533,7 @@ void renderMenu(SDL_Renderer *renderer, SDL_Window *window, int menu, int submen
     rendererPresent(renderer);
 }
 
-void renderMenuMain(SDL_Renderer *renderer, int submenu, int option, int scale) {
+void renderMenuMain(SDL_Renderer *renderer, int scale) {
 
     int pencil_x, pencil_y;
     renderPNG(
@@ -532,7 +545,7 @@ void renderMenuMain(SDL_Renderer *renderer, int submenu, int option, int scale) 
         window_height / scale
     );
 
-    switch (submenu) {
+    switch (gamestate.current_submenu) {
     case SUBMENU_MAIN_MAIN:
         renderPNG(
             renderer, 
@@ -702,6 +715,62 @@ void renderMenuMain(SDL_Renderer *renderer, int submenu, int option, int scale) 
             );
             break;
         }
+        if (gamestate.volume_main)
+            renderPNG(
+                renderer, 
+                spr_menu_main_options_checkmark, 
+                OFFSET_MENU_MAIN_X + OFFSET_MENU_MAIN_MAIN_SOUND_CHECKMARK_X, 
+                OFFSET_MENU_MAIN_Y + OFFSET_MENU_MAIN_MAIN_SOUND_CHECKMARK_Y, 
+                WIDTH_MENU_MAIN_CHECKMARK, 
+                HEIGHT_MENU_MAIN_CHECKMARK
+            );
+        else
+            renderPNG(
+                renderer, 
+                spr_menu_main_options_cross, 
+                OFFSET_MENU_MAIN_X + OFFSET_MENU_MAIN_MAIN_SOUND_CHECKMARK_X, 
+                OFFSET_MENU_MAIN_Y + OFFSET_MENU_MAIN_MAIN_SOUND_CHECKMARK_Y, 
+                WIDTH_MENU_MAIN_CROSS, 
+                HEIGHT_MENU_MAIN_CROSS
+            );
+
+        if (gamestate.volume_music)
+            renderPNG(
+                renderer, 
+                spr_menu_main_options_checkmark, 
+                OFFSET_MENU_MAIN_X + OFFSET_MENU_MAIN_MUSIC_CHECKMARK_X, 
+                OFFSET_MENU_MAIN_Y + OFFSET_MENU_MAIN_MUSIC_CHECKMARK_Y, 
+                WIDTH_MENU_MAIN_CHECKMARK, 
+                HEIGHT_MENU_MAIN_CHECKMARK
+            );
+        else
+            renderPNG(
+                renderer, 
+                spr_menu_main_options_cross, 
+                OFFSET_MENU_MAIN_X + OFFSET_MENU_MAIN_MUSIC_CHECKMARK_X, 
+                OFFSET_MENU_MAIN_Y + OFFSET_MENU_MAIN_MUSIC_CHECKMARK_Y, 
+                WIDTH_MENU_MAIN_CROSS, 
+                HEIGHT_MENU_MAIN_CROSS
+            );
+        
+        if (gamestate.volume_sfx)
+            renderPNG(
+                renderer, 
+                spr_menu_main_options_checkmark, 
+                OFFSET_MENU_MAIN_X + OFFSET_MENU_MAIN_SFX_CHECKMARK_X, 
+                OFFSET_MENU_MAIN_Y + OFFSET_MENU_MAIN_SFX_CHECKMARK_Y, 
+                WIDTH_MENU_MAIN_CHECKMARK, 
+                HEIGHT_MENU_MAIN_CHECKMARK
+            );
+        else
+            renderPNG(
+                renderer, 
+                spr_menu_main_options_cross, 
+                OFFSET_MENU_MAIN_X + OFFSET_MENU_MAIN_SFX_CHECKMARK_X, 
+                OFFSET_MENU_MAIN_Y + OFFSET_MENU_MAIN_SFX_CHECKMARK_Y, 
+                WIDTH_MENU_MAIN_CROSS, 
+                HEIGHT_MENU_MAIN_CROSS
+            );
         break;
     
     case SUBMENU_MAIN_CREDITS:
@@ -726,28 +795,114 @@ void renderMenuMain(SDL_Renderer *renderer, int submenu, int option, int scale) 
     }  
 }
 
-void renderMenuPause(SDL_Renderer *renderer, int submenu, int option, int scale) {
+void renderMenuPause(SDL_Renderer *renderer, int scale) {
 
-    float w,h;
 
-    SDL_GetTextureSize(spr_menu_pause_main[option], &w, &h);
+    switch (gamestate.current_submenu) {
+    case SUBMENU_PAUSE_MAIN:
+        renderPNG(
+            renderer, 
+            spr_menu_pause_main[gamestate.current_option], 
+            OFFSET_MENU_PAUSE_X, 
+            OFFSET_MENU_PAUSE_Y, 
+            WIDTH_MENU_PAUSE, 
+            HEIGHT_MENU_PAUSE
+        );
+        break;
+    case SUBMENU_PAUSE_OPTIONS:
+        renderPNG(
+            renderer, 
+            spr_menu_pause_options[gamestate.current_option], 
+            OFFSET_MENU_PAUSE_X, 
+            OFFSET_MENU_PAUSE_Y, 
+            WIDTH_MENU_PAUSE, 
+            HEIGHT_MENU_PAUSE
+        );
+        if (gamestate.volume_main)
+            renderPNG(
+                renderer, 
+                spr_menu_pause_checkmark, 
+                OFFSET_MENU_PAUSE_X + OFFSET_MENU_PAUSE_MAIN_SOUND_CHECKMARK_X, 
+                OFFSET_MENU_PAUSE_Y + OFFSET_MENU_PAUSE_MAIN_SOUND_CHECKMARK_Y, 
+                WIDTH_MENU_PAUSE_CHECKMARK, 
+                HEIGHT_MENU_PAUSE_CHECKMARK
+            );
+        else
+            renderPNG(
+                renderer, 
+                spr_menu_pause_cross, 
+                OFFSET_MENU_PAUSE_X + OFFSET_MENU_PAUSE_MAIN_SOUND_CHECKMARK_X, 
+                OFFSET_MENU_PAUSE_Y + OFFSET_MENU_PAUSE_MAIN_SOUND_CHECKMARK_Y, 
+                WIDTH_MENU_PAUSE_CROSS, 
+                HEIGHT_MENU_PAUSE_CROSS
+            );
 
-    int pos_x = window_width / 4 - w /2;
-    int pos_y = window_height / 4 - h /2;
+        if (gamestate.volume_music)
+            renderPNG(
+                renderer, 
+                spr_menu_pause_checkmark, 
+                OFFSET_MENU_PAUSE_X + OFFSET_MENU_PAUSE_MUSIC_CHECKMARK_X, 
+                OFFSET_MENU_PAUSE_Y + OFFSET_MENU_PAUSE_MUSIC_CHECKMARK_Y, 
+                WIDTH_MENU_PAUSE_CHECKMARK, 
+                HEIGHT_MENU_PAUSE_CHECKMARK
+            );
+        else
+            renderPNG(
+                renderer, 
+                spr_menu_pause_cross, 
+                OFFSET_MENU_PAUSE_X + OFFSET_MENU_PAUSE_MUSIC_CHECKMARK_X, 
+                OFFSET_MENU_PAUSE_Y + OFFSET_MENU_PAUSE_MUSIC_CHECKMARK_Y, 
+                WIDTH_MENU_PAUSE_CROSS, 
+                HEIGHT_MENU_PAUSE_CROSS
+            );
+        
+        if (gamestate.volume_sfx)
+            renderPNG(
+                renderer, 
+                spr_menu_pause_checkmark, 
+                OFFSET_MENU_PAUSE_X + OFFSET_MENU_PAUSE_SFX_CHECKMARK_X, 
+                OFFSET_MENU_PAUSE_Y + OFFSET_MENU_PAUSE_SFX_CHECKMARK_Y, 
+                WIDTH_MENU_PAUSE_CHECKMARK, 
+                HEIGHT_MENU_PAUSE_CHECKMARK
+            );
+        else
+            renderPNG(
+                renderer, 
+                spr_menu_pause_cross, 
+                OFFSET_MENU_PAUSE_X + OFFSET_MENU_PAUSE_SFX_CHECKMARK_X, 
+                OFFSET_MENU_PAUSE_Y + OFFSET_MENU_PAUSE_SFX_CHECKMARK_Y, 
+                WIDTH_MENU_PAUSE_CROSS, 
+                HEIGHT_MENU_PAUSE_CROSS
+            );
+        
+        break;
+    case SUBMENU_PAUSE_CONFIRM_EXIT:
+    case SUBMENU_PAUSE_CONFIRM_MAIN_MENU:
+        renderPNG(
+            renderer, 
+            spr_menu_pause_confirm[gamestate.current_option], 
+            OFFSET_MENU_PAUSE_X, 
+            OFFSET_MENU_PAUSE_Y, 
+            WIDTH_MENU_PAUSE, 
+            HEIGHT_MENU_PAUSE
+        );
+        break;
+        
+    }
 
-    renderPNG(renderer, spr_menu_pause_main[option], pos_x, pos_y, w, h);
+    
 }
 
-void renderMenuWin(SDL_Renderer *renderer, int submenu, int option, int scale) {
+void renderMenuWin(SDL_Renderer *renderer, int scale) {
 
     float w,h;
 
-    SDL_GetTextureSize(spr_menu_win_main[option], &w, &h);
+    SDL_GetTextureSize(spr_menu_win_main[gamestate.current_option], &w, &h);
 
     int pos_x = window_width / 4 - w / 2;
     int pos_y = window_height / 4 - h / 2;
 
-    renderPNG(renderer, spr_menu_win_main[option], pos_x, pos_y, w, h);
+    renderPNG(renderer, spr_menu_win_main[gamestate.current_option], pos_x, pos_y, w, h);
 
 }
 
@@ -768,23 +923,3 @@ void renderPNG(SDL_Renderer *renderer, SDL_Texture *texture, int pos_x, int pos_
 }
 
 
-
-void loadSounds() {
-
-    /* snd_menu_main_option_select = SDL_LoadWAV(SOUND_MENU_MAIN_OPTION_SELECT, );
-    snd_menu_option_select = SDL_LoadWAV(SOUND_MENU_OPTION_SELECT);
-
-    snd_player_move[0] = SDL_LoadWAV(SOUND_PLAYER_MOVE_1);
-    snd_player_move[1] = SDL_LoadWAV(SOUND_PLAYER_MOVE_2); */
-
-}
-
-SDL_AudioSpec loadSoundFromWAV(const char *file_path) {
-
-    char *snd_path = NULL;
-
-    SDL_asprintf(&snd_path, "%s%s", SDL_GetBasePath(), file_path);
-
-    //SDL_LoadWAV();
-
-}

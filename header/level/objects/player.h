@@ -12,11 +12,12 @@
 #include "../level.h"
 #include "../highlight.h"
 #include "../../draw/menu.h"
+#include "../../draw/audio.h"
 #include "../../debug.h"
 
 // player spawning
 #define PLAYER_SPAWN_FROM_FILE -1
-#define PLAYER_NO_ITEM 0
+#define PLAYER_NO_ITEM '0'
 
 // player sprite info
 #define PLAYER_SPRITE_DIRECTION_LEFT 0

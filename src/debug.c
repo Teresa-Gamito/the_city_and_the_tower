@@ -7,59 +7,62 @@ bool debug_screen_clear = 0;
 
 FILE *logFile;
 
-void debugCommand(char * msg) {
+void debugCommand(SDL_Event *event) {
 
-    logPrint("DEBUG COMMAND: %s", msg);
-
-    if (!strcmp(msg, COMMAND_RESTART)) levelRestart();
-
-    else if (!strcmp(msg, COMMAND_NEXT_PHASE)) levelLoadNextPhase();
-
-    else if (!strcmp(msg, COMMAND_NEXT_LEVEL)) levelGoToNext();
-
-    else if (!strcmp(msg, COMMAND_TORCH)) level_active.objects[player.pos_y][player.pos_x] = CHAR_TORCH;
-
-    else if (!strcmp(msg, COMMAND_RELIC)) level_active.objects[player.pos_y][player.pos_x] = CHAR_RELIC;
-
-    else if (!strcmp(msg, COMMAND_PLANK)) level_active.objects[player.pos_y][player.pos_x] = CHAR_PLANK;
- 
-    else if (!strcmp(msg, COMMAND_LIGHT)) {
-
-        char temp_arr[MAX_HEIGHT][MAX_WIDTH] = {{'1'}};
-
-        layerCopy((char *)temp_arr, (char *)level_active.starting_light, MAX_WIDTH, MAX_HEIGHT);
-
+    if (event->type == SDL_EVENT_KEY_DOWN) {
+        switch (event->key.scancode) {
+        case COMMAND_RESTART:
+            levelRestart();
+            break;
+        case COMMAND_NEXT_PHASE:
+            levelLoadNextPhase();
+            break;
+        case COMMAND_NEXT_LEVEL:
+            levelGoToNext();
+            break;
+        case COMMAND_TORCH:
+            level_active.objects[player.pos_y][player.pos_x] = CHAR_TORCH;
+            break;
+        case COMMAND_RELIC:
+            level_active.objects[player.pos_y][player.pos_x] = CHAR_RELIC;
+            break;
+        case COMMAND_PLANK:
+            level_active.objects[player.pos_y][player.pos_x] = CHAR_PLANK;
+            break;
+        case COMMAND_LIGHT:
+            char temp_arr[MAX_HEIGHT][MAX_WIDTH] = {{'1'}};
+            layerCopy((char *)temp_arr, (char *)level_active.starting_light, MAX_WIDTH, MAX_HEIGHT);
+            break;
+        case COMMAND_PHASE:
+            debug_phase_through_walls = !debug_phase_through_walls;
+            break;
+        case COMMAND_LIGHT_RADIUS_UP:
+            debug_light_buffer++;
+            break;
+        case COMMAND_LIGHT_RADIUS_DOWN:
+            debug_light_buffer--;
+            break;
+        }
     }
-    
-    else if (!strcmp(msg, COMMAND_PHASE))  debug_phase_through_walls = !debug_phase_through_walls;
-
-    else if (!strcmp(msg, COMMAND_LIGHT_RADIUS_UP)) debug_light_buffer++;
-
-    else if (!strcmp(msg, COMMAND_LIGHT_RADIUS_DOWN)) debug_light_buffer--;
-
-    else if (!strcmp(msg, COMMAND_CLEAR_TOGGLE)) debug_screen_clear = !debug_screen_clear;
-
 }
 
 
 void logOpen() {
 
-    // Get current time
-    time_t now = time(NULL);         
+    time_t now = time(NULL);
     struct tm *t = localtime(&now);
 
-    // file name
     char file_name[30];
-    sprintf(file_name, LOG_NAME, 
-        t->tm_mon + 1,  //month
-        t->tm_mday,     //day
-        t->tm_hour,     //hour
-        t->tm_min,      //min
-        t->tm_sec);     //sec
-
-    // open file
+    sprintf(
+        file_name, 
+        LOG_NAME, 
+        t->tm_mon + 1,
+        t->tm_mday,
+        t->tm_hour,
+        t->tm_min,
+        t->tm_sec
+    );
     logFile = fopen(file_name, "at");
-
 }
 
 void logPrint(char * message,...) {
@@ -75,7 +78,6 @@ void logClose() {
 }
 
 void logPrintLayer(char layer[MAX_HEIGHT][MAX_WIDTH], int width, int height) {
-    printf("test");
 
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < width; j++) {

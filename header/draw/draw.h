@@ -12,6 +12,7 @@
 #include <SDL3/SDL.h>
 
 #include "menu.h"
+#include "../main.h"
 #include "../debug.h"
 #include "../tools.h"
 #include "../level/level.h"
@@ -47,6 +48,16 @@
 #define HEIGHT_MENU_MAIN 319
 #define WIDTH_MENU_MAIN_PENCIL 194
 #define HEIGHT_MENU_MAIN_PENCIL 126
+#define WIDTH_MENU_PAUSE 376
+#define HEIGHT_MENU_PAUSE 395
+#define WIDTH_MENU_PAUSE_CHECKMARK 23
+#define HEIGHT_MENU_PAUSE_CHECKMARK 39
+#define WIDTH_MENU_PAUSE_CROSS 26
+#define HEIGHT_MENU_PAUSE_CROSS 34
+#define WIDTH_MENU_MAIN_CHECKMARK 18
+#define HEIGHT_MENU_MAIN_CHECKMARK 17
+#define WIDTH_MENU_MAIN_CROSS 16
+#define HEIGHT_MENU_MAIN_CROSS 16
 
 // offsets
 #define OFFSET_PIXELS_LAYER_TILES_TOP -20
@@ -54,6 +65,8 @@
 #define OFFSET_PIXELS_LAYER_ITEMS -15
 #define OFFSET_MENU_MAIN_X 712
 #define OFFSET_MENU_MAIN_Y 16
+#define OFFSET_MENU_PAUSE_X APP_WIDTH / 4 - WIDTH_MENU_PAUSE / 2
+#define OFFSET_MENU_PAUSE_Y APP_HEIGHT / 4 - HEIGHT_MENU_PAUSE / 2
 
 // menus
 // main
@@ -67,17 +80,17 @@
 #define OFFSET_OPTION_MENU_MAIN_MAIN_EXIT_X 81
 #define OFFSET_OPTION_MENU_MAIN_MAIN_EXIT_Y 222
 // options
-#define OFFSET_OPTION_MENU_MAIN_OPTIONS_MAIN_SOUND_X 140
+#define OFFSET_OPTION_MENU_MAIN_OPTIONS_MAIN_SOUND_X 156
 #define OFFSET_OPTION_MENU_MAIN_OPTIONS_MAIN_SOUND_Y 153
-#define OFFSET_OPTION_MENU_MAIN_OPTIONS_SFX_X 67
+#define OFFSET_OPTION_MENU_MAIN_OPTIONS_SFX_X 83
 #define OFFSET_OPTION_MENU_MAIN_OPTIONS_SFX_Y 176
-#define OFFSET_OPTION_MENU_MAIN_OPTIONS_MUSIC_X 85
+#define OFFSET_OPTION_MENU_MAIN_OPTIONS_MUSIC_X 101
 #define OFFSET_OPTION_MENU_MAIN_OPTIONS_MUSIC_Y 200
 #define OFFSET_OPTION_MENU_MAIN_OPTIONS_BACK_X 89
 #define OFFSET_OPTION_MENU_MAIN_OPTIONS_BACK_Y 224
 // credits
-#define OFFSET_OPTION_MENU_MAIN_CREDITS_BACK_X 97
-#define OFFSET_OPTION_MENU_MAIN_CREDITS_BACK_Y 221
+#define OFFSET_OPTION_MENU_MAIN_CREDITS_BACK_X 98
+#define OFFSET_OPTION_MENU_MAIN_CREDITS_BACK_Y 289
 // level select
 #define OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_1_X 53
 #define OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_1_Y 153
@@ -102,6 +115,21 @@
 #define OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_BACK_X 165
 #define OFFSET_OPTION_MENU_MAIN_LEVEL_SELECT_BACK_Y 305
 
+// main checkmarks
+#define OFFSET_MENU_MAIN_MAIN_SOUND_CHECKMARK_X 137
+#define OFFSET_MENU_MAIN_MAIN_SOUND_CHECKMARK_Y 141
+#define OFFSET_MENU_MAIN_MUSIC_CHECKMARK_X 82
+#define OFFSET_MENU_MAIN_MUSIC_CHECKMARK_Y 196
+#define OFFSET_MENU_MAIN_SFX_CHECKMARK_X 66
+#define OFFSET_MENU_MAIN_SFX_CHECKMARK_Y 168
+// pause checkmarks
+#define OFFSET_MENU_PAUSE_MAIN_SOUND_CHECKMARK_X 268
+#define OFFSET_MENU_PAUSE_MAIN_SOUND_CHECKMARK_Y 129
+#define OFFSET_MENU_PAUSE_MUSIC_CHECKMARK_X 219
+#define OFFSET_MENU_PAUSE_MUSIC_CHECKMARK_Y 190
+#define OFFSET_MENU_PAUSE_SFX_CHECKMARK_X 193
+#define OFFSET_MENU_PAUSE_SFX_CHECKMARK_Y 238
+
 
 // sprites path
 // game
@@ -123,7 +151,7 @@
 #define SPRITE_WALL_TORCH_UNLIT_RIGHT "assets/sprites/tiles/wall_torch_unlit/spr_wall_torch_unlit_right_1.png"
 #define SPRITE_WALL_TORCH_UNLIT_LEFT "assets/sprites/tiles/wall_torch_unlit/spr_wall_torch_unlit_left_1.png"
 #define SPRITE_PLANK_TILE "assets/sprites/tiles/plank_tile/spr_plank_tile_3.png"
-#define SPRITE_EXIT ""
+#define SPRITE_EXIT "assets/sprites/tiles/exit/spr_exit.png"
 // items
 #define SPRITE_RELIC "assets/sprites/items/relic/spr_relic_1.png"
 #define SPRITE_TORCH "assets/sprites/items/torch/spr_torch_1.png"
@@ -152,64 +180,37 @@
 #define SPRITE_MENU_MAIN_OPTIONS "assets/sprites/menus/main/options/spr_menu_main_options.png"
 #define SPRITE_MENU_MAIN_CREDITS "assets/sprites/menus/main/credits/spr_menu_main_credits.png"
 #define SPRITE_MENU_MAIN_PENCIL "assets/sprites/menus/main/spr_menu_main_pencil.png"
+#define SPRITE_MENU_MAIN_OPTIONS_CHECKMARK "assets/sprites/menus/main/spr_menu_checkmark.png"
+#define SPRITE_MENU_MAIN_OPTIONS_CROSS "assets/sprites/menus/main/spr_menu_cross.png"
+
 // pause
-#define SPRITE_MENU_PAUSE_1 "assets/sprites/menus/pause/main/spr_menu_pause_1.png"
-#define SPRITE_MENU_PAUSE_2 "assets/sprites/menus/pause/main/spr_menu_pause_2.png"
-#define SPRITE_MENU_PAUSE_3 "assets/sprites/menus/pause/main/spr_menu_pause_3.png"
-#define SPRITE_MENU_PAUSE_4 "assets/sprites/menus/pause/main/spr_menu_pause_4.png"
+// main
+#define SPRITE_MENU_PAUSE_MAIN_1 "assets/sprites/menus/pause/main/spr_menu_pause_main_1.png"
+#define SPRITE_MENU_PAUSE_MAIN_2 "assets/sprites/menus/pause/main/spr_menu_pause_main_2.png"
+#define SPRITE_MENU_PAUSE_MAIN_3 "assets/sprites/menus/pause/main/spr_menu_pause_main_3.png"
+#define SPRITE_MENU_PAUSE_MAIN_4 "assets/sprites/menus/pause/main/spr_menu_pause_main_4.png"
+#define SPRITE_MENU_PAUSE_MAIN_5 "assets/sprites/menus/pause/main/spr_menu_pause_main_5.png"
+// options
+#define SPRITE_MENU_PAUSE_OPTIONS_1 "assets/sprites/menus/pause/options/spr_menu_pause_options_1.png"
+#define SPRITE_MENU_PAUSE_OPTIONS_2 "assets/sprites/menus/pause/options/spr_menu_pause_options_2.png"
+#define SPRITE_MENU_PAUSE_OPTIONS_3 "assets/sprites/menus/pause/options/spr_menu_pause_options_3.png"
+#define SPRITE_MENU_PAUSE_OPTIONS_4 "assets/sprites/menus/pause/options/spr_menu_pause_options_4.png"
+// confirm
+#define SPRITE_MENU_PAUSE_CONFIRM_1 "assets/sprites/menus/pause/confirm/spr_menu_pause_confirm_1.png"
+#define SPRITE_MENU_PAUSE_CONFIRM_2 "assets/sprites/menus/pause/confirm/spr_menu_pause_confirm_2.png"
+// checkmearks
+#define SPRITE_MENU_PAUSE_OPTIONS_CHECKMARK "assets/sprites/menus/pause/options/spr_menu_checkmark.png"
+#define SPRITE_MENU_PAUSE_OPTIONS_CROSS "assets/sprites/menus/pause/options/spr_menu_cross.png"
 // menu
 #define SPRITE_MENU_WIN_1 "assets/sprites/menus/win/main/spr_menu_win_1.png"
 #define SPRITE_MENU_WIN_2 "assets/sprites/menus/win/main/spr_menu_win_2.png"
 #define SPRITE_MENU_WIN_3 "assets/sprites/menus/win/main/spr_menu_win_3.png"
 
 
-#define SOUND_MENU_MAIN_OPTION_SELECT "assets/audio/menu/snd_menu_main_option_select.wav"
-#define SOUND_MENU_OPTION_SELECT "assets/audio/menu/snd_menu_option_select.wav"
-#define SOUND_PLAYER_MOVE_1 "assets/audio/player/snd_player_move_1.wav"
-#define SOUND_PLAYER_MOVE_2 "assets/audio/player/snd_player_move_2.wav"
-
 
 
 #ifndef DRAW_H
 #define DRAW_H
-
-// ===== sprites =====
-// bottom tiles layer
-/* extern SDL_Texture *spr_wall_bottom[3];
-extern SDL_Texture *spr_ground[2][3];
-extern SDL_Texture *spr_pit[49];
-extern SDL_Texture *spr_pit1;
-extern SDL_Texture *spr_wall_torch_lit_right;
-extern SDL_Texture *spr_wall_torch_lit_left;
-extern SDL_Texture *spr_wall_torch_unlit_right;
-extern SDL_Texture *spr_wall_torch_unlit_left;
-extern SDL_Texture *spr_plank_tile;
-extern SDL_Texture *spr_exit;
-// items layer
-extern SDL_Texture *spr_relic;
-extern SDL_Texture *spr_torch;
-extern SDL_Texture *spr_plank;
-// player layer
-extern SDL_Texture *spr_player[2][4];
-// top tiles layer
-extern SDL_Texture *spr_wall_top;
-// light layer
-extern SDL_Texture *spr_unlit;
-// highlight layer
-extern SDL_Texture *spr_highlight_green;
-extern SDL_Texture *spr_highlight_yellow;
-extern SDL_Texture *spr_highlight_red;
-
-// menus
-extern SDL_Texture *image_starting_screen_background;
-extern SDL_Texture *spr_menu_main_main;
-extern SDL_Texture *spr_menu_main_level_select;
-extern SDL_Texture *spr_menu_main_options;
-extern SDL_Texture *spr_menu_main_credits;
-extern SDL_Texture *spr_menu_main_pencil;
-
-extern SDL_Texture *spr_menu_pause_main[4];
-extern SDL_Texture *spr_menu_win_main[3]; */
 
 
 // window properties
@@ -247,21 +248,13 @@ void renderLayerHighlight(SDL_Renderer *renderer, int pos_x, int pos_y);
 
 // ===== menus =====
 
-void renderMenu(SDL_Renderer *renderer, SDL_Window *window, int menu, int submenu, int option);
+void renderMenu(SDL_Renderer *renderer, SDL_Window *window);
 
-void renderMenuMain(SDL_Renderer *renderer, int submenu, int option, int scale);
-void renderMenuPause(SDL_Renderer *renderer, int submenu, int option, int scale);
-void renderMenuWin(SDL_Renderer *renderer, int submenu, int option, int scale);
+void renderMenuMain(SDL_Renderer *renderer, int scale);
+void renderMenuPause(SDL_Renderer *renderer, int scale);
+void renderMenuWin(SDL_Renderer *renderer, int scale);
 
 void renderPNG(SDL_Renderer *renderer, SDL_Texture *texture, int pos_x, int pos_y, int width, int height);
-
-
-// sounds
-
-void loadSounds();
-SDL_AudioSpec loadSoundFromWAV(const char *file_path);
-
-
 
 
 
