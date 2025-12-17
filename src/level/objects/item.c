@@ -1,10 +1,5 @@
-#include <stdio.h>
-#include <stdbool.h>
 
 #include "../../../header/level/objects/item.h"
-#include "../../../header/level/level.h"
-#include "../../../header/debug.h"
-#include "../../../header/level/objects/player.h"
 
 
 bool itemCanBePickedUp(int pos_x, int pos_y) {
@@ -13,7 +8,7 @@ bool itemCanBePickedUp(int pos_x, int pos_y) {
 
         if (tileHasItem(pos_x, pos_y)) return 1;
 
-        else if (level_active.tiles[pos_y][pos_x] == CHAR_PLANK_TILE) return 1;
+        else if (level_active.tiles[pos_y][pos_x] == CHAR_PLANK_TILE && !(player.pos_x == pos_x && player.pos_y == pos_y)) return 1;
     
     }
     return 0;

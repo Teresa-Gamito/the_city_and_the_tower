@@ -16,7 +16,10 @@
         "item.h": "c",
         "light.h": "c",
         "menu.h": "c",
-        "cstdlib": "c"
+        "cstdlib": "c",
+        "sdl_main.h": "c",
+        "main.h": "c",
+        "system_error": "c"
     },
     "makefile.configureOnOpen": true
 }

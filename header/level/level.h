@@ -5,9 +5,20 @@
 // analizes the current level's properties
 // ========================================
 
+#pragma once
 
 #include <stdio.h>
 #include <stdbool.h>
+#include <math.h>
+#include <string.h>
+
+#include "light.h"
+#include "objects/player.h"
+#include "../main.h"
+#include "../debug.h"
+#include "../tools.h"
+#include "../draw/draw.h"
+#include "../draw/menu.h"
 
 // max level properties
 #define MAX_WIDTH 60
@@ -25,25 +36,28 @@
 // labels for level creation
 // these are the characters read from the lvl.txt file
 #define CHAR_LAYER_TRANSITION '-'
+#define CHAR_NOTHING 0
 // tiles layer
-#define CHAR_WALL 'W'
-#define CHAR_GROUND 'G'
-#define CHAR_PIT 'V'
-#define CHAR_WALL_TORCH_LIT 'I'
-#define CHAR_WALL_TORCH_UNLIT 'O'
-#define CHAR_PLANK_TILE 'Y'
-#define CHAR_EXIT 'E'
+#define CHAR_WALL               'W'
+#define CHAR_GROUND             'G'
+#define CHAR_PIT                'V'
+#define CHAR_WALL_TORCH_LIT     'I'
+#define CHAR_WALL_TORCH_UNLIT   'O'
+#define CHAR_PLANK_TILE         'Y'
+#define CHAR_EXIT               'E'
 // objects layer
-#define CHAR_PLAYER 'P'
-#define CHAR_RELIC 'R'
-#define CHAR_TORCH 'T'
-#define CHAR_PLANK 'L'
-#define CHAR_EMPTY '0'
+#define CHAR_PLAYER             'P'
+#define CHAR_RELIC              'R'
+#define CHAR_TORCH              'T'
+#define CHAR_PLANK              'L'
+#define CHAR_EMPTY              '0'
 // light layer
-#define CHAR_LIT '1'
-#define CHAR_UNLIT '0'
+#define CHAR_LIT                '1'
+#define CHAR_UNLIT              '0'
 // highlight
-#define CHAR_HIGHLIGHT 'H'
+#define CHAR_HIGHLIGHT_GREEN    '9'
+#define CHAR_HIGHLIGHT_YELLOW   '8'
+#define CHAR_HIGHLIGHT_RED      '7'
 
 // timing
 #define DELAY_WALL_TORCH_ERASE 600
@@ -68,6 +82,9 @@ typedef struct { // loaded level structure
 } Level;
 
 extern Level level_active; // the current level
+
+
+void inLevelAction(SDL_Event *event); // action center for when playing a level
 
 // file interaction
 char * levelFileGetName(int level_num, int phase_num);

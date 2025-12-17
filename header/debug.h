@@ -5,13 +5,21 @@
 // Commands
 // ========================================
 
+#pragma once
 
 #include <stdio.h>
 #include <stdarg.h>
-#include <stdbool.h>
+#include <time.h>
+#include <string.h>
 
 #include "level/level.h"
+#include "level/objects/player.h"
+#include "tools.h"
 
+
+
+#define MAX_WIDTH 60
+#define MAX_HEIGHT 33
 
 // command naming
 #define COMMAND_RESTART "restart"               // restart level

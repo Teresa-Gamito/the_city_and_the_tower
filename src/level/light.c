@@ -1,13 +1,5 @@
 
-#include <stdio.h>
-#include <stdbool.h>
-#include <math.h>
-
-#include "../../header/level/level.h"
 #include "../../header/level/light.h"
-#include "../../header/level/objects/player.h"
-#include "../../header/debug.h"
-#include "../../header/tools.h"
 
 #define SIGN(x) x < 0 ? -1 : x > 0 ? 1 : 0
 
@@ -25,8 +17,6 @@ void lightReset() {
 
 void lightPorcessLayers() {
 
-    logPrint("Processing light\n");
-
     lightReset();
     
     for (int i = 0; i < level_active.height; i++) {
@@ -41,16 +31,13 @@ void lightPorcessLayers() {
 
         }
     }
+
     if (player.item == CHAR_TORCH) {
         lightProcess(player.pos_x, player.pos_y, LIGHT_RADIUS_TORCH + debug_light_buffer);
-        logPrint("Processing player light\n");
     }
-    logPrint("\n");
 }
 
 void lightProcess(int pos_x, int pos_y, double light_radius) {
-
-    logPrint("Light source at position x:%d y:%d\n", pos_x, pos_y);
 
     for (int i = -light_radius; i <= light_radius; i++) {
         for (int j = -light_radius; j <= light_radius; j++) {

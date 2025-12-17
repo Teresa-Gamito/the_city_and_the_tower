@@ -3,7 +3,14 @@
 // Item related funcitons
 // ==============================
 
+#pragma once
+
+#include <stdio.h>
 #include <stdbool.h>
+
+#include "../../level/level.h"
+#include "../../debug.h"
+#include "player.h"
 
 #ifndef ITEM_H
 #define ITEM_H

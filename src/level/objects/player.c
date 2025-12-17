@@ -1,18 +1,14 @@
 
-#include <stdio.h>
-#include <stdbool.h>
 
 #include "../../../header/level/objects/player.h"
-#include "../../../header/level/level.h"
-#include "../../../header/level/objects/item.h"
-#include "../../../header/level/highlight.h"
-#include  "../../../header/draw/menu.h"
-#include  "../../../header/debug.h"
 
-Player player = {0, 0, '0'};
+
+Player player = {0, 0, '0', PLAYER_SPRITE_DIRECTION_RIGHT};
 
 
 void playerSpawn(int pos_x, int pos_y, char item) {
+
+    player.sprite_direction = PLAYER_SPRITE_DIRECTION_RIGHT;
 
     if (item != PLAYER_NO_ITEM) player.item = item;
 
@@ -40,44 +36,30 @@ void playerSpawn(int pos_x, int pos_y, char item) {
 
 }
 
-void playerAction(char dir) {
+void playerAction(int input) {
 
-    switch(dir) {
+    switch(input) {
 
-        case 'w':
-        case 'W':
-            if(tileIsWalkable(player.pos_x, player.pos_y - 1) || debug_phase_through_walls)
+        case PLAYER_MOVE_UP:
+        if(tileIsWalkable(player.pos_x, player.pos_y - 1) || debug_phase_through_walls)
             playerMove(player.pos_x, player.pos_y - 1);
-            break;
+        break;
 
-        case 's':
-        case 'S':
-            if(tileIsWalkable(player.pos_x, player.pos_y + 1) || debug_phase_through_walls)
-                playerMove(player.pos_x, player.pos_y + 1);
-            break;
+        case PLAYER_MOVE_DOWN:
+        if(tileIsWalkable(player.pos_x, player.pos_y + 1) || debug_phase_through_walls)
+            playerMove(player.pos_x, player.pos_y + 1);
+        break;
 
-        case 'a':
-        case 'A':
-            if(tileIsWalkable(player.pos_x - 1, player.pos_y) || debug_phase_through_walls)
-                playerMove(player.pos_x - 1, player.pos_y);
-            break;
+        case PLAYER_MOVE_LEFT:
+        if(tileIsWalkable(player.pos_x - 1, player.pos_y) || debug_phase_through_walls)
+            playerMove(player.pos_x - 1, player.pos_y);
+        break;
 
-        case 'd':
-        case 'D':
-            if(tileIsWalkable(player.pos_x + 1, player.pos_y) || debug_phase_through_walls)
-                playerMove(player.pos_x + 1, player.pos_y);
-            break;
-
-        case 'Z':
-        case 'z':
-            highlightSpawn();
-            break;
-
-        case 'P':
-        case 'p':
-            menuTravelPause();
-            break;
-        
+        case PLAYER_MOVE_RIGHT:
+        if(tileIsWalkable(player.pos_x + 1, player.pos_y) || debug_phase_through_walls)
+            playerMove(player.pos_x + 1, player.pos_y);
+        break;
+    
     }
 }
 

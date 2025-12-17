@@ -1,13 +1,5 @@
 
-#include <stdio.h>
-#include <stdarg.h>
-#include <time.h>
-#include <string.h>
-
 #include "../header/debug.h"
-#include "../header/level/level.h"
-#include "../header/level/objects/player.h"
-#include "../header/tools.h"
 
 bool debug_phase_through_walls = false;
 int debug_light_buffer = 0;

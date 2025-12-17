@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/cmake_install.cmake",
+		"C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/vendored/SDL/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

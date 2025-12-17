@@ -1,0 +1,522 @@
+# ninja log v7
+31	69	7874539385372458	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+107	1232	7861429503758862	vendored/SDL/CMakeFiles/SDL_uclibc.dir/src/libm/e_atan2.c.obj	6266743f7cbb7d0c
+125	1293	7861429503928415	vendored/SDL/CMakeFiles/SDL_uclibc.dir/src/libm/e_log10.c.obj	220e76a607b25fce
+128	1302	7861429503973375	vendored/SDL/CMakeFiles/SDL_uclibc.dir/src/libm/e_pow.c.obj	7f1288fc3fe1d41a
+110	1326	7861429503788779	vendored/SDL/CMakeFiles/SDL_uclibc.dir/src/libm/e_exp.c.obj	3878656a7d61dfd2
+114	1364	7861429503828676	vendored/SDL/CMakeFiles/SDL_uclibc.dir/src/libm/e_fmod.c.obj	1931c5b002a97033
+118	1501	7861429503858591	vendored/SDL/CMakeFiles/SDL_uclibc.dir/src/libm/e_log.c.obj	1400c6341e84453
+102	1941	7861429503708984	vendored/SDL/CMakeFiles/SDL3-shared.dir/cmake_pch.h.gch	dba8283474ca1203
+1271	2478	7861429515403432	vendored/SDL/CMakeFiles/SDL_uclibc.dir/src/libm/e_rem_pio2.c.obj	3eaf0e9591fdd5b9
+1296	2503	7861429515652721	vendored/SDL/CMakeFiles/SDL_uclibc.dir/src/libm/e_sqrt.c.obj	72e30862793626e9
+1342	2560	7861429516261108	vendored/SDL/CMakeFiles/SDL_uclibc.dir/src/libm/k_rem_pio2.c.obj	9c7872328617f683
+1506	2649	7861429517856832	vendored/SDL/CMakeFiles/SDL_uclibc.dir/src/libm/k_tan.c.obj	899314f3328777f3
+1307	2660	7861429515872150	vendored/SDL/CMakeFiles/SDL_uclibc.dir/src/libm/k_cos.c.obj	78784b6576419365
+1383	2668	7861429516520408	vendored/SDL/CMakeFiles/SDL_uclibc.dir/src/libm/k_sin.c.obj	b21e81f5736ef2d6
+99	2933	7861429503679062	vendored/SDL/CMakeFiles/SDL3-shared.dir/cmake_pch.hxx.gch	c3ad17d1044e32a4
+1999	3297	7861429522683917	vendored/SDL/CMakeFiles/SDL_uclibc.dir/src/libm/s_atan.c.obj	81e5d16e2769c224
+2499	3589	7861429527680563	vendored/SDL/CMakeFiles/SDL_uclibc.dir/src/libm/s_copysign.c.obj	8b18108d4a4f858a
+2561	3685	7861429528298904	vendored/SDL/CMakeFiles/SDL_uclibc.dir/src/libm/s_fabs.c.obj	10482032ef40b8bd
+2668	3693	7861429529366047	vendored/SDL/CMakeFiles/SDL_uclibc.dir/src/libm/s_isinff.c.obj	fe042756816d5003
+2506	3717	7861429527830157	vendored/SDL/CMakeFiles/SDL_uclibc.dir/src/libm/s_cos.c.obj	853695b09346989
+2650	3847	7861429529186532	vendored/SDL/CMakeFiles/SDL_uclibc.dir/src/libm/s_floor.c.obj	1c868722b4c41264
+2660	3876	7861429529286265	vendored/SDL/CMakeFiles/SDL_uclibc.dir/src/libm/s_isinf.c.obj	b9cabfe91f6e3864
+2951	4262	7861429532338109	vendored/SDL/CMakeFiles/SDL_uclibc.dir/src/libm/s_isnan.c.obj	e8038a42798ad70a
+3298	4429	7861429535828755	vendored/SDL/CMakeFiles/SDL_uclibc.dir/src/libm/s_isnanf.c.obj	9b6de1537f95e6ef
+3853	4511	7861429541214355	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/SDL.c.obj	9356132ae9b604a2
+3878	4543	7861429541473660	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/SDL_assert.c.obj	804996b4a3ee1ca1
+4296	4563	7861429545642506	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/SDL_error.c.obj	ee3110f020930f8b
+3597	4697	7861429538661186	vendored/SDL/CMakeFiles/SDL_uclibc.dir/src/libm/s_modf.c.obj	321ba41ee20f5720
+3687	4804	7861429539568775	vendored/SDL/CMakeFiles/SDL_uclibc.dir/src/libm/s_scalbn.c.obj	98b32dfb478a953b
+4439	4826	7861429547238253	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/SDL_guid.c.obj	ccb62f597bda1d49
+3729	4897	7861429539987649	vendored/SDL/CMakeFiles/SDL_uclibc.dir/src/libm/s_tan.c.obj	b8cc02ee9e9df8ae
+3710	4912	7861429539808142	vendored/SDL/CMakeFiles/SDL_uclibc.dir/src/libm/s_sin.c.obj	28f818686e36482a
+4564	4923	7861429548405143	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/SDL_list.c.obj	dde86c1bbf6bf698
+4522	5014	7861429547986253	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/SDL_hashtable.c.obj	2dd0a4ea32bff570
+4547	5019	7861429548165772	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/SDL_hints.c.obj	7bcc090d03b7762c
+4826	5224	7861429550948321	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/SDL_utils.c.obj	c0ee5bdd61688b69
+4901	5248	7861429551706305	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/atomic/SDL_atomic.c.obj	2f09139000c6c7c3
+4814	5280	7861429550828653	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/SDL_properties.c.obj	a247d29e6373866
+5019	5294	7861429552873176	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/audio/SDL_audiodev.c.obj	493da186506fcb02
+4710	5391	7861429549781443	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/SDL_log.c.obj	975d1ad485767026
+4914	5408	7861429551835954	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/atomic/SDL_spinlock.c.obj	b60a604f6dc1b1b0
+5306	5640	7861429555915050	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/audio/SDL_mixer.c.obj	2a268f95fa59f32c
+5231	5674	7861429555127152	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/audio/SDL_audioqueue.c.obj	58484c86c57f4bf1
+5252	5699	7861429555246832	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/audio/SDL_audioresample.c.obj	f162ee460b0d3508
+5015	5716	7861429552833311	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/audio/SDL_audiocvt.c.obj	6f1d9872542abaa6
+5290	5753	7861429555585934	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/audio/SDL_audiotypecvt.c.obj	a0387520ee41467b
+4923	5845	7861429551915736	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/audio/SDL_audio.c.obj	bee4105aa76ed68f
+5402	5875	7861429556712926	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/audio/SDL_wave.c.obj	de53664b9362def2
+5641	6012	7861429559096533	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/core/SDL_core_unsupported.c.obj	1ba6d55e0a32418a
+5755	6176	7861429560243488	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/events/SDL_clipboardevents.c.obj	5b6cbee69f3d6c21
+5845	6190	7861429561141059	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/events/SDL_displayevents.c.obj	8dd769652640cc35
+5717	6213	7861429559854502	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/events/SDL_categories.c.obj	29e92699cfc6c2c1
+5409	6220	7861429556782722	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/camera/SDL_camera.c.obj	1b4d6d94daf7c0c0
+5875	6322	7861429561450236	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/events/SDL_dropevents.c.obj	4c018105fd7cc801
+5674	6382	7861429559455568	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/cpuinfo/SDL_cpuinfo.c.obj	5d9904b793557922
+6216	6615	7861429564851152	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/events/SDL_keymap.c.obj	da146b0e791373f8
+6184	6631	7861429564522021	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/events/SDL_eventwatch.c.obj	bc47a9847e9fbad4
+6191	6699	7861429564601806	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/events/SDL_keyboard.c.obj	754fbae38c3b867
+6222	6708	7861429564910992	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/events/SDL_keysym_to_keycode.c.obj	51f57845288a13ea
+6322	6779	7861429565908309	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/events/SDL_keysym_to_scancode.c.obj	437ebb56d0c3f78c
+6015	6930	7861429563006080	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/events/SDL_events.c.obj	355c594c2c3dbfb6
+6631	7037	7861429568990066	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/events/SDL_quit.c.obj	3be072764b4f2310
+6615	7052	7861429568830494	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/events/SDL_pen.c.obj	ec181b005fa3aca3
+6699	7056	7861429569678230	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/events/SDL_scancode_tables.c.obj	e9880ee93ef54127
+6708	7120	7861429569767989	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/events/SDL_touch.c.obj	16f38b56f11e2a19
+6384	7161	7861429566955508	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/events/SDL_mouse.c.obj	c0fa7ee30f2df03
+6779	7176	7861429570476096	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/events/SDL_windowevents.c.obj	cdefc95444a41a28
+6932	7180	7861429572031937	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/events/imKStoUCS.c.obj	c0c3a23b33e27bb6
+7049	7559	7861429573178874	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/filesystem/SDL_filesystem.c.obj	8aa84cfc72b52348
+7162	7578	7861429574305860	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/io/SDL_asyncio.c.obj	fea2416a2e53404e
+7057	7594	7861429573248690	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/haptic/SDL_haptic.c.obj	5290517a7d995c9
+7180	7659	7861429574485374	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/io/generic/SDL_asyncio_generic.c.obj	8fd690b685ec831a
+7052	7860	7861429573208787	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/gpu/SDL_gpu.c.obj	53e4d6dd1a27d539
+7177	7989	7861429574455459	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/io/SDL_iostream.c.obj	90edb04cd3a4d9db
+7659	8030	7861429579282545	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/controller_type.c.obj	3e8334a7eb16ea8
+7121	8171	7861429573896957	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/hidapi/SDL_hidapi.c.obj	c2274a0bb7f80ad4
+7594	8192	7861429578624304	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/SDL_steam_virtual_gamepad.c.obj	5886b37cc1a28d0b
+7863	8278	7861429581456737	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/locale/SDL_locale.c.obj	fe2bb2943846e806
+8030	8318	7861429582982650	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/main/SDL_runapp.c.obj	28af0b24ee789acf
+8026	8325	7861429582942751	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/main/SDL_main_callbacks.c.obj	7577fb265f8bf9fa
+7574	8473	7861429578424842	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/SDL_gamepad.c.obj	27e4cec2dbcedd65
+7578	8550	7861429578464727	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/SDL_joystick.c.obj	a97ea3070464cfe1
+8198	8557	7861429584668136	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/misc/SDL_url.c.obj	817153ab42d3a2c9
+8325	8596	7861429585934756	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/render/SDL_render_unsupported.c.obj	1756506ce3a9cb9d
+8279	8602	7861429585475982	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/power/SDL_power.c.obj	17082b728d9e9a9a
+8182	8609	7861429584568406	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/misc/SDL_libusb.c.obj	4f384fe984ece18b
+8473	8828	7861429587460667	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/render/SDL_yuv_sw.c.obj	82d0cb8fba3d58a1
+8318	9342	7861429585864939	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/render/SDL_render.c.obj	97aa3d0cb0abe6f4
+8557	9480	7861429588258533	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/render/direct3d/SDL_shaders_d3d.c.obj	c57af23417b6cdf9
+8602	9594	7861429588707333	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/render/direct3d11/SDL_shaders_d3d11.c.obj	14d0d0ba373b6827
+8550	9717	7861429588188715	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/render/direct3d/SDL_render_d3d.c.obj	dd9c1da4ab85fa6b
+9361	9851	7861429596506475	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/render/gpu/SDL_pipeline_gpu.c.obj	87932350772b5e3f
+8596	9872	7861429588647487	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/render/direct3d11/SDL_render_d3d11.c.obj	2be53d4e2a35c5e6
+8852	9897	7861429591290432	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/render/direct3d12/SDL_shaders_d3d12.c.obj	eb052bed6c0e6d69
+8609	9968	7861429588866905	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/render/direct3d12/SDL_render_d3d12.c.obj	dd851dc0e4eed930
+9731	9981	7861429599997134	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/render/ngage/SDL_render_ngage.c.obj	58395a493a255e70
+9611	10007	7861429598790360	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/render/gpu/SDL_shaders_gpu.c.obj	9d1dd3d14149e2d4
+9485	10122	7861429597862845	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/render/gpu/SDL_render_gpu.c.obj	22be5845575f310b
+9981	10317	7861429602500433	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/render/ps2/SDL_render_ps2.c.obj	b936087afa53988c
+9972	10345	7861429602400719	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/render/opengles2/SDL_shaders_gles2.c.obj	6c4d147eae881413
+10008	10365	7861429602759747	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/render/psp/SDL_render_psp.c.obj	d5e384e35de8ca2c
+9898	10531	7861429601672651	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/render/opengles2/SDL_render_gles2.c.obj	2bcf2026e92234c3
+9873	10545	7861429601423330	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/render/opengl/SDL_shaders_gl.c.obj	d21afb2ff21f9e73
+9852	10738	7861429601213885	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/render/opengl/SDL_render_gl.c.obj	1da1ffa9a99d9b87
+10348	10869	7861429606280325	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/render/software/SDL_blendpoint.c.obj	1ecc6546ee9451f3
+10132	10878	7861429604156011	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/render/software/SDL_blendfillrect.c.obj	22964642b5d69e
+10541	10908	7861429608095476	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/render/software/SDL_drawpoint.c.obj	fe9f0711dd94191c
+10366	10994	7861429606350149	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/render/software/SDL_drawline.c.obj	bc0ddafdf40eaf30
+10546	11035	7861429608145342	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/render/software/SDL_render_sw.c.obj	ac69a891db26c2c3
+10871	11199	7861429611426580	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/render/vitagxm/SDL_render_vita_gxm.c.obj	277f2bf63339ee2c
+10743	11241	7861429610169931	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/render/software/SDL_triangle.c.obj	4e7ac1584a4f9ecd
+10909	11266	7861429611775639	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/render/vitagxm/SDL_render_vita_gxm_tools.c.obj	34c3da6a7ae9132f
+10879	11273	7861429611685869	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/render/vitagxm/SDL_render_vita_gxm_memory.c.obj	d82d95d92f9e496e
+10319	11292	7861429605951212	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/render/software/SDL_blendline.c.obj	4e3f9c4938bc1d3d
+11044	11376	7861429613132010	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/render/vulkan/SDL_shaders_vulkan.c.obj	b48900563d98042c
+5702	11563	7861429559714892	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/dynapi/SDL_dynapi.c.obj	d759614b34bd0060
+11252	11583	7861429615296220	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/stdlib/SDL_crc16.c.obj	ce3bdbb466c285a3
+11267	11602	7861429615356066	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/stdlib/SDL_crc32.c.obj	fd918598a3b0f917
+11199	11649	7861429614677863	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/sensor/SDL_sensor.c.obj	69e5c56a4bc8325a
+11292	11715	7861429615605397	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/stdlib/SDL_iconv.c.obj	df6714db0620e777
+11397	11756	7861429616652582	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/stdlib/SDL_malloc.c.obj	e8645251f851aa55
+11604	11945	7861429618737019	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/stdlib/SDL_memset.c.obj	2ccf06ba31761e90
+11276	11949	7861429615445820	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/stdlib/SDL_getenv.c.obj	3a0ccabf24cd0422
+11572	11953	7861429618407890	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/stdlib/SDL_memcpy.c.obj	521273d142229918
+11657	11961	7861429619405227	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/stdlib/SDL_mslibc.c.obj	bab8dd195bae227b
+11715	11964	7861429619834082	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/stdlib/SDL_murmur3.c.obj	ce6ad41edd41e5ff
+11591	11974	7861429618637279	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/stdlib/SDL_memmove.c.obj	3cf983c4745180f1
+11756	12101	7861429620252964	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/stdlib/SDL_qsort.c.obj	2c46e1c63ac7d10d
+11006	12139	7861429612882687	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/render/vulkan/SDL_render_vulkan.c.obj	d21f24301e7e70ab
+11946	12232	7861429622137931	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/stdlib/SDL_random.c.obj	faaf82426b98e315
+11965	12349	7861429622357346	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/storage/SDL_storage.c.obj	3f938b3a1d32b47d
+11961	12358	7861429622297493	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/stdlib/SDL_strtokr.c.obj	e7d1c957808cfa64
+11949	12409	7861429622177815	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/stdlib/SDL_stdlib.c.obj	5a8669502abb7180
+11953	12414	7861429622237655	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/stdlib/SDL_string.c.obj	aef3d9a9c1330c4
+12108	12462	7861429623773560	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/time/SDL_time.c.obj	dffac592e5c4ea43
+11978	12693	7861429622477006	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/thread/SDL_thread.c.obj	72632fa13bcf2fa2
+12410	12840	7861429626785498	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/SDL_blit_1.c.obj	c3bd23cdd050b669
+12233	12847	7861429625020214	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/SDL_RLEaccel.c.obj	b0a5cab2b83f9714
+12351	12868	7861429626197063	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/SDL_blit.c.obj	f9f4de463990f58b
+12143	12884	7861429624112652	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/timer/SDL_timer.c.obj	20e3938f7b083e7f
+12361	12889	7861429626306767	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/SDL_blit_0.c.obj	c3d266e68baa7d18
+12475	13129	7861429627433763	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/SDL_blit_N.c.obj	e86a2310a5a3de2f
+12881	13248	7861429631492893	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/SDL_bmp.c.obj	67aafc849751167
+12842	13261	7861429631113919	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/SDL_blit_copy.c.obj	8df3d0e12a4e0b15
+12418	13289	7861429626895245	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/SDL_blit_A.c.obj	cee7807438b693a7
+12884	13294	7861429631522812	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/SDL_clipboard.c.obj	c9c96ac500441d2
+12855	13435	7861429631273494	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/SDL_blit_slow.c.obj	ae4b35ce318da298
+13262	13610	7861429635302710	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/SDL_rect.c.obj	8956d20a9716eb00
+12889	13639	7861429631572694	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/SDL_egl.c.obj	a9c5e4cb3dcc7461
+13132	13644	7861429634325316	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/SDL_fillrect.c.obj	64cdf31f3cd21128
+13290	13661	7861429635591936	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/SDL_rotate.c.obj	452dcba51e2319db
+13440	13933	7861429637087929	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/SDL_stretch.c.obj	a00f996d6ce786fa
+13257	13950	7861429635252864	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/SDL_pixels.c.obj	3f654b98ee7436d7
+13644	14016	7861429639122491	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/SDL_video_unsupported.c.obj	d12b05a341433c53
+12700	14188	7861429629687743	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/SDL_blit_auto.c.obj	1e15d45bd57e2013
+13295	14230	7861429635651779	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/SDL_stb.c.obj	ba034f7813ba7b84
+13635	14268	7861429639032733	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/SDL_surface.c.obj	369e262b1cfd5d44
+13964	14296	7861429642463565	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/yuv2rgb/yuv_rgb_lsx.c.obj	52686ded333ed726
+13661	14400	7861429639292036	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/SDL_vulkan_utils.c.obj	50f2cf20bcbb059f
+14230	14629	7861429644986807	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/audio/dummy/SDL_dummyaudio.c.obj	c4d7ba8b2ae53199
+14268	14683	7861429645365799	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/audio/disk/SDL_diskaudio.c.obj	d326a0bdabd1fc0c
+13934	14712	7861429642154384	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/SDL_yuv.c.obj	fe71b6d47f1b504e
+14297	14847	7861429645655031	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/camera/dummy/SDL_camera_dummy.c.obj	999a7adffb5faead
+14200	14859	7861429644687613	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/yuv2rgb/yuv_rgb_std.c.obj	30c9fdb404597256
+14417	15005	7861429647091180	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/virtual/SDL_virtualjoystick.c.obj	d3a13cc7bf910a19
+14631	15012	7861429649006059	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/dummy/SDL_nullevents.c.obj	550dcb60bf357ea2
+14683	15026	7861429649524667	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/dummy/SDL_nullframebuffer.c.obj	8d26134241c32ec0
+14730	15032	7861429649983444	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/dummy/SDL_nullvideo.c.obj	c37dc2353eb778d1
+13640	15062	7861429639082596	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/SDL_video.c.obj	649fc098ff2bdcc
+14852	15217	7861429651210168	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/core/windows/SDL_gameinput.cpp.obj	fbcad2656134c1a8
+14860	15434	7861429651279977	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/core/windows/SDL_hid.c.obj	ee6154bb037f2a16
+15033	15481	7861429653015340	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/core/windows/pch.c.obj	534081c353115c0f
+15026	15530	7861429652945517	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/core/windows/SDL_xinput.c.obj	d26503d2a78bd825
+15064	15551	7861429653324500	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/core/windows/pch_cpp.cpp.obj	722545b386d58bc4
+14016	15660	7861429642852516	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/yuv2rgb/yuv_rgb_sse.c.obj	56011598e1f37bed
+15217	15829	7861429654860399	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/main/windows/SDL_sysmain_runapp.c.obj	d7c950562ab92c5
+15445	15865	7861429657134306	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/io/windows/SDL_asyncio_windows_ioring.c.obj	e0dfaf6844f2f05f
+15007	15877	7861429652756033	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/core/windows/SDL_immdevice.c.obj	9e8d91de66c0bd5e
+15013	15960	7861429652815886	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/core/windows/SDL_windows.c.obj	5e1a8d0a303be788
+15481	16035	7861429657493350	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/misc/windows/SDL_sysurl.c.obj	4071ffe7c916d82c
+15530	16482	7861429657992021	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/audio/directsound/SDL_directsound.c.obj	b2eadc4b14a319e6
+15661	16513	7861429659298529	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/windows/SDL_windowsclipboard.c.obj	2111299d99ec0615
+15867	16658	7861429661412872	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/windows/SDL_windowsframebuffer.c.obj	91893f812063123a
+15551	16681	7861429658201455	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/audio/wasapi/SDL_wasapi.c.obj	a55b9f946d1bbd61
+16041	16915	7861429663158232	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/windows/SDL_windowsmessagebox.c.obj	e150a836a9463f51
+15966	16925	7861429662350377	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/windows/SDL_windowskeyboard.c.obj	3578b55874b361eb
+15891	17056	7861429661642261	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/windows/SDL_windowsgameinput.cpp.obj	39697e416b5cc1cc
+15842	17164	7861429661103731	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/windows/SDL_windowsevents.c.obj	96f4b34d640d11ad
+16515	17396	7861429667835691	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/windows/SDL_windowsmouse.c.obj	82f110a06a2e3912
+16689	17525	7861429669660810	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/windows/SDL_windowsopengles.c.obj	ba041bd06ae4a949
+16489	17626	7861429667586356	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/windows/SDL_windowsmodes.c.obj	194417365fe73288
+16660	17709	7861429669431424	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/windows/SDL_windowsopengl.c.obj	7b420a731c6d9678
+16928	17717	7861429671984590	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/windows/SDL_windowsshape.c.obj	71607fdd41f602f7
+16919	17801	7861429671874889	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/windows/SDL_windowsrawinput.c.obj	a782356eda21579e
+17545	17875	7861429678188001	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/thread/generic/SDL_syscond.c.obj	67f71f852a9211d3
+17631	18048	7861429679065667	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/thread/generic/SDL_sysrwlock.c.obj	b2dfc06f6666af6d
+17170	18218	7861429674388176	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/windows/SDL_windowsvulkan.c.obj	b668c75b02cbfa9c
+17717	18249	7861429679853550	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/thread/windows/SDL_sysmutex.c.obj	30f9218c569f2a11
+17713	18266	7861429679813664	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/thread/windows/SDL_syscond_cv.c.obj	fa387d03f2e59485
+17059	18274	7861429673301068	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/windows/SDL_windowsvideo.c.obj	92cbd37c600c071b
+17806	18428	7861429680781060	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/thread/windows/SDL_sysrwlock_srw.c.obj	b2e9fcad7f31b886
+17880	18556	7861429681479203	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/thread/windows/SDL_syssem.c.obj	ad0ac74ff30fab1c
+18049	18710	7861429683483844	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/thread/windows/SDL_systhread.c.obj	8322600796d93a58
+17406	18797	7861429676781770	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/windows/SDL_windowswindow.c.obj	37dd8b7205b52da0
+18274	18845	7861429685428640	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/locale/windows/SDL_syslocale.c.obj	bbab4d15c8ee4c01
+18220	18850	7861429684890080	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/thread/windows/SDL_systls.c.obj	6b8e29154fd59fbf
+18266	18892	7861429685348852	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/power/windows/SDL_syspower.c.obj	3b0c234cfabe3230
+18711	19113	7861429689796958	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/storage/generic/SDL_genericstorage.c.obj	94f2bf57bd7ee019
+18806	19125	7861429690844156	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/storage/steam/SDL_steamstorage.c.obj	f902a0ddee3b83f7
+18561	19269	7861429688580210	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/filesystem/windows/SDL_sysfsops.c.obj	b8997e9a1a650441
+18261	19291	7861429685298989	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/sensor/windows/SDL_windowssensor.c.obj	7c59f9ee9e844283
+18858	19431	7861429691512377	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/timer/windows/SDL_systimer.c.obj	33ead84d91d7e4a4
+18893	19448	7861429691622077	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/loadso/windows/SDL_sysloadso.c.obj	19322baf22a4c3cd
+18845	19473	7861429691143351	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/time/windows/SDL_systime.c.obj	b5e776f5ac7bec97
+19125	19575	7861429693935883	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/hidapi/SDL_hidapi_8bitdo.c.obj	ed7c08eed28bc8bf
+18428	19592	7861429686974506	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/filesystem/windows/SDL_sysfilesystem.c.obj	35d15715cd7a8b36
+19272	19600	7861429695411945	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/hidapi/SDL_hidapi_combined.c.obj	d9d7a4b377e9840d
+19296	19717	7861429695651307	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/hidapi/SDL_hidapi_flydigi.c.obj	d788734540b7ba98
+19119	19803	7861429693886029	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/tray/windows/SDL_tray.c.obj	634258187bd82a9a
+19435	19849	7861429697127363	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/hidapi/SDL_hidapi_gamecube.c.obj	5635954052516ade
+19576	20023	7861429698443835	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/hidapi/SDL_hidapi_luna.c.obj	98bc32f52c9126ce
+19479	20037	7861429697496357	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/hidapi/SDL_hidapi_lg4ff.c.obj	1a115f6a207aa993
+19610	20058	7861429698792918	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/hidapi/SDL_hidapi_ps4.c.obj	e0e06a93d1ded54d
+19455	20176	7861429697366756	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/hidapi/SDL_hidapi_gip.c.obj	3ff84e3466e2fe25
+19594	20183	7861429698653282	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/hidapi/SDL_hidapi_ps3.c.obj	d7ca876bd017ea90
+19732	20193	7861429700109385	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/hidapi/SDL_hidapi_ps5.c.obj	46a0af920a379478
+19851	20199	7861429701206457	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/hidapi/SDL_hidapi_shield.c.obj	4a6c5533f03db7a0
+19809	20299	7861429700787571	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/hidapi/SDL_hidapi_rumble.c.obj	c8a4278b15999c4f
+20047	20433	7861429703171179	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/hidapi/SDL_hidapi_stadia.c.obj	e0d82a69ed3e809e
+20033	20503	7861429703021585	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/hidapi/SDL_hidapi_sinput.c.obj	779ebceb741a405e
+20193	20529	7861429704617324	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/hidapi/SDL_hidapi_steamdeck.c.obj	6d723c3a0cd82a6b
+20185	20573	7861429704587400	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/hidapi/SDL_hidapi_steam_triton.c.obj	dfb67877cbe7b048
+20179	20601	7861429704477696	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/hidapi/SDL_hidapi_steam_hori.c.obj	6ed4315ea809a1e2
+20066	20611	7861429703340726	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/hidapi/SDL_hidapi_steam.c.obj	18dfa7293422f2e
+20300	20618	7861429705684466	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/hidapi/SDL_hidapi_switch2.c.obj	4c8986408dc5d107
+20516	20879	7861429707938428	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/hidapi/SDL_hidapi_xbox360.c.obj	5b51b3e8344680fa
+20199	20886	7861429704677162	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/hidapi/SDL_hidapi_switch.c.obj	eca61cea6f4a382d
+20538	20958	7861429708078068	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/hidapi/SDL_hidapi_xbox360w.c.obj	d0350be432e691bc
+20434	20978	7861429707020883	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/hidapi/SDL_hidapi_wii.c.obj	6e3b0d8b153af090
+20633	20992	7861429709025532	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/haptic/hidapi/SDL_hidapihaptic.c.obj	124fd7d2ea385324
+20574	21069	7861429708447079	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/hidapi/SDL_hidapi_xboxone.c.obj	5c8d5d60baf812fd
+20602	21125	7861429708766216	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/hidapi/SDL_hidapi_zuiki.c.obj	ec081034c89030a3
+20613	21265	7861429708836032	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/hidapi/SDL_hidapijoystick.c.obj	913603e8dae72baa
+20883	21347	7861429711518847	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/haptic/hidapi/SDL_hidapihaptic_lg4ff.c.obj	9e23a2d746868489
+20893	21906	7861429711618581	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/windows/SDL_dinputjoystick.c.obj	e4bff2baf7b22cee
+20992	21965	7861429712605946	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/windows/SDL_windowsjoystick.c.obj	cefae16a089fd3ed
+21094	22000	7861429713703013	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/windows/SDL_xinputjoystick.c.obj	58232490ed7e70ba
+21274	22028	7861429715458313	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/haptic/windows/SDL_windowshaptic.c.obj	82301050d15cedca
+21126	22040	7861429713942377	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/haptic/windows/SDL_dinputhaptic.c.obj	4d0c9bb4a6b81c58
+20979	22067	7861429712476294	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/windows/SDL_windows_gaming_input.c.obj	6eef61ab7e95ef44
+20973	22084	7861429712416472	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/joystick/windows/SDL_rawinputjoystick.c.obj	74801e4b24e7efcf
+21911	22285	7861429721801349	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/core/windows/version.rc.obj	72fa92410de94878
+21361	22327	7861429716296072	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/camera/mediafoundation/SDL_camera_mediafoundation.c.obj	64884598cee487d1
+21989	22344	7861429722659050	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/dialog/SDL_dialog.c.obj	c801876c76fe5af9
+22040	22358	7861429723087933	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/process/SDL_process.c.obj	bdc3237457726433
+22002	22442	7861429722718905	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/dialog/SDL_dialog_utils.c.obj	676492f484e8ce0b
+22084	22463	7861429723526733	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/offscreen/SDL_offscreenevents.c.obj	74d570eb7d2ac6e5
+22285	22611	7861429725531375	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/offscreen/SDL_offscreenframebuffer.c.obj	f455180dbad0ac5a
+22068	22619	7861429723357199	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/process/windows/SDL_windowsprocess.c.obj	bfacfd8b3a3b47b1
+22473	22813	7861429727416358	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/tray/SDL_tray_utils.c.obj	2f8f74af3061852
+22332	22862	7861429726089905	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/offscreen/SDL_offscreenopengles.c.obj	4025d8cd077ace84
+22451	22926	7861429727286676	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/offscreen/SDL_offscreenwindow.c.obj	446fc3e09a5cc9
+22360	22951	7861429726289347	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/offscreen/SDL_offscreenvulkan.c.obj	1ad3e683e6f20038
+22352	22985	7861429726229520	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/offscreen/SDL_offscreenvideo.c.obj	9b31f041d96e0278
+22033	23116	7861429723008122	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/dialog/windows/SDL_windowsdialog.c.obj	1fda6078e4d4dfaa
+22822	23132	7861429730907001	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/main/generic/SDL_sysmain_callbacks.c.obj	3d3ce8cefa1a375b
+86	586	7874539385923061	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+22862	23248	7861429731305934	vendored/SDL/libSDL_uclibc.a	cc066f47d6129a0c
+22622	23789	7861429728912341	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/gpu/vulkan/SDL_gpu_vulkan.c.obj	a669babc4fd31807
+22612	23959	7861429728842517	vendored/SDL/CMakeFiles/SDL3-shared.dir/src/gpu/d3d12/SDL_gpu_d3d12.c.obj	8411fcf04989399a
+92	614	7861472988005895	SDL3.dll	a736de28be5c63e1
+92	614	7861472988005895	vendored/SDL/libSDL3.dll.a	a736de28be5c63e1
+840	1257	7874539393458109	game.exe	3be9f6a8162139b8
+70	2121	7865522028651772	build.ninja	d2277602e865a2d1
+70	2121	7865522028651772	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/cmake_install.cmake	d2277602e865a2d1
+70	2121	7865522028651772	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/vendored/SDL/cmake_install.cmake	d2277602e865a2d1
+103	585	7874539386088780	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+89	579	7874539385949204	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+92	556	7874539385989055	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+98	690	7874539386038913	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+100	668	7874539386068829	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+105	641	7874539386118702	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+561	840	7874539390676734	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+579	822	7874539390856247	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+95	664	7874539386008991	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+92	160	7862333539710457	CMakeFiles/game.dir/test.c.obj	528891a971d661ad
+90	582	7861470367738162	vendored/SDL/SDL3.dll	42fbeb7af7029526
+35	74	7874539993424505	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+92	457	7874539993995997	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+104	502	7874539994115682	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+95	531	7874539994025920	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+101	570	7874539994085763	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+111	584	7874539994185508	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+107	596	7874539994145602	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+98	604	7874539994055844	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+114	626	7874539994215418	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+503	734	7874539998100741	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+464	795	7874539997711542	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+795	917	7874540001022487	game.exe	3be9f6a8162139b8
+32	71	7874540566059214	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+20	62	7874540922918902	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+78	296	7874540923491235	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+297	456	7874540925687565	game.exe	3be9f6a8162139b8
+31	67	7874541309241806	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+85	316	7874541309788224	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+317	444	7874541312098565	game.exe	3be9f6a8162139b8
+32	72	7874548021341914	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+105	570	7874548022068099	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+108	578	7874548022127950	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+90	589	7874548021908821	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+102	606	7874548022028211	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+99	634	7874548022008264	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+96	641	7874548021972332	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+93	661	7874548021938441	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+114	673	7874548022227679	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+586	799	7874548026870340	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+574	845	7874548026760644	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+845	965	7874548029467540	game.exe	3be9f6a8162139b8
+27	67	7874548536953255	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+83	308	7874548537514210	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+309	435	7874548539772099	game.exe	3be9f6a8162139b8
+35	117	7874553316744962	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+138	523	7874553317782949	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+135	571	7874553317741678	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+152	576	7874553317912601	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+163	581	7874553318027390	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+160	582	7874553317997476	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+132	589	7874553317711755	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+156	647	7874553317967550	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+141	654	7874553317812880	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+573	776	7874553322116459	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+536	813	7874553321757417	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+814	932	7874553324537919	game.exe	3be9f6a8162139b8
+27	67	7874556629504228	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+82	586	7874556630051075	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+88	610	7874556630110923	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+110	670	7874556630370223	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+85	696	7874556630080995	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+118	700	7874556630410124	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+94	702	7874556630180731	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+90	722	7874556630140837	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+121	740	7874556630489914	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+611	837	7874556635377047	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+26	67	7874556768225075	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+86	607	7874556768827331	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+99	614	7874556768966655	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+111	621	7874556769106280	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+90	638	7874556768866927	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+103	778	7874556769036466	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+83	780	7874556768797387	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+124	794	7874556769215991	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+95	801	7874556768916791	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+608	935	7874556774038338	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+614	939	7874556774098178	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+940	1064	7874556777354664	game.exe	3be9f6a8162139b8
+29	70	7874556936997315	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+18	60	7874565578992991	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+18	57	7874566256085869	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+17	59	7874566328091478	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+81	498	7874566328742046	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+87	552	7874566328793004	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+124	563	7874566329181972	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+76	568	7874566328682445	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+79	583	7874566328712120	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+129	584	7874566329231836	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+96	585	7874566329092205	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+84	590	7874566328763086	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+553	755	7874566333455641	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+499	765	7874566333006833	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+765	886	7874566335574005	game.exe	3be9f6a8162139b8
+27	65	7874566732008442	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+94	558	7874566732667769	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+81	616	7874566732538765	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+84	649	7874566732578001	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+87	710	7874566732607919	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+90	717	7874566732637842	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+97	722	7874566732717636	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+258	747	7874566734343275	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+104	765	7874566733016827	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+616	857	7874566737894062	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+558	858	7874566737315326	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+858	973	7874566740311715	game.exe	3be9f6a8162139b8
+31	71	7874567194835365	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+17	56	7874568422034179	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+71	237	7874568422577127	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+238	357	7874568424245308	game.exe	3be9f6a8162139b8
+29	67	7874568561648361	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+83	239	7874568562187267	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+239	356	7874568563739833	game.exe	3be9f6a8162139b8
+33	73	7874568661881302	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+20	62	7874568891937404	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+100	607	7874568892809554	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+86	619	7874568892580161	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+118	625	7874568892929337	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+78	626	7874568892510355	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+93	628	7874568892669920	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+113	645	7874568892869389	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+82	646	7874568892540269	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+88	652	7874568892610092	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+620	806	7874568897926063	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+616	844	7874568897886171	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+844	965	7874568900162366	game.exe	3be9f6a8162139b8
+33	71	7874569214038878	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+112	555	7874569214826129	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+96	561	7874569214668121	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+89	573	7874569214596742	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+102	587	7874569214726395	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+108	612	7874569214796208	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+93	614	7874569214636944	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+105	644	7874569214746345	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+99	660	7874569214696475	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+563	764	7874569219400537	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+556	826	7874569219280695	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+826	945	7874569221964910	game.exe	3be9f6a8162139b8
+29	68	7874570091320511	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+84	294	7874570091873874	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+295	418	7874570093980402	game.exe	3be9f6a8162139b8
+68	117	7875114595804778	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+132	1135	7875114596443066	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+1136	1536	7875114606473242	game.exe	3be9f6a8162139b8
+26	62	7875117862874534	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+17	55	7875120528870781	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+70	246	7875120529399382	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+73	293	7875120529429290	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+293	410	7875120531633703	game.exe	3be9f6a8162139b8
+28	68	7875120787320921	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+84	242	7875120787869678	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+243	363	7875120789455200	game.exe	3be9f6a8162139b8
+29	73	7875138311437584	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+16	57	7875138586336855	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+20	59	7875143788742674	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+81	519	7875143789356119	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+79	552	7875143789326189	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+95	556	7875143789495749	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+87	580	7875143789405982	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+76	605	7875143789296270	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+92	681	7875143789455848	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+99	687	7875143789535635	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+84	687	7875143789386036	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+552	780	7875143794064552	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+519	810	7875143793724753	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+810	936	7875143796631782	game.exe	3be9f6a8162139b8
+28	64	7875143884778208	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+18	58	7875154852881611	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+74	289	7875154853440116	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+297	418	7875154855669260	game.exe	3be9f6a8162139b8
+30	67	7875156169783596	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+18	53	7875157594733781	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+68	392	7875157595232439	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+73	421	7875157595292284	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+76	426	7875157595322207	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+71	437	7875157595262360	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+98	438	7875157595541622	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+95	450	7875157595501720	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+79	480	7875157595441884	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+101	494	7875157595581520	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+421	622	7875157598765902	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+394	646	7875157598496027	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+647	762	7875157601020922	game.exe	3be9f6a8162139b8
+29	67	7875159196356368	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+19	56	7875159363908575	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+17	56	7875160028572525	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+18	61	7875160494356931	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+18	59	7875160876347062	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+16	53	7875164260904450	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+17	51	7875165251128791	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+19	63	7875166569978966	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+79	367	7875166570587186	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+28	66	7875166634949094	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+81	199	7875166635477683	game.exe	3be9f6a8162139b8
+20	61	7875169075583939	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+47	98	7875215897659682	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+130	1424	7875215898507430	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+127	1431	7875215898457560	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+119	1447	7875215898377778	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+135	1450	7875215898547320	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+115	1456	7875215898337869	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+122	1458	7875215898407691	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+124	1459	7875215898437611	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+139	1460	7875215898577242	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+1431	1618	7875215911499133	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+29	68	7875216087178179	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+84	292	7875216087726722	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+295	592	7875216089841068	game.exe	3be9f6a8162139b8
+27	69	7875217378042216	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+101	532	7875217378785289	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+86	540	7875217378630623	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+89	545	7875217378660556	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+98	547	7875217378745399	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+95	554	7875217378710411	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+110	654	7875217378875067	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+114	663	7875217378964813	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+105	665	7875217378835166	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+541	798	7875217383188604	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+533	846	7875217383138731	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+846	962	7875217386230477	game.exe	3be9f6a8162139b8
+28	66	7875220860669288	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+91	492	7875220861307317	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+94	502	7875220861337225	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+97	509	7875220861367165	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+86	511	7875220861247464	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+83	517	7875220861217540	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+101	520	7875220861407047	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+89	529	7875220861277386	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+105	537	7875220861452011	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+504	676	7875220865436448	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+494	714	7875220865336724	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+715	832	7875220867533923	game.exe	3be9f6a8162139b8
+28	67	7875232137865247	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44
+83	525	7875232138413790	CMakeFiles/game.dir/src/main.c.obj	24fac6229811dfc8
+85	535	7875232138443711	CMakeFiles/game.dir/src/debug.c.obj	c42d56966728de02
+97	544	7875232138563392	CMakeFiles/game.dir/src/level/light.c.obj	82ad6058da7b935d
+88	556	7875232138473633	CMakeFiles/game.dir/src/tools.c.obj	9ddc7415bf8d5d8f
+91	558	7875232138503551	CMakeFiles/game.dir/src/level/level.c.obj	1334f77e7a6eb478
+104	617	7875232138633210	CMakeFiles/game.dir/src/level/objects/item.c.obj	6d707c6fcfe898b7
+94	621	7875232138533472	CMakeFiles/game.dir/src/level/highlight.c.obj	fcf505a1c4ec2a2e
+100	622	7875232138593324	CMakeFiles/game.dir/src/level/objects/player.c.obj	27b61a22f7c4adcf
+535	741	7875232142946786	CMakeFiles/game.dir/src/draw/menu.c.obj	62a3cc56a729c2a
+525	781	7875232142837072	CMakeFiles/game.dir/src/draw/draw.c.obj	4b567e76968fbf86
+781	901	7875232145399286	game.exe	3be9f6a8162139b8
+27	66	7875236154875866	C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/cmake.verify_globs	2bf12faaa006ea44

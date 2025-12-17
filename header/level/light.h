@@ -4,7 +4,16 @@
 // processes the lighing system
 // ========================================
 
+#pragma once
+
+#include <stdio.h>
 #include <stdbool.h>
+#include <math.h>
+
+#include "level.h"
+#include "../debug.h"
+#include "../tools.h"
+#include "objects/player.h"
 
 // default light radius
 #define LIGHT_RADIUS_TORCH 4.5

@@ -1,19 +1,71 @@
-#include <stdio.h>
-#include <stdbool.h>
-#include <math.h>
-#include <string.h>
 
 #include "../../header/level/level.h"
-#include "../../header/debug.h"
-#include "../../header/level/objects/player.h"
-#include "../../header/tools.h"
-#include "../../header/level/light.h"
-#include "../../header/draw/draw.h"
-#include "../../header/draw/menu.h"
 
 
 Level level_active = {MAX_WIDTH, MAX_HEIGHT, {{0}}, {{0}}, {{0}}, 0, 0, 0, 0, 0};
 
+
+void inLevelAction(SDL_Event *event) {
+
+    if (event->type == SDL_EVENT_KEY_DOWN) {
+
+        switch (event->key.scancode) {
+
+        case SDL_SCANCODE_UP:
+            if (highlight.is_on) highlightAction(HIGHLIGHT_MOVE_UP);
+            else playerAction(PLAYER_MOVE_UP);
+            break;
+
+        case SDL_SCANCODE_DOWN:
+            if (highlight.is_on) highlightAction(HIGHLIGHT_MOVE_DOWN);
+            else playerAction(PLAYER_MOVE_DOWN);
+            break;
+        
+        case SDL_SCANCODE_LEFT:
+            if (highlight.is_on) highlightAction(HIGHLIGHT_MOVE_LEFT);
+            else playerAction(PLAYER_MOVE_LEFT);
+            break;
+        
+        case SDL_SCANCODE_RIGHT:
+            if (highlight.is_on) highlightAction(HIGHLIGHT_MOVE_RIGHT);
+            else playerAction(PLAYER_MOVE_RIGHT);
+            break;
+
+        case SDL_SCANCODE_Z:
+            highlightSpawn();
+            break;
+
+        case SDL_SCANCODE_ESCAPE:
+            gamestate.current_screen = SCREEN_MENU;
+            gamestate.current_menu = MENU_PAUSE;
+            break;
+
+        }
+    }
+
+    else if (event->type == SDL_EVENT_KEY_UP) {
+        
+        switch (event->key.scancode) {
+
+        case SDL_SCANCODE_UP:
+        case SDL_SCANCODE_DOWN:
+        case SDL_SCANCODE_LEFT:
+        case SDL_SCANCODE_RIGHT:
+            if (highlight.is_on) {
+                highlightAction(HIGHLIGHT_RESET);
+            } 
+            break;
+
+        case SDL_SCANCODE_Z:
+            if (!playerHasItem()) itemPickUp(highlight.pos_x, highlight.pos_y);
+            else itemDrop(highlight.pos_x, highlight.pos_y);
+            highlightDespawn();
+            break;
+        }
+    }
+
+    
+}
 
 char * levelFileGetName(int level_num, int phase_num) {
 
@@ -107,7 +159,7 @@ void levelActiveSetFromFile(int level_num, int phase_num) {
         }
     }
 
-    logPrintLevelActive();
+    logPrintLevelActive(); // debug
 
     levelFileClose(level_file);
 
@@ -120,7 +172,6 @@ void levelLoad(int level_num, int phase_num, int player_pos_x, int player_pos_y,
 
     levelActiveSetFromFile(level_num, phase_num);
     playerSpawn(player_pos_x, player_pos_y, item);
-
 
 }
 
@@ -153,20 +204,13 @@ void levelGoToNext() {
 
 }
 
-void levelExit() {
-
-    logPrint("level exited\n");
-
-    level_active.level_exit = true;
-    
-}
-
 void levelWin() {
 
     logPrint("level Won\n");
-    
-    level_active.level_won = true;
-    menuTravelWin();
+
+    gamestate.current_screen = SCREEN_MENU;
+    gamestate.current_menu = MENU_WIN;
+    gamestate.current_option = 0;
 
 }
 
@@ -189,7 +233,6 @@ void levelTransitionAction() {
             if (tileGetType(j,i) == CHAR_WALL_TORCH_LIT) {
                 
                 level_active.tiles[i][j] = CHAR_WALL_TORCH_UNLIT;
-                drawLevel();
                 delay(DELAY_WALL_TORCH_ERASE);
 
             }
