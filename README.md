@@ -9,10 +9,10 @@ Teresa Gamito  |  github - @Teresa-Gamito  |  teresacgamito@gmail.com
 Rodrigo Valente  |  github - @Hrodrick27
 
 ## Trailer
-![Trailer](https://youtu.be/EhqqahplOeU?si=JrBfFIPRjj2SCHx5)
+[Trailer](https://youtu.be/EhqqahplOeU?si=JrBfFIPRjj2SCHx5)
 
 ## In-Game Screenshots
-[Screenshot1](https://github.com/Teresa-Gamito/the_city_and_the_tower/blob/main/screenshots/screenshot1.png?raw=true)
+![Screenshot1](https://github.com/Teresa-Gamito/the_city_and_the_tower/blob/main/screenshots/screenshot1.png?raw=true)
 
 ![Screenshot2](https://github.com/Teresa-Gamito/the_city_and_the_tower/blob/main/screenshots/screenshot2.png?raw=true)
 
