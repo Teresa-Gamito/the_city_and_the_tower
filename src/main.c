@@ -3,7 +3,8 @@
 // ==============================
 
 
-#include <../header/main.h>
+#include "../header/main.h"
+#include <SDL3/SDL_timer.h>
 
 #define SDL_MAIN_USE_CALLBACKS 1 // uses SDL callbacks
 #include <SDL3/SDL.h>
@@ -75,6 +76,7 @@ SDL_AppResult SDL_AppEvent(void *appstate, SDL_Event *event) {
 
 SDL_AppResult SDL_AppIterate(void *appstate) {
 
+    SDL_Delay(16);
     gameUpdate();
     return SDL_APP_CONTINUE;
 }

@@ -1,8 +1,0 @@
-C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/game.dir
-C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/edit_cache.dir
-C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/CMakeFiles/rebuild_cache.dir
-C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/vendored/SDL/CMakeFiles/SDL3-shared.dir
-C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/vendored/SDL/CMakeFiles/SDL3_test.dir
-C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/vendored/SDL/CMakeFiles/SDL_uclibc.dir
-C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/vendored/SDL/CMakeFiles/edit_cache.dir
-C:/Users/Copygoat/Downloads/Uni/Project/Game Program/The-City-and-the-Tower/build/vendored/SDL/CMakeFiles/rebuild_cache.dir

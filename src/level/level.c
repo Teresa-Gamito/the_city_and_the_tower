@@ -42,6 +42,8 @@ void inLevelAction(SDL_Event *event) {
 
             break;
 
+        default:
+            break;
         }
     }
 
@@ -62,6 +64,8 @@ void inLevelAction(SDL_Event *event) {
             if (!playerHasItem()) itemPickUp(highlight.pos_x, highlight.pos_y);
             else itemDrop(highlight.pos_x, highlight.pos_y);
             highlightDespawn();
+            break;
+        default:
             break;
         }
     }

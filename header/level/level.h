@@ -30,7 +30,7 @@
 
 // level naming
 // inside the "level" folder - 'lvl' + number of level + '-' + phase of level
-#define LEVEL_FILE_NAME "level/lvl%02d-%01d.txt\0"
+#define LEVEL_FILE_NAME "level/lvl%02d-%01d.txt"
 
 
 // labels for level creation

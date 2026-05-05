@@ -5,7 +5,7 @@ bool debug_phase_through_walls = false;
 int debug_light_buffer = 0;
 bool debug_screen_clear = 0;
 
-FILE *logFile;
+FILE *logFile = NULL;
 
 void debugCommand(SDL_Event *event) {
 
@@ -66,6 +66,8 @@ void logOpen() {
 }
 
 void logPrint(char * message,...) {
+
+    if (!logFile) return;
     va_list args;
     va_start(args, message);
     vfprintf(logFile, message, args);
