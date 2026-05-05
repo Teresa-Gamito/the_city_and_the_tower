@@ -90,7 +90,6 @@ void SDL_AppQuit(void *appstate, SDL_AppResult result) {
 
     SDL_Quit();
     logClose();
-    exit(0);
 
 }
 

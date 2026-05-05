@@ -6,6 +6,13 @@
 # make build     -> creates Build/ folder with exe + assets (+ DLLs on MSYS2)
 # make clean     -> deletes .o, .d, and app
 
+# ---------------- Platform detection ----------------
+UNAME_S := $(shell uname -s)
+
+ifdef MSYSTEM
+    IS_MSYS2 := 1
+endif
+
 # ---------------- Build bundle config ----------------
 # PATH THAT WILL BE CREATED
 BUILD_DIR := build
@@ -14,13 +21,10 @@ BUILD_DIR := build
 ASSET_DIRS := assets assets/audio assets/sprites level
 
 # INDIVIDUAL FILES TO INCLUDE IN THE BUILD PATH
-ASSET_FILES :=
-
-# ---------------- Platform detection ----------------
-UNAME_S := $(shell uname -s)
-
-ifdef MSYSTEM
-    IS_MSYS2 := 1
+ifdef IS_MSYS2
+	ASSET_FILES := SDL3.dll
+else
+	ASSET_FILES :=
 endif
 
 # ---------------- Compiler ----------------
@@ -33,7 +37,7 @@ else
 endif
 
 # ---------------- pkg-config (SDL3) ----------------
-SDL_PKG  := sdl3 sdl3-image sdl3-ttf
+SDL_PKG  := sdl3
 
 ifeq ($(UNAME_S),Darwin)
     PKGCONF := pkg-config
@@ -47,7 +51,7 @@ PKG_CFLAGS := $(shell $(PKGCONF) --cflags $(SDL_PKG) 2>/dev/null)
 PKG_LIBS   := $(shell $(PKGCONF) --libs   $(SDL_PKG) 2>/dev/null)
 
 ifeq ($(PKG_LIBS),)
-	PKG_LIBS := -lSDL3 -lSDL3_image -lSDL3_ttf
+	PKG_LIBS := -lSDL3
 endif
 
 # ---------------- Common flags ----------------
@@ -78,7 +82,7 @@ all: debug
 
 debug: CFLAGS := $(CSTD) $(WARN) $(DBG) $(DEPS) $(INC) $(PKG_CFLAGS)
 debug: LDFLAGS := $(PKG_LIBS) -lm
-debug: $(BIN_EXE) -lm
+debug: $(BIN_EXE)
 
 release: CFLAGS := $(CSTD) $(WARN) $(REL) $(DEPS) $(INC) $(PKG_CFLAGS)
 release: LDFLAGS := $(PKG_LIBS) -lm
