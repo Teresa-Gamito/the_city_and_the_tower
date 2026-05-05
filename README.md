@@ -12,12 +12,12 @@ Rodrigo Valente  |  github - @Hrodrick27
 ![Trailer](https://youtu.be/EhqqahplOeU?si=JrBfFIPRjj2SCHx5)
 
 ## In-Game Screenshots
-![Screenshot1](https://github.com/Teresa-Gamito/the_city_and_the_tower/tree/main/screenshots/screenshot1)
+![Screenshot1](https://github.com/Teresa-Gamito/the_city_and_the_tower/tree/main/screenshots/screenshot1.png)
 
-![Screenshot2](https://github.com/Teresa-Gamito/the_city_and_the_tower/tree/main/screenshots/screenshot2)
+![Screenshot2](https://github.com/Teresa-Gamito/the_city_and_the_tower/tree/main/screenshots/screenshot2.png)
 
-![Screenshot3](https://github.com/Teresa-Gamito/the_city_and_the_tower/tree/main/screenshots/screenshot3)
+![Screenshot3](https://github.com/Teresa-Gamito/the_city_and_the_tower/tree/main/screenshots/screenshot3.png)
 
-![Screenshot4](https://github.com/Teresa-Gamito/the_city_and_the_tower/tree/main/screenshots/screenshot4)
+![Screenshot4](https://github.com/Teresa-Gamito/the_city_and_the_tower/tree/main/screenshots/screenshot4.png)
 
-![Screenshot5](https://github.com/Teresa-Gamito/the_city_and_the_tower/tree/main/screenshots/screenshot5)
+![Screenshot5](https://github.com/Teresa-Gamito/the_city_and_the_tower/tree/main/screenshots/screenshot5.png)
