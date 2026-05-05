@@ -21,4 +21,3 @@ Rodrigo Valente  |  github - @Hrodrick27
 ![Screenshot4](https://github.com/Teresa-Gamito/the_city_and_the_tower/blob/main/screenshots/screenshot4.png?raw=true)
 
 ![Screenshot5](https://github.com/Teresa-Gamito/the_city_and_the_tower/blob/main/screenshots/screenshot5.png?raw=true)
-
