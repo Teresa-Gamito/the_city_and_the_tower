@@ -3,6 +3,9 @@
 1st semester project
 grid based game
 
+## Play the game here:
+[itch.io](https://notlabeled.itch.io/the-city-and-the-tower)
+
 ## Made by:
 Teresa Gamito  |  github - @Teresa-Gamito  |  teresacgamito@gmail.com
 
