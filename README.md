@@ -7,9 +7,9 @@ grid based game
 [itch.io](https://notlabeled.itch.io/the-city-and-the-tower)
 
 ## Made by:
-Teresa Gamito  |  github - @Teresa-Gamito  |  teresacgamito@gmail.com
+Teresa Gamito  |  github - [@Teresa-Gamito](https://github.com/Teresa-Gamito)
 
-Rodrigo Valente  |  github - @Hrodrick27
+Rodrigo Valente  |  github - [@Hrodrick27](https://github.com/Hrodrick27)
 
 ## Trailer
 [Trailer](https://youtu.be/EhqqahplOeU?si=JrBfFIPRjj2SCHx5)
